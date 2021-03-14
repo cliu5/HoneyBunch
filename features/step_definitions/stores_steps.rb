@@ -1,8 +1,12 @@
 
-Given /the following movies exist/ do |movies_table|
-  movies_table.hashes.each do |movie|
-    Movie.create movie
+Given /the following stores exist/ do |stores_table|
+  stores_table.hashes.each do |store|
+    Store.create store
   end
+end
+
+Then /^the rating of "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
+  expect(Store.find_by_name(arg1).rating).to eq(arg2)
 end
 
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
@@ -17,9 +21,9 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   end
 end
 
-Then /I should see all the movies/ do
-  # Make sure that all the movies in the app are visible in the table
-  Movie.all.each do |movie|
-    step %{I should see "#{movie.title}"}
+Then /I should see all the stores/ do
+  # Make sure that all the stores in the app are visible in the table
+  Store.all.each do |store|
+    step %{I should see "#{store.name}"}
   end
 end
