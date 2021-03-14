@@ -1,0 +1,11 @@
+<h2>Create New Store</h2>
+
+<%= form_tag stores_path, :class => 'form' do %>
+  <%= label :store, :name, 'Name', :class => 'col-form-label' %>
+  <%= text_field :store, :name, :class => 'form-control' %>
+  <%= label :store, :rating, 'Rating', :class => 'col-form-label'  %>
+  <%= select :store, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
+  <br/>
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', stores_path, :class => 'btn btn-secondary' %>
+<% end %>

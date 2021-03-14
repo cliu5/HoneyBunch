@@ -21,26 +21,22 @@
     <tr>
       <th>Store</th>
       <th>Rating</th>
-      <th>Address</th>
     </tr>
   </thead>
   <tbody>
-    <% @movies.each do |movie| %>
+    <% @stores.each do |store| %>
       <tr>
         <td>
-          <%= movie.title %>
+          <%= store.name %>
         </td>
         <td>
-          <%= movie.rating %>
+          <%= store.rating %>
         </td>
         <td>
-          <%= movie.release_date %>
-        </td>
-        <td>
-          <%= link_to "Order", movie_path(movie) %>
+          <%= link_to "Order", store_path(store) %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Add new restaurant', new_movie_path, :class => 'btn btn-primary' %>
+<%= link_to 'Add new store', new_store_path, :class => 'btn btn-primary' %>
