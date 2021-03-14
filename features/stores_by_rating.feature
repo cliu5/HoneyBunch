@@ -31,4 +31,4 @@ Scenario: can't find similar movies if we don't know director (sad path)
   Then  I should not see "PG-13"
   When  I follow "Find Stores With Same Rating"
   Then  I should be on the home page
-  And   I should see "no rating info availible"
+  And   I should see "no rating info available"
