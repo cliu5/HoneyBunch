@@ -868,6 +868,7 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.1ms)
 
 
+<<<<<<< HEAD
 Started GET "/movies" for 209.6.116.71 at 2021-03-14 07:10:36 +0000
 Processing by MoviesController#index as HTML
   [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
@@ -2614,10 +2615,365 @@ Started GET "/movies" for 209.6.116.71 at 2021-03-14 08:16:57 +0000
 Processing by MoviesController#index as HTML
   [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
   Rendered movies/index.html.erb within layouts/application (1.0ms)
+=======
+Started GET "/" for 172.254.90.3 at 2021-03-14 07:11:39 +0000
+
+
+Started GET "/movies" for 172.254.90.3 at 2021-03-14 07:11:39 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 213ms (Views: 195.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 172.254.90.3 at 2021-03-14 07:11:40 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 172.254.90.3 at 2021-03-14 07:11:40 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 172.254.90.3 at 2021-03-14 07:11:40 +0000
+
+
+Started GET "/assets/application.self-5dbdcd2fa71fde6e0b26d31433ae4f255100868798b9f458fca357096bc0dbe8.css?body=1" for 172.254.90.3 at 2021-03-14 07:11:40 +0000
+
+
+Started GET "/movies" for 172.254.90.3 at 2021-03-14 07:11:46 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for 172.254.90.3 at 2021-03-14 07:11:52 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for 172.254.90.3 at 2021-03-14 07:12:25 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 172.254.90.3 at 2021-03-14 07:12:29 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/new" for 172.254.90.3 at 2021-03-14 07:12:35 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/2" for 172.254.90.3 at 2021-03-14 07:15:49 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/2/edit" for 172.254.90.3 at 2021-03-14 07:15:51 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/edit.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (93.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (98.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (85.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (99.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 172.254.90.3 at 2021-03-14 07:30:14 +0000
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:30:14 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    24:     </tr>
+    25:   </thead>
+    26:   <tbody>
+    27:     <% @stores.each do |store| %>
+    28:       <tr>
+    29:         <td>
+    30:           <%= store.name %>
+  app/views/stores/index.html.erb:27:in `_app_views_stores_index_html_erb___1364145508634283692_69828153022300'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (83.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (103.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (105.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (95.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:32:07 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    24:     </tr>
+    25:   </thead>
+    26:   <tbody>
+    27:     <% @stores.each do |store| %>
+    28:       <tr>
+    29:         <td>
+    30:           <%= store.name %>
+  app/views/stores/index.html.erb:27:in `_app_views_stores_index_html_erb___1251437991508307656_70337945451340'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:32:08 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    24:     </tr>
+    25:   </thead>
+    26:   <tbody>
+    27:     <% @stores.each do |store| %>
+    28:       <tr>
+    29:         <td>
+    30:           <%= store.name %>
+  app/views/stores/index.html.erb:27:in `_app_views_stores_index_html_erb___1251437991508307656_70337945451340'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+  [1m[36m (78.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (92.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (91.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (95.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (77.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (87.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (96.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (101.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (87.8ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text) [0m
+  [1m[35m (102.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (96.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (87.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (96.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (94.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20111119180638)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:36:56 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    24:     </tr>
+    25:   </thead>
+    26:   <tbody>
+    27:     <% @stores.each do |store| %>
+    28:       <tr>
+    29:         <td>
+    30:           <%= store.name %>
+  app/views/stores/index.html.erb:27:in `_app_views_stores_index_html_erb___2094880971926299563_69931500617460'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20111119180638)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (117.4ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text) [0m
+  [1m[35m (67.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (77.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (74.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20111119180638)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20111119180638)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20111119180638"]]
+  [1m[36m (157.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 172.254.90.3 at 2021-03-14 07:46:21 +0000
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:46:21 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.9ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 156ms (Views: 142.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/new" for 172.254.90.3 at 2021-03-14 07:46:25 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 172.254.90.3 at 2021-03-14 07:46:26 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zu9pck02dFdhVMVJ+mWGbTffswXahGUFOCBWjGXqhIB0UECDfk8MzqW4lK2GZZU9FwPakgKVwaGpq5MhQmLGSQ==", "store"=>{"name"=>"a", "rating"=>"G"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating") VALUES (?, ?)[0m  [["name", "a"], ["rating", "G"]]
+  [1m[35m (83.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 83.4ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"stores"} missing required keys: [:id]):
+  app/controllers/stores_controller.rb:20:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:51:13 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.9ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 158ms (Views: 143.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:51:19 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores/new" for 172.254.90.3 at 2021-03-14 07:51:25 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:51:27 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores/new" for 172.254.90.3 at 2021-03-14 07:51:28 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:51:29 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/new" for 172.254.90.3 at 2021-03-14 07:51:30 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 172.254.90.3 at 2021-03-14 07:51:32 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K1t/rVcQY6QqYgZvz4fuKnRutVoeilpaEolv15cBKEs55FZcZGkbPe6OV4uzh/16VLLczcab/v6DAqp6sIlqgg==", "store"=>{"name"=>"test", "rating"=>"G"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stores" ("name", "rating") VALUES (?, ?)  [["name", "test"], ["rating", "G"]]
+  [1m[36m (102.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 102.5ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"stores"} missing required keys: [:id]):
+  app/controllers/stores_controller.rb:20:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:51:41 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+>>>>>>> 084586d5ee1fff403e5bfd8a1de507b15d162c7c
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
 
 
+<<<<<<< HEAD
 Started GET "/movies" for 209.6.116.71 at 2021-03-14 08:17:41 +0000
 Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
@@ -2862,3 +3218,232 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (1.1ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+=======
+Started GET "/stores/new" for 172.254.90.3 at 2021-03-14 07:51:44 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 172.254.90.3 at 2021-03-14 07:51:47 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nzz9+iAoJ2WI8hXt2g51Fj8QVqkz0fjD024m+yjoRU+Ng9QLE1Ff/EweRAmmDmZGH8w/PuvAXGdC5eNWD2AHhg==", "store"=>{"name"=>"asdf", "rating"=>"G"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stores" ("name", "rating") VALUES (?, ?)  [["name", "asdf"], ["rating", "G"]]
+  [1m[36m (111.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 111.3ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"stores"} missing required keys: [:id]):
+  app/controllers/stores_controller.rb:20:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.0ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:54:22 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:54:24 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 172.254.90.3 at 2021-03-14 07:54:24 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 172.254.90.3 at 2021-03-14 07:54:24 +0000
+
+
+Started GET "/assets/application.self-5dbdcd2fa71fde6e0b26d31433ae4f255100868798b9f458fca357096bc0dbe8.css?body=1" for 172.254.90.3 at 2021-03-14 07:54:24 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 172.254.90.3 at 2021-03-14 07:54:24 +0000
+
+
+Started GET "/stores/1" for 172.254.90.3 at 2021-03-14 07:54:25 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/stores/1" for 172.254.90.3 at 2021-03-14 07:54:28 +0000
+Processing by StoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SRPtLnLjzxXhuYhcL70m+9NQUTW7ff+23MWwy0XDZQlbrMTfQZq3jCVV2bhTvTWr84w4omNsWxJNTnVmYksnwA==", "id"=>"1"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "stores" WHERE "stores"."id" = ?[0m  [["id", 1]]
+  [1m[35m (100.3ms)[0m  commit transaction
+Redirected to https://pirate-table-3000.codio.io/stores
+Completed 302 Found in 102ms (ActiveRecord: 100.7ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:54:28 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores/2" for 172.254.90.3 at 2021-03-14 07:54:39 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered stores/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:54:41 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 172.254.90.3 at 2021-03-14 07:58:21 +0000
+
+
+Started GET "/stores" for 172.254.90.3 at 2021-03-14 07:58:21 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores/2" for 172.254.90.3 at 2021-03-14 07:58:26 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered stores/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores.2" for 172.254.90.3 at 2021-03-14 07:58:28 +0000
+Processing by StoresController#index as 
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores.2" for 172.254.90.3 at 2021-03-14 07:58:31 +0000
+Processing by StoresController#index as 
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 172.254.90.3 at 2021-03-14 07:58:31 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 172.254.90.3 at 2021-03-14 07:58:31 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 172.254.90.3 at 2021-03-14 07:58:31 +0000
+
+
+Started GET "/assets/application.self-5dbdcd2fa71fde6e0b26d31433ae4f255100868798b9f458fca357096bc0dbe8.css?body=1" for 172.254.90.3 at 2021-03-14 07:58:31 +0000
+>>>>>>> 084586d5ee1fff403e5bfd8a1de507b15d162c7c
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-14 19:13:07 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-14 19:13:07 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    17: 
+    18: <h2>Stores</h2>
+    19: <div class="card-columns">
+    20:     <% @stores.each do |store| %>
+    21:         <div class="card " style="width: 14rem; length; 10rem">
+    22:           <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="card-img-top" alt="...">
+    23:           <div class="card-body">
+  app/views/stores/index.html.erb:20:in `_app_views_stores_index_html_erb___3290818276990770247_69983644148840'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (85.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (102.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (91.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (113.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-14 19:14:28 +0000
+Processing by StoresController#index as HTML
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores"
+  Rendered stores/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    17: 
+    18: <h2>Stores</h2>
+    19: <div class="card-columns">
+    20:     <% @stores.each do |store| %>
+    21:         <div class="card " style="width: 14rem; length; 10rem">
+    22:           <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="card-img-top" alt="...">
+    23:           <div class="card-body">
+  app/views/stores/index.html.erb:20:in `_app_views_stores_index_html_erb___3290818276990770247_69983644148840'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-14 19:14:44 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-14 19:14:44 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: stores: SELECT "stores".* FROM "stores"):
+    17: 
+    18: <h2>Stores</h2>
+    19: <div class="card-columns">
+    20:     <% @stores.each do |store| %>
+    21:         <div class="card " style="width: 14rem; length; 10rem">
+    22:           <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="card-img-top" alt="...">
+    23:           <div class="card-body">
+  app/views/stores/index.html.erb:20:in `_app_views_stores_index_html_erb___1035530009662671747_70162522733420'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.1ms)
