@@ -2,8 +2,7 @@ class StoresController < ApplicationController
 
   def show
     id = params[:id] # retrieve movie ID from URI route
-    @store = Store.find(id) # look up movie by unique ID
-    # will render app/views/movies/show.<extension> by default
+    @store = Store.find(id)
   end
 
   def index
@@ -31,11 +30,19 @@ class StoresController < ApplicationController
     redirect_to store_path(@store)
   end
 
-  def destroy
+  def search_for_same_rating
     @store = Store.find(params[:id])
-    @store.destroy
-    flash[:notice] = "Store '#{@store.name}' deleted."
-    redirect_to stores_path
+
+    begin
+	@stores = Store.find_stores_with_same_rating(@current_store)
+	#redirect_to stores_with_same_rating_path
+    rescue
+	flash.keep
+	flash[:notice] = "no rating info available"
+	#flash[:notice] = "'#{@current_store.name}' has no rating info"
+	#the above line should fix the last feature but name is an undefined method
+	redirect_to '/stores'
+    end
   end
 
   private

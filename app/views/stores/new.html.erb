@@ -5,6 +5,8 @@
   <%= text_field :store, :name, :class => 'form-control' %>
   <%= label :store, :rating, 'Rating', :class => 'col-form-label'  %>
   <%= select :store, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
+  <%= text_field :store, :rating %>
+  <!-- again, not sure if the above line belongs there -->
   <br/>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', stores_path, :class => 'btn btn-secondary' %>

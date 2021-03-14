@@ -1,0 +1,30 @@
+<!-- apps/views/stores/search_for_same_rating.html.erb -->
+<h2> Stores with Rating '#{@current_store.rating}'
+
+<table class="table table-striped col-md-12">
+	<thead>
+		<tr>
+			<th>Store Name</th>
+			<th>Rating</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @stores.each do |store| %>
+			<tr>
+				<td>
+					<%= store.name %>
+				</td>
+				<td>
+					<%= store.rating %>
+				</td>
+				<td>
+					<%= store.description %>
+				</td>
+				<td>
+					<%= link_to "More about #{store.name}", store_path(store) %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

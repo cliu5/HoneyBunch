@@ -1,4 +1,4 @@
-<!--  app/views/movies/show.html.erb -->
+!--  app/views/stores/show.html.erb -->
 <h2>Details about <em><%= @store.name %></em></h2>
 
 <ul id="details">
@@ -14,7 +14,8 @@
 </p>
 
 <div class="row">
+  <%= link_to 'Find Stores With Same Rating', stores_with_same_rating_path(@store) %>
   <%= link_to 'Edit', edit_store_path(@store), :class => 'btn btn-primary col-2' %>
   <%= link_to 'Delete', store_path(@store), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
-  <%= link_to 'Back to movie list', stores_path(@store), :class => 'btn btn-primary col-2' %>
+  <%= link_to 'Back to store list', stores_path, :class => 'btn btn-primary col-2' %>
 </div>
