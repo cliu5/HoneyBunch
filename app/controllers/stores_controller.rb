@@ -2,7 +2,8 @@ class StoresController < ApplicationController
 
   def show
     id = params[:id] # retrieve movie ID from URI route
-    @store = Store.find(id)
+    @store = Store.find(id) # look up movie by unique ID
+    # will render app/views/movies/show.<extension> by default
   end
 
   def index
@@ -16,7 +17,7 @@ class StoresController < ApplicationController
   def create
     @store = Store.create!(store_params)
     flash[:notice] = "#{@store.name} was successfully created."
-    redirect_to store_path
+    redirect_to '/stores'
   end
 
   def edit
@@ -30,19 +31,11 @@ class StoresController < ApplicationController
     redirect_to store_path(@store)
   end
 
-  def search_for_same_rating
+  def destroy
     @store = Store.find(params[:id])
-
-    begin
-	@stores = Store.find_stores_with_same_rating(@current_store)
-	#redirect_to stores_with_same_rating_path
-    rescue
-	flash.keep
-	flash[:notice] = "no rating info available"
-	#flash[:notice] = "'#{@current_store.name}' has no rating info"
-	#the above line should fix the last feature but name is an undefined method
-	redirect_to '/stores'
-    end
+    @store.destroy
+    flash[:notice] = "Store '#{@store.name}' deleted."
+    redirect_to stores_path
   end
 
   private
