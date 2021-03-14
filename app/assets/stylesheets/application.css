@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #FAEBD7;
+  margin: auto;
+  width: 75%;
+  min-width: 300px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: left;
+  font-family: Inconsolata,monospace;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.title{
+    color: black;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #DAA520; 
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #FFDEAD;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

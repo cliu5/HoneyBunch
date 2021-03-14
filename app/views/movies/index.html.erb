@@ -1,15 +1,27 @@
 <!--  This file is app/views/movies/index.html.erb -->
-<h2>All Movies</h2>
+<h2>Search local Columbia stores</h2>
 
 <%#  Part 2: Start here... %>
 
-<table class="table table-striped col-md-12" id="movies">
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+<div class="input-group col-md-4">
+      <input class="form-control py-2" type="search" value="search" id="example-search-input">
+      <span class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">
+            <i class="fa fa-search"></i>
+        </button>
+      </span>
+</div>
+
+<table class="table table-striped col-md-12" id="stores">
   <thead>
     <tr>
-      <th>Movie Title</th>
+      <th>Store</th>
       <th>Rating</th>
-      <th>Release Date</th>
-      <th>More Info</th>
+      <th>Address</th>
     </tr>
   </thead>
   <tbody>
@@ -25,10 +37,10 @@
           <%= movie.release_date %>
         </td>
         <td>
-          <%= link_to "More about #{movie.title}", movie_path(movie) %>
+          <%= link_to "Order", movie_path(movie) %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary' %>
+<%= link_to 'Add new restaurant', new_movie_path, :class => 'btn btn-primary' %>
