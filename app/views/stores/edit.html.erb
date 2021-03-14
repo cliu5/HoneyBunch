@@ -1,9 +1,11 @@
 <h2>Edit Existing Store</h2>
 <%= form_tag store_path(@store), :method => :put do %>
   <%= label :store, :name, 'Name', :class => 'col-form-label' %>
-  <%= text_field :store, 'Name', :class => 'form-control' %>
+  <%= text_field :store, 'name', :class => 'form-control' %>
   <%= label :store, :rating, 'Rating', :class => 'col-form-label'  %>
   <%= select :store, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
+  <%= text_field :store, 'rating' %>
+  <!-- idk if the above line goes there -->
   <br/>
   <%= submit_tag 'Update Store Info', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', stores_path, :class => 'btn btn-secondary' %>
