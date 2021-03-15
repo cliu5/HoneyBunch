@@ -21,7 +21,7 @@ describe StoresController do
 	@store_class = class_double('Store').as_stubbed_const
 	@store_attributes = {:name => 'test', :rating => 'G', :description => '2020-01-01'}
     end
-    describe 'Find Stores With Same Rating' do
+    describe 'Find Stores With Same Category' do
 
 	before :each do
 	    @results = [double('store1'), double('store2')]
@@ -29,26 +29,26 @@ describe StoresController do
 	    allow(@store_class).to receive(:find).and_return(@current_store)
 	end
 
-	context 'store has rating' do
+	context 'store has category' do
 	    it 'selects search results template for render' do
-		allow(@store_class).to receive(:find_stores_with_same_rating).and_return(@results)
-		get :search_for_same_rating, {id: '1'}
-		expect(response).to render_template('search_for_same_rating')
+		allow(@store_class).to receive(:find_stores_with_same_category).and_return(@results)
+		get :search_for_same_category, {id: '1'}
+		expect(response).to render_template('search_for_same_category')
 	    end
 	    it 'makes results available to the template' do
-		allow(@store_class).to receive(:find_stores_with_same_rating).and_return(@results)
-		get :search_for_same_rating, {id: '1'}
+		allow(@store_class).to receive(:find_stores_with_same_category).and_return(@results)
+		get :search_for_same_category, {id: '1'}
 		expect(assigns(:stores)).to eq(@results)
 	    end
 	end
-	context 'store has no rating' do
-	    subject { get :search_for_same_rating, {id: '1'} }
+	context 'store has no category' do
+	    subject { get :search_for_same_category, {id: '1'} }
 	    it 'redirects to home' do
 		other_store = double('store')
-		allow(other_store).to receive(:rating).and_return('')
+		allow(other_store).to receive(:category).and_return('')
 		allow(other_store).to receive(:name).and_return('test')
 		allow(@store_class).to receive(:find).and_return(other_store)
-		allow(@store_class).to receive(:find_stores_with_same_rating).and_raise(ArgumentError)
+		allow(@store_class).to receive(:find_stores_with_same_category).and_raise(ArgumentError)
 		expect(subject).to redirect_to(stores_path)
 	    end
 	end
@@ -81,16 +81,16 @@ describe StoresController do
 
     describe 'show stores' do
 	it 'on name' do
-	    all_ratings = ['rating1', 'rating2']
-	    allow(@store_class).to receive(:all_ratings).and_return(all_ratings)
+	    all_categories = ['cat1', 'cat2']
+	    allow(@store_class).to receive(:all_categories).and_return(all_categories)
 	    allow(@store_class).to receive(:where)
 	    get :index, {:sort => 'name'}
 	    expect(assigns(:name_header)).to eq 'bg-warning hilite'
 	end
 
 	it 'on description' do
-	    all_ratings = ['rating1', 'rating2']
-	    allow(@store_class).to receive(:all_ratings).and_return(all_ratings)
+	    all_categories = ['cat1', 'cat2']
+	    allow(@store_class).to receive(:all_categories).and_return(all_categories)
 	    allow(@movie_class).to receive(:where)
 	    get :index, {:sort => 'description'}
 	    expect(assigns(:description_header)).to eq 'bg-warning hilite'

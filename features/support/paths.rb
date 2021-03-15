@@ -28,7 +28,7 @@ module NavigationHelpers
       store_path(id: Store.find_by_name($1))
 
     when /^the Similar Stores page for "(.*)"$/
-      stores_with_same_rating_path(id: Store.find_by_name($1))
+      stores_with_same_category_path(id: Store.find_by_name($1))
 
     else
       begin
