@@ -1,0 +1,35 @@
+<!--  This file is app/views/movies/index.html.erb -->
+
+<body>
+
+<h2>Orders you can Pick Up</h2>
+</body>
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-striped col-md-12" id="stores">
+        <thead>
+        <tr>
+          <th>From</th>
+          <th>Item</th>
+          <th>Deliver to</th>
+        </tr>
+        </thead>
+      <tbody>
+        <% @orders.each do |order| %>
+          <tr>
+            <td>
+              <%= order.store %>
+            </td>
+            <td>
+              <%= order.item %>
+            </td>
+            <td>
+              <%= order.deliver_to %>
+            </td>
+            <td>
+              <%= link_to "Accept order", order_accepted(order) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>

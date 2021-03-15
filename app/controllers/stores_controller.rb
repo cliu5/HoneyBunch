@@ -37,7 +37,13 @@ class StoresController < ApplicationController
     flash[:notice] = "#{@store.name} was successfully created."
     redirect_to '/stores'
   end
-
+    
+  def order_accepted(order)
+      @orders.delete(order)
+      redirect_to '/orders'
+  end
+    
+    
   def edit
     @store = Store.find params[:id]
   end

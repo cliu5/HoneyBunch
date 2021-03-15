@@ -4056,3 +4056,60 @@ Processing by StoresController#show as HTML
   Rendered stores/show.html.erb within layouts/application (0.4ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-15 23:37:09 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-15 23:37:09 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=description" for 209.6.116.71 at 2021-03-15 23:37:14 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"description"}
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=description
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=description" for 209.6.116.71 at 2021-03-15 23:37:14 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"description"}
+  [1m[36mStore Load (9.9ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."description" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/stores/6" for 209.6.116.71 at 2021-03-15 23:49:32 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered stores/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-15 23:50:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-15 23:50:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
