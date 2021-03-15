@@ -1730,3 +1730,62 @@ Processing by StoresController#index as HTML
   Rendered stores/index.html.erb within layouts/application (2.6ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 20:24:38 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 20:24:38 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."description" ASC
+  Rendered stores/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:24:42 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:24:42 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:25:20 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:25:33 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:25:40 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
