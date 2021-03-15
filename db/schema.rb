@@ -21,5 +21,11 @@ ActiveRecord::Schema.define(version: 20111119180638) do
     t.string "menu"
     t.string "image"
   end
+    
+  create_table "orders", force: :cascade do |t|
+    t.string "store"
+    t.string "item"
+    t.string "deliver_to"
+  end
 
 end
