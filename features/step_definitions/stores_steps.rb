@@ -5,6 +5,10 @@ Given /the following stores exist/ do |stores_table|
   end
 end
 
+Then (/^(\d+) seed stores should exist$/) do | n_seeds |
+  Store.count.should be n_seeds.to_i
+end
+
 Then /^the rating of "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
   expect(Store.find_by_name(arg1).rating).to eq(arg2)
 end

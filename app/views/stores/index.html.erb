@@ -1,5 +1,15 @@
 <!--  This file is app/views/stores/index.html.erb -->
-<h2>Search local Columbia stores</h2>
+<h2>Search local Columbia stores </h2>
+<%= form_tag stores_path, :method => get, :id => 'ratings_form' do %>
+    <%= hidden_field_tag "name_sort", true if @name_header %>
+    <%= hidden_field_tag ":description_sort", true if @description_header %>
+    Include:
+    <% @all_ratings.each do |rating| %>
+	<%= rating %>
+	<%= check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}" %>
+    <% end %>
+    <%= submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary' %>
+<% end %>
 
 <%#  Part 2: Start here... %>
 
