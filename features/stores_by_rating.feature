@@ -8,18 +8,18 @@ Feature: search for stores by rating
 Background: stores in database
 
   Given the following stores exist:
-  | name                    | rating | description  |
-  | McBonalds                 | 1      | Burger and fries  |
-  | KingBurger          | 2      | fries and burger  |
-  | The Krusty Krab    | 3      | spongebob fav place to eat  |
-  | Cranberry Juice                | 4      | best juice in the world  |
-  | Gong Cha                | 4      | nice boba   |
-  | Some Pastry Shop                  | 2      | nice pastries  |
-  | Btarsucks   | 4      | yummy coffee   |
-  | Popsicles         | 2      | cooling popsicles   |
-  | Chicken Wings | 3      | krispy  |
-  | Energy Drinks            | 4      | caffeine drinks  |
-  | Hotdog Stand           | 2      | ketchup and mustard  |
+  | name                    | rating | description  | menu |
+  | McBonalds                 | 1      | Burger and fries  | fries |
+  | KingBurger          | 2      | fries and burger  | burger |
+  | The Krusty Krab    | 3      | spongebob fav place to eat  | krabby patty |
+  | Cranberry Juice                | 4      | best juice in the world  | juice |
+  | Gong Cha                | 4      | nice boba   | boba |
+  | Some Pastry Shop                  | 2      | nice pastries  | croissant |
+  | Btarsucks   | 4      | yummy coffee   | expresso |
+  | Popsicles         | 2      | cooling popsicles   | popsicles |
+  | Chicken Wings | 3      | krispy  | fried chicken |
+  | Energy Drinks            | 4      | caffeine drinks  | monster energy |
+  | Hotdog Stand           | 2      | ketchup and mustard  | hotdog|
 
     And I am on the HoneyBunch home page
     Then 11 seed stores should exist

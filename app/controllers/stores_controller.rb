@@ -73,6 +73,6 @@ class StoresController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def store_params
-    params.require(:store).permit(:name, :rating, :description)
+    params.require(:store).permit(:name, :rating, :description, :menu)
   end
 end
