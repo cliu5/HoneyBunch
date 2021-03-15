@@ -15,16 +15,16 @@
 
 <body>
 
-<%= form_tag stores_path, :method => :get, :id => 'ratings_form' do %>
+<%= form_tag stores_path, :method => :get, :id => 'categories_form' do %>
   <%= hidden_field_tag "name_sort", true if @name_header %>
   <%= hidden_field_tag ":description_sort", true if @description_header %>
-  Include these ratings:
-  <% @all_ratings.each do |rating| %>
-    <%= rating %>
-    <span class="fa fa-star checked"></span>
-    <%= check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}" %>
+  Food Near Me:
+  <% @all_categories.each do |category| %>
+    <%= category %>
+    <span class="checked"></span>
+    <%= check_box_tag "categories[#{category}]", 1, @selected_categories.include?(category), :id => "categories_#{category}" %>
   <% end %>
-  <%= submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary' %>
+  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-primary' %>
 <% end %>
     
 <h2>Stores</h2>
@@ -35,7 +35,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
             <h5 class="card-title"><%= store.rating %><span class="fa fa-star checked"></span></h5> 
-            <p class="card-text"><%= store.description %></p>
+            <p class="card-text"><%= store.category %></p>
             <%= link_to "Order", store_path(store) %>
           </div>
         </div>
@@ -49,11 +49,11 @@
         <thead>
         <tr>
           <th class="<%= @name_header %>">
-        <%= link_to 'Store Name', stores_path(:sort => 'name', :ratings => @selected_ratings), :id => 'name_header' %>
+        <%= link_to 'Store Name', stores_path(:sort => 'name', :categories => @selected_categories), :id => 'name_header' %>
           </th>
           <th>Rating</th>
           <th class="<%= @description_header %>">
-        <%= link_to 'Description', stores_path(:sort => 'description', :ratings => @selected_ratings), :id => 'description_header' %>
+        <%= link_to 'Description', stores_path(:sort => 'description', :categories => @selected_categories), :id => 'description_header' %>
           </th>
         </tr>
         </thead>

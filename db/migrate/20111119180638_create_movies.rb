@@ -3,6 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :stores do |t|
       t.string :name
       t.string :rating
+      t.string :category
       t.text :description
       t.string :menu
       t.string :image

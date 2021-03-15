@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20111119180638) do
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.string "rating"
+    t.string "category"
     t.text   "description"
     t.string "menu"
     t.string "image"

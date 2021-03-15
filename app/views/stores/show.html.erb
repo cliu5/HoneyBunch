@@ -1,23 +1,30 @@
 <!--  app/views/stores/show.html.erb -->
-<h2>Details about <em><%= @store.name %></em></h2>
 
-<ul id="details">
-  <li>
-    Rating:
-    <%= @store.rating %>
-  </li>
-</ul>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 
-<h3>Description:</h3>
-<p id="description">
-  <%= @store.description %>
-</p>
+<!--<div class="container-fluid w-auto h-1000">  
+    <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="img-fluid w-auto h-1000" alt="Patience">           
+</div>-->
 
+
+<h3><%= @store.description %></h3>
+
+
+<div class="card-columns">
+    <% @store.menu.split(",").each do |item| %>
+        <div class="card " style="width: 14rem; length; 10rem">
+          <%=image_tag(@store.image, class: "card-img-top")%>
+          <div class="card-body">
+            <h5 class="card-title"><%= item %></h5>
+            <p class="card-text">$4</p>
+            <%= link_to "Order Now", store_path(@store) %>
+          </div>
+        </div>
+    <% end %>
+</div>
 
 
 <div class="row">
-  <%= link_to 'Find Stores With Same Rating', stores_with_same_rating_path(@store) %>
-  <%= link_to 'Edit', edit_store_path(@store), :class => 'btn btn-primary col-2' %>
-  <%= link_to 'Delete', store_path(@store), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
   <%= link_to 'Back to store list', stores_path, :class => 'btn btn-primary col-2' %>
 </div>

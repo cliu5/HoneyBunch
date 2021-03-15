@@ -13,19 +13,19 @@ class StoresController < ApplicationController
     when 'description'
 	ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
     end
-    @all_ratings = Store.all_ratings
-    @selected_ratings = params[:ratings] || session[:ratings] || {}
+    @all_categories = Store.all_categories
+    @selected_categories = params[:categories] || session[:categories] || {}
 
-    if @selected_ratings == {}
-	@selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
+    if @selected_categories == {}
+	@selected_categories = Hash[@all_categories.map {|category| [category, category]}]
     end
 
-    if params[:sort] != session[:sort] or params[:ratings] != session[:ratings]
+    if params[:sort] != session[:sort] or params[:categories] != session[:categories]
 	session[:sort] = sort
-	session[:ratings] = @selected_ratings
-	redirect_to :sort => sort, :ratings => @selected_ratings and return
+	session[:categories] = @selected_categories
+	redirect_to :sort => sort, :categories => @selected_categories and return
     end
-    @stores = Store.where(rating: @selected_ratings.keys).order(ordering)
+    @stores = Store.where(category: @selected_categories.keys).order(ordering)
   end
 
   def new
