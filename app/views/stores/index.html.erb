@@ -34,7 +34,7 @@
           <%=image_tag(store.image, class: "card-img-top")%>
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
-            <h5 class="card-title"><%= store.rating %></h5>
+            <h5 class="card-title"><%= store.rating %></h5> 
             <p class="card-text"><%= store.description %></p>
             <%= link_to "Order", store_path(store) %>
           </div>
@@ -65,6 +65,7 @@
             </td>
             <td>
               <%= store.rating %>
+              <span class="fa fa-star checked"></span>
             </td>
             <td>
               <%= store.description %>
