@@ -61,14 +61,14 @@ class StoresController < ApplicationController
     redirect_to store_path(@store)
   end
 
-  def search_for_same_rating
+  def search_for_same_category
     @store = Store.find(params[:id])
 
     begin
-	@stores = Store.find_stores_with_same_rating(@current_store)
+	@stores = Store.find_stores_with_same_category(@current_store)
     rescue
 	flash.keep
-	flash[:notice] = "no rating info available"
+	flash[:notice] = "no category info available"
 	#flash[:notice] = "'#{@current_store.name}' has no rating info"
 	#the above line should fix the last feature but name is an undefined method
 	redirect_to '/stores'

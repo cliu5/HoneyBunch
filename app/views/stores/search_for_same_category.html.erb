@@ -1,11 +1,12 @@
 <!-- apps/views/stores/search_for_same_rating.html.erb -->
-<h2> Stores with Rating '#{@current_store.rating}'
+<h2> Stores with Category '#{@current_store.category}'
 
 <table class="table table-striped col-md-12">
 	<thead>
 		<tr>
 			<th>Store Name</th>
 			<th>Rating</th>
+			<th>Category</th>
 			<th>Description</th>
 		</tr>
 	</thead>
@@ -17,6 +18,9 @@
 				</td>
 				<td>
 					<%= store.rating %>
+				</td>
+				<td>
+					<%= store.category %>
 				</td>
 				<td>
 					<%= store.description %>

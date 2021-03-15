@@ -19,16 +19,16 @@ Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   expect(page.body.index(e1) < page.body.index(e2))
 end
 
-When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
-  rating_list.split(', ').each do |rating|
-    step %{I #{uncheck.nil? ? '' : 'un'}check "ratings_#{rating}"}
+When /I (un)?check the following categories: (.*)/ do |uncheck, category_list|
+  category_list.split(', ').each do |category|
+    step %{I #{uncheck.nil? ? '' : 'un'}check "categories_#{category}"}
   end
 end
 
 Then /I should see all the stores/ do
   # Make sure that all the stores in the app are visible in the table
   Store.all.each do |store|
-    if ['G', 'PG', 'PG-13', 'R'].include? store.rating
+    if ['fast food', 'snack', 'drinks', 'cafe'].include? store.category
       step %{I should see "#{store.name}"}
     end
   end
