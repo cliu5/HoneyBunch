@@ -2,11 +2,31 @@ class StoresController < ApplicationController
 
   def show
     id = params[:id] # retrieve movie ID from URI route
-    @store = Store.find(id)
+    @store = Store.find(id) # look up movie by unique ID
+    # will render app/views/movies/show.<extension> by default
   end
 
   def index
-    @stores = Store.all
+    sort = params[:sort] || session[:sort]
+    case sort
+    when 'name'
+	ordering,@name_header = {:name => :asc}, 'bg-warning hilite'
+    when 'description'
+	ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
+    end
+    @all_ratings = Store.all_ratings
+    @selected_ratings = params[:ratings] || session[:ratings] || {}
+
+    if @selected_ratings == {}
+	@selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
+    end
+
+    if params[:sort] != session[:sort] or params[:ratings] != session[:ratings]
+	session[:sort] = sort
+	session[:ratings] = @selected_ratings
+	redirect_to :sort => sort, :ratings => @selected_ratings and return
+    end
+    @stores = Store.where(rating: @selected_ratings.keys).order(ordering)
   end
 
   def new
@@ -16,7 +36,7 @@ class StoresController < ApplicationController
   def create
     @store = Store.create!(store_params)
     flash[:notice] = "#{@store.name} was successfully created."
-    redirect_to store_path
+    redirect_to '/stores'
   end
 
   def edit
@@ -30,12 +50,17 @@ class StoresController < ApplicationController
     redirect_to store_path(@store)
   end
 
+  def destroy
+    @store = Store.find params[:id]
+    @store.destroy
+    redirect_to store_path(@store)
+  end
+
   def search_for_same_rating
     @store = Store.find(params[:id])
 
     begin
 	@stores = Store.find_stores_with_same_rating(@current_store)
-	#redirect_to stores_with_same_rating_path
     rescue
 	flash.keep
 	flash[:notice] = "no rating info available"
