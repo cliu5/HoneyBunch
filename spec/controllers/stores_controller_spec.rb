@@ -79,7 +79,7 @@ describe StoresController do
 	end
     end
 
-    describe 'show movies' do
+    describe 'show stores' do
 	it 'on name' do
 	    all_ratings = ['rating1', 'rating2']
 	    allow(@store_class).to receive(:all_ratings).and_return(all_ratings)
