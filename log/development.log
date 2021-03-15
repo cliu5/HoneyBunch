@@ -746,3 +746,951 @@ Migrating to CreateMovies (20111119180638)
   [1m[35m (96.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (89.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-15 15:01:39 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 15:01:39 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 15:01:40 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 224ms (Views: 219.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-15 19:14:55 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 19:14:56 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 19:14:56 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 277ms (Views: 271.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 209.6.116.71 at 2021-03-15 19:14:56 +0000
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 19:22:14 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (2.4ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/stores/new" for 209.6.116.71 at 2021-03-15 19:22:15 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-15 19:22:19 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gt4P/tL4WeWKA1PnwFWWIz9y8PtHmr7tj1gtUVw+kNCx4hHT/jzVYxy/KeV5Ze1SW3a1BnCB0c4VSFbHM7dxMQ==", "store"=>{"name"=>"asdadasd", "rating"=>"adad"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "stores" ("name", "rating") VALUES (?, ?)  [["name", "asdadasd"], ["rating", "adad"]]
+  [1m[36m (92.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 119ms (ActiveRecord: 94.0ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 19:22:19 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 19:22:19 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/action_page.php?search=hello" for 209.6.116.71 at 2021-03-15 19:22:27 +0000
+
+ActionController::RoutingError (No route matches [GET] "/action_page.php"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (6.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (85.4ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text, "menu" varchar) [0m
+  [1m[35m (108.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (92.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (89.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (111.5ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text, "menu" varchar) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (76.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (83.6ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text, "menu" varchar) [0m
+  [1m[35m (89.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (104.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (84.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (84.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (94.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text, "menu" varchar, "image" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20111119180638"]]
+  [1m[35m (117.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["description", "Boba"], ["menu", "Milk Tea, Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (150.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)  [["name", "HMART"], ["rating", "3"], ["description", "Asian supermarket"], ["menu", "Ramen, Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (86.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["description", "Pizza place"], ["menu", "Pizza, Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (77.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["description", "Supermarket"], ["menu", "Broccoli, Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (70.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["description", "Fast Chinese food"], ["menu", "Kung Pao Chicken, Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (82.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["description", "Pizza"], ["menu", "Pepperoni Pizza, Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "description", "menu", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["description", "Columbia eatery"], ["menu", "boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (72.8ms)[0m  commit transaction
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 19:59:55 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/7" for 209.6.116.71 at 2021-03-15 20:00:01 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&name_sort=true&ratings%5B1%5D=1&ratings%5B2%5D=1&commit=Refresh" for 209.6.116.71 at 2021-03-15 20:00:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "name_sort"=>"true", "ratings"=>{"1"=>"1", "2"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&sort=name
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:00:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&name_sort=true&ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&commit=Refresh" for 209.6.116.71 at 2021-03-15 20:00:25 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "name_sort"=>"true", "ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:00:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.9ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:01:24 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/%3C" for 209.6.116.71 at 2021-03-15 20:01:24 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%3C"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:01:46 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/class=%22card-img-top%22" for 209.6.116.71 at 2021-03-15 20:01:46 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class=%22card-img-top%22"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:01:55 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/class=%22card-img-top%22" for 209.6.116.71 at 2021-03-15 20:01:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class=%22card-img-top%22"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:01:58 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/class=%22card-img-top%22" for 209.6.116.71 at 2021-03-15 20:01:58 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class=%22card-img-top%22"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:03:02 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:03:10 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/class=%22card-img-top%22" for 209.6.116.71 at 2021-03-15 20:03:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class=%22card-img-top%22"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:04:09 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:04:38 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:05:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:05:50 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:06:07 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:08:12 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  Rendered stores/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/index.html.erb:35: unknown type of %string
+..._buffer.append=( image_tag <%store.image);@output_buffer.saf...
+...                            ^~~
+/home/codio/workspace/HoneyBunch/app/views/stores/index.html.erb:35: syntax error, unexpected end-of-input
+..._buffer.append=( image_tag <%store.image);@output_buffer.saf...
+...                            ^~~):
+  app/views/stores/index.html.erb:35: unknown type of %string
+  app/views/stores/index.html.erb:35: syntax error, unexpected end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:08:45 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (30.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (32.3ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 30.1ms)
+
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    32:     <% @stores.each do |store| %>
+    33:         <div class="card " style="width: 14rem; length; 10rem">
+    34:           <%= link_to root_path do %>
+    35:                <%= image_tag <% store.image %>, class="card-img-top" alt="...">
+    36:           <% end %>
+    37:           <div class="card-body">
+    38:             <h5 class="card-title"><%= store.name %></h5>
+  app/views/stores/index.html.erb:35:in `block (2 levels) in _app_views_stores_index_html_erb___714678458699165016_69816825993700'
+  app/views/stores/index.html.erb:34:in `block in _app_views_stores_index_html_erb___714678458699165016_69816825993700'
+  app/views/stores/index.html.erb:32:in `_app_views_stores_index_html_erb___714678458699165016_69816825993700'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.7ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:09:50 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/class=" for 209.6.116.71 at 2021-03-15 20:09:50 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class="):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:11:16 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/images/pizza.jpg" for 209.6.116.71 at 2021-03-15 20:11:16 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/pizza.jpg"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:12:57 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/class=%22card-img-top%22" for 209.6.116.71 at 2021-03-15 20:12:57 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class=%22card-img-top%22"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:13:17 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/%3Cimg" for 209.6.116.71 at 2021-03-15 20:13:17 +0000
+
+ActionController::RoutingError (No route matches [GET] "/%3Cimg"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:13:36 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/class=%22card-img-top%22" for 209.6.116.71 at 2021-03-15 20:13:36 +0000
+
+ActionController::RoutingError (No route matches [GET] "/class=%22card-img-top%22"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:14:14 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:14:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (64.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:14:27 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:14:32 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/pizza-2ee0830c8c08dd3af22d84dc761fa102ae3ba1fd9e963671b0feaa3cc3feeb54.jpg" for 209.6.116.71 at 2021-03-15 20:14:32 +0000
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:15:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/pizza.png" for 209.6.116.71 at 2021-03-15 20:15:22 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/pizza.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:15:31 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:16:25 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  Rendered stores/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/index.html.erb:34: syntax error, unexpected '='
+...(image_tag("pizza.jpg", class = "card-img-top"));@output_buf...
+...                              ^
+/home/codio/workspace/HoneyBunch/app/views/stores/index.html.erb:34: syntax error, unexpected ')', expecting end
+....jpg", class = "card-img-top"));@output_buffer.safe_append='
+...                              ^
+/home/codio/workspace/HoneyBunch/app/views/stores/index.html.erb:84: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/stores/index.html.erb:34: syntax error, unexpected '='
+  app/views/stores/index.html.erb:34: syntax error, unexpected ')', expecting end
+  app/views/stores/index.html.erb:84: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:16:51 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B3%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:18:11 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "3"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '3', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&name_sort=true&ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&commit=Refresh" for 209.6.116.71 at 2021-03-15 20:18:34 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "name_sort"=>"true", "ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:18:34 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/4" for 209.6.116.71 at 2021-03-15 20:18:50 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered stores/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 20:19:59 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/2" for 209.6.116.71 at 2021-03-15 20:20:00 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)

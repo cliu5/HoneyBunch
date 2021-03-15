@@ -8,18 +8,18 @@ Feature: search for stores by rating
 Background: stores in database
 
   Given the following stores exist:
-  | name                    | rating | description  | menu |
-  | McBonalds                 | 1      | Burger and fries  | fries |
-  | KingBurger          | 2      | fries and burger  | burger |
-  | The Krusty Krab    | 3      | spongebob fav place to eat  | krabby patty |
-  | Cranberry Juice                | 4      | best juice in the world  | juice |
-  | Gong Cha                | 4      | nice boba   | boba |
-  | Some Pastry Shop                  | 2      | nice pastries  | croissant |
-  | Btarsucks   | 4      | yummy coffee   | expresso |
-  | Popsicles         | 2      | cooling popsicles   | popsicles |
-  | Chicken Wings | 3      | krispy  | fried chicken |
-  | Energy Drinks            | 4      | caffeine drinks  | monster energy |
-  | Hotdog Stand           | 2      | ketchup and mustard  | hotdog|
+  | name                    | rating | description  | menu | image | 
+  | McBonalds                 | 1      | Burger and fries  | fries | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | KingBurger          | 2      | fries and burger  | burger | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | The Krusty Krab    | 3      | spongebob fav place to eat  | krabby patty | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Cranberry Juice                | 4      | best juice in the world  | juice | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Gong Cha                | 4      | nice boba   | boba | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Some Pastry Shop                  | 2      | nice pastries  | croissant | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Btarsucks   | 4      | yummy coffee   | expresso | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Popsicles         | 2      | cooling popsicles   | popsicles | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Chicken Wings | 3      | krispy  | fried chicken | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Energy Drinks            | 4      | caffeine drinks  | monster energy | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
+  | Hotdog Stand           | 2      | ketchup and mustard  | hotdog| https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg|
 
     And I am on the HoneyBunch home page
     Then 11 seed stores should exist

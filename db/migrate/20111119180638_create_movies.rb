@@ -5,6 +5,8 @@ class CreateMovies < ActiveRecord::Migration
       t.string :rating
       t.text :description
       t.string :menu
+      t.string :image
+     
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
     end

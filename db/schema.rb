@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20111119180638) do
     t.string "rating"
     t.text   "description"
     t.string "menu"
+    t.string "image"
   end
 
 end

@@ -31,7 +31,7 @@
 <div class="card-columns">
     <% @stores.each do |store| %>
         <div class="card " style="width: 14rem; length; 10rem">
-          <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="card-img-top" alt="...">
+          <%=image_tag(store.image, class: "card-img-top")%>
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
             <h5 class="card-title"><%= store.rating %></h5>
