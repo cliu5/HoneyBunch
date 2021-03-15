@@ -60,7 +60,6 @@ class StoresController < ApplicationController
 
     begin
 	@stores = Store.find_stores_with_same_rating(@current_store)
-	#redirect_to stores_with_same_rating_path
     rescue
 	flash.keep
 	flash[:notice] = "no rating info available"

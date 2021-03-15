@@ -1,17 +1,15 @@
 <!--  This file is app/views/stores/index.html.erb -->
 <h2>Search local Columbia stores </h2>
-<%= form_tag stores_path, :method => get, :id => 'ratings_form' do %>
-    <%= hidden_field_tag "name_sort", true if @name_header %>
-    <%= hidden_field_tag ":description_sort", true if @description_header %>
-    Include:
-    <% @all_ratings.each do |rating| %>
-	<%= rating %>
-	<%= check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}" %>
-    <% end %>
-    <%= submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary' %>
+<%= form_tag stores_path, :method => :get, :id => 'ratings_form' do %>
+  <%= hidden_field_tag "name_sort", true if @name_header %>
+  <%= hidden_field_tag ":description_sort", true if @description_header %>
+  Include:
+  <% @all_ratings.each do |rating| %>
+    <%= rating %>
+    <%= check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}" %>
+  <% end %>
+  <%= submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary' %>
 <% end %>
-
-<%#  Part 2: Start here... %>
 
 <!-- Load icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,8 +27,13 @@
 <table class="table table-striped col-md-12" id="stores">
   <thead>
     <tr>
-      <th>Store</th>
+      <th class="<%= @name_header %>">
+	<%= link_to 'Store Name', stores_path(:sort => 'name', :ratings => @selected_ratings), :id => 'name_header' %>
+      </th>
       <th>Rating</th>
+      <th class="<%= @description_header %>">
+	<%= link_to 'Description', stores_path(:sort => 'description', :ratings => @selected_ratings), :id => 'description_header' %>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -42,6 +45,9 @@
         <td>
           <%= store.rating %>
         </td>
+	<td>
+	  <%= store.description %>
+	</td>
         <td>
           <%= link_to "Order", store_path(store) %>
         </td>

@@ -28,6 +28,8 @@ end
 Then /I should see all the stores/ do
   # Make sure that all the stores in the app are visible in the table
   Store.all.each do |store|
-    step %{I should see "#{store.name}"}
+    if ['G', 'PG', 'PG-13', 'R'].include? store.rating
+      step %{I should see "#{store.name}"}
+    end
   end
 end
