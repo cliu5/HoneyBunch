@@ -1,72 +1,82 @@
-<!--  This file is app/views/stores/index.html.erb -->
-<h2>Search local Columbia stores </h2>
+<!--  This file is app/views/movies/index.html.erb -->
+<h2>Search local Columbia stores</h2>
+
+<%#  Part 2: Start here... %>
+
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+<!-- The form -->
+<form class="search_store" action="action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<body>
+
 <%= form_tag stores_path, :method => :get, :id => 'ratings_form' do %>
   <%= hidden_field_tag "name_sort", true if @name_header %>
   <%= hidden_field_tag ":description_sort", true if @description_header %>
-  Include:
+  Include these ratings:
   <% @all_ratings.each do |rating| %>
     <%= rating %>
+    <span class="fa fa-star checked"></span>
     <%= check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}" %>
   <% end %>
   <%= submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary' %>
 <% end %>
-
-<!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- The form -->
-<div class="input-group col-md-4">
-      <input class="form-control py-2" type="search" value="search" id="example-search-input">
-      <span class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">
-            <i class="fa fa-search"></i>
-        </button>
-      </span>
-</div>
-
-<table class="table table-striped col-md-12" id="stores">
-  <thead>
-    <tr>
-      <th class="<%= @name_header %>">
-	<%= link_to 'Store Name', stores_path(:sort => 'name', :ratings => @selected_ratings), :id => 'name_header' %>
-      </th>
-      <th>Rating</th>
-      <th class="<%= @description_header %>">
-	<%= link_to 'Description', stores_path(:sort => 'description', :ratings => @selected_ratings), :id => 'description_header' %>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @stores.each do |store| %>
-      <tr>
-        <td>
-          <%= store.name %>
-        </td>
-        <td>
-          <%= store.rating %>
-        </td>
-	<td>
-	  <%= store.description %>
-	</td>
-        <td>
-          <%= link_to "Order", store_path(store) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to 'Add new restaurant', new_store_path, :class => 'btn btn-primary' %>
-
+    
+<h2>Stores</h2>
 <div class="card-columns">
     <% @stores.each do |store| %>
         <div class="card " style="width: 14rem; length; 10rem">
           <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
+            <h5 class="card-title"><%= store.rating %></h5>
             <p class="card-text"><%= store.description %></p>
             <%= link_to "Order", store_path(store) %>
           </div>
         </div>
     <% end %>
 </div>
-  
+
+</body>
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-striped col-md-12" id="stores">
+        <thead>
+        <tr>
+          <th class="<%= @name_header %>">
+        <%= link_to 'Store Name', stores_path(:sort => 'name', :ratings => @selected_ratings), :id => 'name_header' %>
+          </th>
+          <th>Rating</th>
+          <th class="<%= @description_header %>">
+        <%= link_to 'Description', stores_path(:sort => 'description', :ratings => @selected_ratings), :id => 'description_header' %>
+          </th>
+        </tr>
+        </thead>
+      <tbody>
+        <% @stores.each do |store| %>
+          <tr>
+            <td>
+              <%= store.name %>
+            </td>
+            <td>
+              <%= store.rating %>
+            </td>
+            <td>
+              <%= store.description %>
+            </td>
+            <td>
+              <%= link_to "Order", store_path(store) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+
+
+<%= link_to 'Add new restaurant', new_store_path, :class => 'btn btn-primary' %>

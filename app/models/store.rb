@@ -1,6 +1,6 @@
 class Store < ActiveRecord::Base
     def self.all_ratings
-	%w(G PG PG-13 R NC-17)
+	%w(1 2 3 4 5)
     end
 
     def self.find_stores_with_same_rating(store)

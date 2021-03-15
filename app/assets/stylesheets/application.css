@@ -35,6 +35,10 @@ body {
     border-radius: 20px;
 }
 
+.checked {
+  color: orange;
+}
+
 /* Style the search field */
 form.search_store input[type=text] {
   border-radius: 20px;

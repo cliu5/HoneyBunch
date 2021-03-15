@@ -1,0 +1,622 @@
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-15 12:57:07 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 12:57:07 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'PG', 'PG-13', 'R', 'NC-17')[0m
+  Rendered stores/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 311ms (Views: 288.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 209.6.116.71 at 2021-03-15 12:57:07 +0000
+
+
+Started GET "/stores/new" for 209.6.116.71 at 2021-03-15 12:58:09 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-15 12:58:13 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KMYTgRGG+CLvRqSZcdcCVPgiVXQrVuMxyB2wc1KCrzob+g2sPUJ0pHn63pvI53klnCYQiRxNjBJSDcvlPQtO2w==", "store"=>{"name"=>"Evan", "rating"=>"AS"}, "commit"=>"Save Changes"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating") VALUES (?, ?)[0m  [["name", "Evan"], ["rating", "AS"]]
+  [1m[35m (85.4ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 91ms (ActiveRecord: 85.9ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 12:58:13 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (1.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'PG', 'PG-13', 'R', 'NC-17')[0m
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stores/new" for 209.6.116.71 at 2021-03-15 12:58:14 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-15 12:58:18 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpPxbWwIWGzriuxORlyI8b5Hrl9EiAU5yLgtOKwDMQKxr+9AQMzU6n02lkz/bPOA2kPronOTahpSqFauw4rQ4w==", "store"=>{"name"=>"asdad", "rating"=>"dasd"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating") VALUES (?, ?)[0m  [["name", "asdad"], ["rating", "dasd"]]
+  [1m[35m (100.8ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 104ms (ActiveRecord: 101.0ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 12:58:18 +0000
+Processing by StoresController#index as HTML
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'PG', 'PG-13', 'R', 'NC-17')[0m
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&ratings%5BNC-17%5D=1&commit=Refresh" for 209.6.116.71 at 2021-03-15 12:58:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1", "NC-17"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:58:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:58:25 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:58:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&commit=Refresh" for 209.6.116.71 at 2021-03-15 12:58:42 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:58:42 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:59:12 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:59:35 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 12:59:37 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:00:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17: 
+    18: <h2>Stores</h2>
+    19: <div class="card-columns">
+    20:     <% @movies.each do |movie| %>
+    21:         <div class="card " style="width: 14rem; length; 10rem">
+    22:           <img src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612" class="card-img-top" alt="...">
+    23:           <div class="card-body">
+  app/views/stores/index.html.erb:20:in `_app_views_stores_index_html_erb__3978990675856129986_70327625604220'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:01:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/new" for 209.6.116.71 at 2021-03-15 13:01:37 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-15 13:01:40 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hw++Wy6y5zqsuqdZun1404GTlSdlE5Ave02bs1Nnnqu0M6B2AnZrvDoG3VsDTQOi5ZfQ2lII/wzhXeAlPO5/Sg==", "store"=>{"name"=>"Evan", "rating"=>"asd"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating") VALUES (?, ?)[0m  [["name", "Evan"], ["rating", "asd"]]
+  [1m[35m (102.2ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 105ms (ActiveRecord: 102.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 13:01:40 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:01:40 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:01:42 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:04:27 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:04:47 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:06:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:06:05 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:06:19 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:07:30 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:08:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:08:40 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:08:52 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:09:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:09:44 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/action_page.php?search=adad" for 209.6.116.71 at 2021-03-15 13:09:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/action_page.php"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:11:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:21:28 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:21:40 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:22:37 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-ee26730e1aa7088e1499c5dae9451ce61ea505f71d32e6ebfdd95802c7a0bae1.css?body=1" for 209.6.116.71 at 2021-03-15 13:22:37 +0000
+
+
+Started GET "/stores/new" for 209.6.116.71 at 2021-03-15 13:22:58 +0000
+Processing by StoresController#new as HTML
+  Rendered stores/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-15 13:23:02 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fGiyS6busKWv/G6YCf6SzIYCXXkdQKBec3r69ygLUpBPVKxmiio8IzlAFJqwzum94gYYhCpbz33paoFhR4KzcQ==", "store"=>{"name"=>"asdas", "rating"=>"asdd"}, "commit"=>"Save Changes"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating") VALUES (?, ?)[0m  [["name", "asdas"], ["rating", "asdd"]]
+  [1m[35m (120.9ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 124ms (ActiveRecord: 121.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 13:23:02 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:23:02 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:25:37 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:25:56 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:26:15 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (93.3ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "description" text) [0m
+  [1m[35m (102.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (96.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (97.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-15 13:27:29 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-15 13:27:29 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:27:29 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered stores/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&commit=Refresh" for 209.6.116.71 at 2021-03-15 13:27:33 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.6.116.71 at 2021-03-15 13:27:33 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?utf8=%E2%9C%93&ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&commit=Refresh" for 209.6.116.71 at 2021-03-15 13:27:39 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1" for 209.6.116.71 at 2021-03-15 13:27:39 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')[0m
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1" for 209.6.116.71 at 2021-03-15 13:29:01 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 13:29:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 13:29:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."description" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 13:29:05 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."description" ASC
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 13:29:07 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 13:29:07 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 13:42:21 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 13:42:46 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 13:42:48 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 13:42:48 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."description" ASC
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 13:44:48 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."description" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=description" for 209.6.116.71 at 2021-03-15 14:03:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"description"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."description" ASC
+  Rendered stores/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 14:03:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+Redirected to https://agenda-except-3000.codio.io/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?ratings%5B1%5D=1&ratings%5B2%5D=1&ratings%5B3%5D=1&ratings%5B4%5D=1&ratings%5B5%5D=1&sort=name" for 209.6.116.71 at 2021-03-15 14:03:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"ratings"=>{"1"=>"1", "2"=>"1", "3"=>"1", "4"=>"1", "5"=>"1"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."rating" IN ('1', '2', '3', '4', '5')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)

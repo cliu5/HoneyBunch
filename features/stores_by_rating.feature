@@ -9,74 +9,74 @@ Background: stores in database
 
   Given the following stores exist:
   | name                    | rating | description  |
-  | Aladdin                 | G      | 25-Nov-1992  |
-  | The Terminator          | R      | 26-Oct-1984  |
-  | When Harry Met Sally    | R      | 21-Jul-1989  |
-  | The Help                | PG-13  | 10-Aug-2011  |
-  | Chocolat                | PG-13  | 5-Jan-2001   |
-  | Amelie                  | R      | 25-Apr-2001  |
-  | 2001: A Space Odyssey   | G      | 6-Apr-1968   |
-  | The Incredibles         | PG     | 5-Nov-2004   |
-  | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
-  | Chicken Run             | G      | 21-Jun-2000  |
-  | Spirited Away           |        | 31-Aug-2002  |
+  | McBonalds                 | 1      | Burger and fries  |
+  | KingBurger          | 2      | fries and burger  |
+  | The Krusty Krab    | 3      | spongebob fav place to eat  |
+  | Cranberry Juice                | 4      | best juice in the world  |
+  | Gong Cha                | 4      | nice boba   |
+  | Some Pastry Shop                  | 2      | nice pastries  |
+  | Btarsucks   | 4      | yummy coffee   |
+  | Popsicles         | 2      | cooling popsicles   |
+  | Chicken Wings | 3      | krispy  |
+  | Energy Drinks            | 4      | caffeine drinks  |
+  | Hotdog Stand           | 2      | ketchup and mustard  |
 
-    And I am on the RottenPotatoes home page
+    And I am on the HoneyBunch home page
     Then 11 seed stores should exist
 
 Scenario: add rating to existing store
-  When I go to the edit page for "Spirited Away"
-  And  I fill in "Rating" with "PG-13"
+  When I go to the edit page for "Hotdog Stand"
+  And  I fill in "Rating" with "2"
   And  I press "Update Store Info"
-  Then the rating of "Spirited Away" should be "PG-13"
+  Then the rating of "Hotdog Stand" should be "2"
 
 Scenario: can't find similar stores if we don't know rating
-  Given I am on the details page for "Spirited Away"
-  Then  I should not see "PG-13"
+  Given I am on the details page for "Hotdog Stand"
+  Then  I should not see "5"
   When  I follow "Find Stores With Same Rating"
   Then  I should be on the home page
   And   I should see "no rating info available"
 
 Scenario: sort stores alphabetically
   When I follow "Store Name"
-  Then I should see "2001: A Space Odyssey" before "Raiders of the Lost Ark"
-  And I should see "Aladdin" before "Amelie"
-  And I should see "Amelie" before "Chicken Run"
-  And I should see "Chicken Run" before "Chocolat"
-  And I should see "Chocolat" before "Raiders of the Lost Ark"
-  And I should see "Raiders of the Lost Ark" before "The Help"
-  And I should see "The Help" before "The Incredibles"
-  And I should see "The Incredibles" before "The Terminator"
-  And I should see "The Terminator" before "When Harry Met Sally"
+  Then I should see "Btarsucks" before "Chicken Wings"
+  And I should see "McBonalds" before "Some Pastry Shop"
+  And I should see "Some Pastry Shop" before "Energy Drinks"
+  And I should see "Energy Drinks" before "Gong Cha"
+  And I should see "Gong Cha" before "Chicken Wings"
+  And I should see "Chicken Wings" before "Cranberry Juice"
+  And I should see "Cranberry Juice" before "Popsicles"
+  And I should see "Popsicles" before "KingBurger"
+  And I should see "KingBurger" before "The Krusty Krab"
 
 Scenario: sort stores by their description
   When I follow "Description"
-  Then I should see "2001: A Space Odyssey" before "Raiders of the Lost Ark"
-  And I should see "Raiders of the Lost Ark" before "The Terminator"
-  And I should see "The Terminator" before "When Harry Met Sally"
-  And I should see "When Harry Met Sally" before "Aladdin"
-  And I should see "Aladdin" before "Chicken Run"
-  And I should see "Chicken Run" before "Chocolat"
-  And I should see "Chocolat" before "Amelie"
-  And I should see "Amelie" before "The Incredibles"
-  And I should see "The Incredibles" before "The Help"
+  Then I should see "Btarsucks" before "Chicken Wings"
+  And I should see "Chicken Wings" before "KingBurger"
+  And I should see "KingBurger" before "The Krusty Krab"
+  And I should see "The Krusty Krab" before "McBonalds"
+  And I should see "McBonalds" before "Energy Drinks"
+  And I should see "Energy Drinks" before "Gong Cha"
+  And I should see "Gong Cha" before "Some Pastry Shop"
+  And I should see "Some Pastry Shop" before "Popsicles"
+  And I should see "Popsicles" before "Cranberry Juice"
 
-Scenario: restrict to stores with 'PG' or 'R' ratings
-  When I check the following ratings: PG, R
-  And I uncheck the following ratings: G, PG-13
+Scenario: restrict to stores with '2' or '3' ratings
+  When I check the following ratings: 2, 3
+  And I uncheck the following ratings: 1, 4, 5
   And I press "Refresh"
-  Then I should see "The Terminator"
-  And I should see "When Harry Met Sally"
-  And I should see "Amelie"
-  And I should see "The Incredibles"
-  And I should see "Raiders of the Lost Ark"
-  And I should not see "Aladdin"
-  And I should not see "The Help"
-  And I should not see "Chocolat"
-  And I should not see "2001: A Space Odyssey"
-  And I should not see "Chicken Run"
+  Then I should see "KingBurger"
+  And I should see "The Krusty Krab"
+  And I should see "Some Pastry Shop"
+  And I should see "Popsicles"
+  And I should see "Chicken Wings"
+  And I should not see "McBonalds"
+  And I should not see "Cranberry Juice"
+  And I should not see "Gong Cha"
+  And I should not see "Btarsucks"
+  And I should not see "Energy Drinks"
 
 Scenario: all ratings selected
-  When I check the following ratings: G, PG, PG-13, R
+  When I check the following ratings: 1, 2, 3, 4, 5
   And I press "Refresh"
   Then I should see all the stores

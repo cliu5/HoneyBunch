@@ -3,7 +3,7 @@
   <%= label :store, :name, 'Name', :class => 'col-form-label' %>
   <%= text_field :store, 'name', :class => 'form-control' %>
   <%= label :store, :rating, 'Rating', :class => 'col-form-label'  %>
-  <%= select :store, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
+  <%= select :store, :rating, ['1 stars', '2 stars', '3 stars', '4 stars', '5 stars'], {}, {:class => 'form-control col-1'} %>
   <%= text_field :store, 'rating' %>
   <!-- idk if the above line goes there -->
   <br/>
