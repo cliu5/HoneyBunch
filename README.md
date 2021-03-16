@@ -14,4 +14,4 @@ $ bundle exec rake db:seed
 ```
 
 ## [our video demo here](https://www.youtube.com/watch?v=nCH_KgSoyOM)
-## [our heroku link](https://sleepy-gorge-62245.herokuapp.com/)
+## [our heroku link](https://stark-chamber-14297.herokuapp.com/)
