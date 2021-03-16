@@ -37,14 +37,15 @@ class StoresController < ApplicationController
     flash[:notice] = "#{@store.name} was successfully created."
     redirect_to '/stores'
   end
-   
+ 
  
   def order_accepted(order)
-      @orders.delete(order)
+      Order.all.delete(order)
       redirect_to '/orders'
   end
     
   def orders
+      @orders = []
   end
     
     
@@ -79,6 +80,7 @@ class StoresController < ApplicationController
     end
   end
 
+    
   private
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.

@@ -7365,3 +7365,237 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-16 01:07:30 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-16 01:07:30 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-16 01:07:30 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 155ms (Views: 150.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:07:31 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         </tr>
+    12:         </thead>
+    13:       <tbody>
+    14:         <% @orders.each do |order| %>
+    15:           <tr>
+    16:             <td>
+    17:               <%= order.store %>
+  app/views/stores/orders.html.erb:14:in `_app_views_stores_orders_html_erb___179091963064352872_70230103999260'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/stores/7" for 209.6.116.71 at 2021-03-16 01:07:34 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered stores/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-16 01:12:24 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-16 01:12:24 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name
+Completed 302 Found in 20ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-16 01:12:24 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 173.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:12:26 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         </tr>
+    12:         </thead>
+    13:       <tbody>
+    14:         <% @orders.each do |order| %>
+    15:           <tr>
+    16:             <td>
+    17:               <%= order.store %>
+  app/views/stores/orders.html.erb:14:in `_app_views_stores_orders_html_erb__2784762820428039980_70250205994880'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:12:50 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:15:19 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:16:04 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         </tr>
+    12:         </thead>
+    13:       <tbody>
+    14:         <% @orders.each do |order| %>
+    15:           <tr>
+    16:             <td>
+    17:               <%= order.store %>
+  app/views/stores/orders.html.erb:14:in `_app_views_stores_orders_html_erb__2784762820428039980_70250213041580'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-16 01:16:14 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-16 01:16:14 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-16 01:16:15 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."name" ASC
+  Rendered stores/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:16:16 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         </tr>
+    12:         </thead>
+    13:       <tbody>
+    14:         <% @orders.each do |order| %>
+    15:           <tr>
+    16:             <td>
+    17:               <%= order.store %>
+  app/views/stores/orders.html.erb:14:in `_app_views_stores_orders_html_erb__2784762820428039980_70250213041580'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-16 01:16:32 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-16 01:16:32 +0000
+Processing by StoresController#index as HTML
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name
+Completed 302 Found in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-16 01:16:32 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"Cafe", "Chinese"=>"Chinese", "Drinks"=>"Drinks", "Groceries"=>"Groceries", "Italian"=>"Italian"}, "sort"=>"name"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')  ORDER BY "stores"."name" ASC[0m
+  Rendered stores/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 159ms (Views: 154.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:16:34 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         </tr>
+    12:         </thead>
+    13:       <tbody>
+    14:         <% @orders.each do |order| %>
+    15:           <tr>
+    16:             <td>
+    17:               <%= order.store %>
+  app/views/stores/orders.html.erb:14:in `_app_views_stores_orders_html_erb___946339151551945585_70210239783040'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-16 01:17:02 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  Rendered stores/orders.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=Cafe&categories%5BChinese%5D=Chinese&categories%5BDrinks%5D=Drinks&categories%5BGroceries%5D=Groceries&categories%5BItalian%5D=Italian&sort=name" for 209.6.116.71 at 2021-03-16 01:30:03 +0000
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/controllers/stores_controller.rb:83: syntax error, unexpected ':', expecting end
+  helper: :order_accepted
+        ^):
+  app/controllers/stores_controller.rb:83: syntax error, unexpected ':', expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
