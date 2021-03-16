@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20111119180638) do
 
+  create_table "orders", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "item"
+    t.string "deliver_to"
+  end
+
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.string "rating"
@@ -20,12 +27,6 @@ ActiveRecord::Schema.define(version: 20111119180638) do
     t.text   "description"
     t.string "menu"
     t.string "image"
-  end
-    
-  create_table "orders", force: :cascade do |t|
-    t.string "store"
-    t.string "item"
-    t.string "deliver_to"
   end
 
 end

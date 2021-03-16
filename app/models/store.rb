@@ -7,3 +7,4 @@ class Store < ActiveRecord::Base
 	Store.all.where(category: store.category)
     end
 end
+

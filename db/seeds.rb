@@ -19,3 +19,9 @@ stores.each do |store|
   Store.create!(store)
 end
 
+orders = [{:name => 'Gongcha', :image => 'https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png', :item => 'Milk Tea', :deliver_to => 'Carman'},
+    ]
+
+orders.each do |order|
+  Order.create!(order)
+end

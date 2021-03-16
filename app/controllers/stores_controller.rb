@@ -45,6 +45,8 @@ class StoresController < ApplicationController
   end
     
   def orders
+      id = params[:id]
+      @orders = Order.all
   end
     
     
@@ -85,4 +87,6 @@ class StoresController < ApplicationController
   def store_params
     params.require(:store).permit(:name, :rating, :description, :menu)
   end
+  helper_method :order_accepted
+
 end
