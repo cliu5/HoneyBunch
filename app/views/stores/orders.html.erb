@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
 <h2>Orders you can Pick Up</h2>
 
 
@@ -23,7 +26,7 @@
               <%= order.deliver_to %>
             </td>
             <td>
-              <%= link_to "Accept order", order_accepted(order) %>
+              <% link_to "Accept order", order_accepted(order), :class => 'btn btn-primary'%>
             </td>
           </tr>
         <% end %>

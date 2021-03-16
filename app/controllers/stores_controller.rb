@@ -4,7 +4,7 @@ class StoresController < ApplicationController
     id = params[:id] 
     @store = Store.find(id) 
   end
-
+    
   def index
     sort = params[:sort] || session[:sort]
     case sort
@@ -37,15 +37,18 @@ class StoresController < ApplicationController
     flash[:notice] = "#{@store.name} was successfully created."
     redirect_to '/stores'
   end
- 
+   
+  def new_order(store, item)
+      Order.create!(:name => store, :item=>item)
+  end
  
   def order_accepted(order)
-      Order.all.delete(order)
-      redirect_to '/orders'
+      @orders.delete(order)
   end
     
   def orders
-      @orders = []
+      id = params[:id]
+      @orders = Order.all
   end
     
     
@@ -80,11 +83,13 @@ class StoresController < ApplicationController
     end
   end
 
-    
   private
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def store_params
     params.require(:store).permit(:name, :rating, :description, :menu)
   end
+  helper_method :order_accepted
+  helper_method :new_order
+
 end

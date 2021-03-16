@@ -11,9 +11,20 @@ class CreateMovies < ActiveRecord::Migration
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
     end
+      
+    create_table :orders do |t|
+      t.string :name
+      t.string :image
+      t.string :item
+      t.string :deliver_to
+     
+      # Add fields that let Rails automatically keep track
+      # of when movies are added or modified:
+    end
   end
 
   def down
     drop_table :stores
+    drop_table :orders
   end
 end
