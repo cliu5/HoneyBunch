@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '>= 2.6.6', '< 2.7.0'
 gem 'rails', '4.2.10'
 
-# for Heroku deployment 
+# for Heroku deployment
 group :development, :test do
-  gem 'sqlite3', '1.3.11'
+  gem 'pg'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -15,6 +15,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'pg'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'simplecov', :require => false
