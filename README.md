@@ -1,10 +1,10 @@
 # COMS 4156 Final Project
 ## HoneyBunch
-Evan Li el3078
-Thomas Lim tl2977
-Claire Liu cl3944
-Marcus Fong maf2300
-
+Evan Li el3078 <br>
+Thomas Lim tl2977 <br>
+Claire Liu cl3944 <br>
+Marcus Fong maf2300 <br>
+ 
 ## Instructions to Run: 
 Create initial database schema & transfer seed data.
 ```
