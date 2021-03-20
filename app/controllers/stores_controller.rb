@@ -6,25 +6,43 @@ class StoresController < ApplicationController
   end
 
   def index
+    puts("\n\n")
+    
+    if params[:search] != "" and !params[:search].nil?
+      @stores = Store.search_stores(params[:search])
+      #flash[:notice] = @stores.class
+      #puts("SUCCESSFUL SEARCH")
+      @selected_categories = {}
+      @all_categories = Store.all_categories
+      return
+    end
+    
+    if !params[:sort].nil? and params[:sort] == session[:sort] #to unselect a sort
+      params[:sort] = nil
+      session[:sort] = nil
+    end
+      
     sort = params[:sort] || session[:sort]
+    
     case sort
     when 'name'
-	ordering,@name_header = {:name => :asc}, 'bg-warning hilite'
+      ordering,@name_header = {:name => :asc}, 'bg-warning hilite'
     when 'description'
-	ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
+      ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
     end
     @all_categories = Store.all_categories
     @selected_categories = params[:categories] || session[:categories] || {}
 
     if @selected_categories == {}
-	@selected_categories = Hash[@all_categories.map {|category| [category, category]}]
+      @selected_categories = Hash[@all_categories.map {|category| [category, category]}]
     end
 
     if params[:sort] != session[:sort] or params[:categories] != session[:categories]
-	session[:sort] = sort
-	session[:categories] = @selected_categories
-	redirect_to :sort => sort, :categories => @selected_categories and return
+      session[:sort] = sort
+      session[:categories] = @selected_categories
+      #redirect_to :sort => sort, :categories => @selected_categories and return
     end
+    
     @stores = Store.where(category: @selected_categories.keys).order(ordering)
   end
 
@@ -98,6 +116,7 @@ class StoresController < ApplicationController
   def store_params
     params.require(:store).permit(:name, :rating, :description, :menu)
   end
+  
   def order_params
     params.require(:order).permit(:name, :image, :item, :deliver_to)
   end
