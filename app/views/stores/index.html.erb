@@ -8,10 +8,16 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 
 <!-- The form -->
+<%= form_tag stores_path, :method => "get" do %>
+  <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search..." %>
+  <%= submit_tag("GO!", :name => nil, :class => "btn btn-warning btn-lg")%>
+<% end %>
+<!--  
 <form class="search_store" action="action_page.php">
   <input type="text" placeholder="Search.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
+-->
 
 
 <%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-primary' %>

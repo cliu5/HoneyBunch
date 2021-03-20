@@ -6,25 +6,35 @@ class StoresController < ApplicationController
   end
 
   def index
+    if params[:search] != "" and !params[:search].nil?
+      @stores = Store.search_stores(params[:search])
+      @selected_categories = {}
+      @all_categories = Store.all_categories
+      return
+    end
+    
     sort = params[:sort] || session[:sort]
+    
     case sort
     when 'name'
-	ordering,@name_header = {:name => :asc}, 'bg-warning hilite'
+      ordering,@name_header = {:name => :asc}, 'bg-warning hilite'
     when 'description'
-	ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
+      ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
     end
     @all_categories = Store.all_categories
     @selected_categories = params[:categories] || session[:categories] || {}
 
     if @selected_categories == {}
-	@selected_categories = Hash[@all_categories.map {|category| [category, category]}]
+      @selected_categories = Hash[@all_categories.map {|category| [category, category]}]
+    end
+    
+    if params[:sort] != session[:sort] or params[:categories] != session[:categories]
+      puts("\n\nhere\n\n")
+      session[:sort] = sort
+      session[:categories] = @selected_categories
+      redirect_to :sort => sort, :categories => @selected_categories and return
     end
 
-    if params[:sort] != session[:sort] or params[:categories] != session[:categories]
-	session[:sort] = sort
-	session[:categories] = @selected_categories
-	redirect_to :sort => sort, :categories => @selected_categories and return
-    end
     @stores = Store.where(category: @selected_categories.keys).order(ordering)
   end
 
