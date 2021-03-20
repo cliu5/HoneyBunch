@@ -6,7 +6,7 @@ class StoresController < ApplicationController
   end
 
   def index
-    if params[:search] != "" and !params[:search].nil?
+    if params[:search] != "" and !params[:search].nil? #if non-empty search entry
       @stores = Store.search_stores(params[:search])
       @selected_categories = {}
       @all_categories = Store.all_categories
