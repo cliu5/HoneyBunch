@@ -13,6 +13,16 @@ class StoresController < ApplicationController
       return
     end
     
+    #code for unselecting a sort
+    if session[:changed_sort] and !params[:sort].nil? and params[:sort] == session[:sort]
+      params[:sort] = nil
+      session[:sort] = nil
+      session[:changed_sort] = false
+    end
+    if !session[:changed_sort] 
+      session[:changed_sort] = true
+    end
+    
     sort = params[:sort] || session[:sort]
     
     case sort
@@ -20,6 +30,8 @@ class StoresController < ApplicationController
       ordering,@name_header = {:name => :asc}, 'bg-warning hilite'
     when 'description'
       ordering,@description_header = {:description => :asc}, 'bg-warning hilite'
+    when 'rating'
+      ordering,@rating_header = {:rating => :desc}, 'bg-warning hilite'
     end
     @all_categories = Store.all_categories
     @selected_categories = params[:categories] || session[:categories] || {}
@@ -32,6 +44,7 @@ class StoresController < ApplicationController
       puts("\n\nhere\n\n")
       session[:sort] = sort
       session[:categories] = @selected_categories
+      session[:changed_sort] = false
       redirect_to :sort => sort, :categories => @selected_categories and return
     end
 
