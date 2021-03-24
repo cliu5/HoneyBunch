@@ -33,8 +33,9 @@ class StoresController < ApplicationController
   end
 
   def create
-    @store = Store.create!(store_params)
-    flash[:notice] = "#{@store.name} was successfully created."
+    @order = Order.create!(order_params)
+    puts order_params
+    flash[:notice] = "#{@order.item} was successfully ordered."
     redirect_to '/stores'
   end
    
@@ -42,20 +43,31 @@ class StoresController < ApplicationController
       Order.create!(:name => store, :item=>item)
   end
  
-  def order_accepted(order)
-      @orders.delete(order)
+  def add_order(store, item)
+      new_order = Order.new
+      new_order.name = store
+      new_order.item = item
+      new_order.image = "tmp"
+      new_order.deliver_to = "Carman Hall"
+      Order.create!(new_order)
+      puts "klajsdklfjlds"
+      puts new_order
+      redirect_to store_path
   end
     
   def orders
       id = params[:id]
       @orders = Order.all
+      if params[:id] != 'id'
+          @orders.delete(Order.find params[:id])
+      end
   end
     
     
   def edit
     @store = Store.find params[:id]
   end
-
+    
   def update
     @store = Store.find params[:id]
     @store.update_attributes!(store_params)
@@ -76,7 +88,7 @@ class StoresController < ApplicationController
 	@stores = Store.find_stores_with_same_category(@current_store)
     rescue
 	flash.keep
-	flash[:notice] = "no category info available"
+	flash[:notice] = "This feature has not been implemented yet! :)"
 	#flash[:notice] = "'#{@current_store.name}' has no rating info"
 	#the above line should fix the last feature but name is an undefined method
 	redirect_to '/stores'
@@ -89,7 +101,9 @@ class StoresController < ApplicationController
   def store_params
     params.require(:store).permit(:name, :rating, :description, :menu)
   end
-  helper_method :order_accepted
-  helper_method :new_order
 
+  def order_params
+    params.require(:order).permit(:name, :image, :item, :deliver_to)
+  end
+  helper_method :order_accepted, :add_order
 end

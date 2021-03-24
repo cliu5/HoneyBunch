@@ -35,7 +35,7 @@ Scenario: can't find similar stores if we don't know category
   Then  I should not see "cafe"
   When  I follow "Find Stores With Same Category"
   Then  I should be on the home page
-  And   I should see "no category info available"
+  And   I should see "This feature has not been implemented yet!"
 
 Scenario: sort stores alphabetically
   When I follow "Store Name"
