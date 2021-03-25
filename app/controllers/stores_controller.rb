@@ -10,8 +10,15 @@ class StoresController < ApplicationController
       @stores = Store.search_stores(params[:search])
       @selected_categories = {}
       @all_categories = Store.all_categories
+      if @stores.blank?
+        flash[:notice] = "Your search query found no results :(" 
+        @stores = Store.all
+      end
       return
+    elsif params[:search] == ""
+      flash[:notice] = "Please input a search query!"
     end
+
     
     #code for unselecting a sort
     if session[:changed_sort] and !params[:sort].nil? and params[:sort] == session[:sort]
@@ -41,7 +48,6 @@ class StoresController < ApplicationController
     end
     
     if params[:sort] != session[:sort] or params[:categories] != session[:categories]
-      puts("\n\nhere\n\n")
       session[:sort] = sort
       session[:categories] = @selected_categories
       session[:changed_sort] = false
