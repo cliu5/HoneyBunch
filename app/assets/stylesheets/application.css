@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 body {
   background-color: #FFFACD;
   margin: auto;
@@ -38,7 +39,11 @@ body {
 .checked {
   color: orange;
 }
-
+.btn-login {
+    position: absolute;
+    top: 300px;
+    right: 425px;
+}
 /* Style the search field */
 form.search_store input[type=text] {
   border-radius: 20px;

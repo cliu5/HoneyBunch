@@ -1,4 +1,9 @@
 <!--  This file is app/views/movies/index.html.erb -->
+
+<%= link_to 'Login', orders_path("id"), :class => 'btn btn-info btn-lg btn-login btn-lg' %>
+
+<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-outline-info btn-lg' %>
+
 <h2>Search local Columbia stores</h2>
 
 <%#  Part 2: Start here... %>
@@ -10,17 +15,14 @@
 <!-- The form -->
 <%= form_tag stores_path, :method => "get" do %>
   <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search..." %>
-  <%= submit_tag("GO!", :name => nil, :class => "btn btn-warning btn-lg")%>
+  <%= submit_tag("GO!", :name => nil, :class => "btn btn-outline-info btn-lg")%>
 <% end %>
 <!--  
 <form class="search_store" action="action_page.php">
   <input type="text" placeholder="Search.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+</form
 -->
-
-
-<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-primary' %>
 
 <body>
 
@@ -33,7 +35,7 @@
     <span class="checked"></span>
     <%= check_box_tag "categories[#{category}]", 1, @selected_categories.include?(category), :id => "categories_#{category}" %>
   <% end %>
-  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-primary' %>
+  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-outline-info' %>
 <% end %>
     
 <h2>Stores</h2>
