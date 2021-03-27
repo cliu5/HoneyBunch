@@ -16,15 +16,50 @@
 
 body {
   background-color: #FFFACD;
-  margin: auto;
-  width: 75%;
+  color: black;
+  width:100%;
   min-width: 300px;
   padding-top: 80px;
   padding-bottom: 80px;
-  text-align: left;
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+h1{
+    font-stretch: ultra-expanded;
+    padding-top: 80px;
+    padding-bottom: 80px; 
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 300%;
+    color: black; 
+    font: bold 52px Sans-Serif;
+    text-shadow: 1px 1px #cc9900,
+                2px 2px #cc9900, 
+                3px 3px #cc9900,
+                6px 6px yellow,   
+                7px 7px yellow,
+                9px 9px yellow,
+                10px 10px white,
+                11px 11px white;
+    
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://thumbs.dreamstime.com/z/apiary-bee-honey-pattern-floral-yellow-template-seamless-cute-background-vector-hand-drawn-design-summer-meadow-flower-honeycomb-174467465.jpg");
+  
+  /* Set a specific height */
+  min-height: 1000px;
+  min-width: 1024px;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    
 }
 .title{
     color: black;
@@ -39,10 +74,16 @@ body {
 .checked {
   color: orange;
 }
+.btn-delivery{
+    position: absolute;
+    top: 200px;
+    right: 475px;
+    
+}
 .btn-login {
     position: absolute;
-    top: 300px;
-    right: 425px;
+    top: 200px;
+    right: 375px;
 }
 /* Style the search field */
 form.search_store input[type=text] {

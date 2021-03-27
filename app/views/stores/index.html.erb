@@ -1,21 +1,25 @@
 <!--  This file is app/views/movies/index.html.erb -->
-
+<div class="parallax">
+    
+    
 <%= link_to 'Login', orders_path("id"), :class => 'btn btn-info btn-lg btn-login btn-lg' %>
 
-<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-outline-info btn-lg' %>
+<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-info btn-delivery btn-lg' %>
 
-<h2>Search local Columbia stores</h2>
+<h1>Search local Columbia stores</h2>
 
+  
 <%#  Part 2: Start here... %>
 
 <!-- Load icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
 <!-- The form -->
 <%= form_tag stores_path, :method => "get" do %>
   <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search..." %>
-  <%= submit_tag("GO!", :name => nil, :class => "btn btn-outline-info btn-lg")%>
+  <%= submit_tag("GO!", :name => nil, :class => "btn btn-info btn-lg")%>
 <% end %>
 <!--  
 <form class="search_store" action="action_page.php">
@@ -35,10 +39,12 @@
     <span class="checked"></span>
     <%= check_box_tag "categories[#{category}]", 1, @selected_categories.include?(category), :id => "categories_#{category}" %>
   <% end %>
-  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-outline-info' %>
+  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-info' %>
 <% end %>
+
     
-<h2>Stores</h2>
+<h1>Stores</h2>
+    
 <div class="card-columns">
     <% @stores.each do |store| %>
         <div class="card " style="width: 14rem; length; 10rem">
@@ -52,10 +58,8 @@
         </div>
     <% end %>
 </div>
-
-    
-</body>
-
+    </body>
+</div>
 
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
     <table class="table table-striped col-md-12" id="stores">
@@ -94,3 +98,4 @@
         <% end %>
       </tbody>
     </table>
+    
