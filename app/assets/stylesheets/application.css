@@ -15,7 +15,7 @@
  */
 
 body {
-  background-color: #FFFACD;
+  background-color: rgba(247,234,218,255); 
   color: black;
   min-width:100%;
   padding-top: 80px;

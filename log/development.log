@@ -3979,3 +3979,48 @@ Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-27 02:28:26 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-27 02:29:46 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 361ms (Views: 325.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self-0ef1052e5cf624df198b992c4706386fae3fc3d06e668715a2ced5842e24943c.css?body=1" for 209.6.116.71 at 2021-03-27 02:29:47 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-27 02:29:47 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-27 02:30:12 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-3be0203e09bbceaffb376b448c0907dece9cc9cce5b746baf679556cf1500a4e.css?body=1" for 209.6.116.71 at 2021-03-27 02:30:12 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-27 02:30:13 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-27 02:30:29 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-0313e29a60c7c615036308bf84e03f249a9c219763a3fa54a7fd8cd862c4d2a8.css?body=1" for 209.6.116.71 at 2021-03-27 02:30:29 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-27 02:30:29 +0000
