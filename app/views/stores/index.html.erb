@@ -1,10 +1,10 @@
 <!--  This file is app/views/movies/index.html.erb -->
-<div class="parallax">
-    
-    
-<%= link_to 'Login', orders_path("id"), :class => 'btn btn-info btn-lg btn-login btn-lg' %>
 
-<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-info btn-delivery btn-lg' %>
+    
+    
+<%= link_to 'Login', orders_path("id"), :class => 'btn btn-dark btn-lg btn-login btn-lg' %>
+
+<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-dark btn-delivery btn-lg' %>
 
 <h1>Search local Columbia stores</h2>
 
@@ -19,7 +19,7 @@
 <!-- The form -->
 <%= form_tag stores_path, :method => "get" do %>
   <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search..." %>
-  <%= submit_tag("GO!", :name => nil, :class => "btn btn-info btn-lg")%>
+  <%= submit_tag("GO!", :name => nil, :class => "btn btn-dark btn-lg")%>
 <% end %>
 <!--  
 <form class="search_store" action="action_page.php">
@@ -39,11 +39,11 @@
     <span class="checked"></span>
     <%= check_box_tag "categories[#{category}]", 1, @selected_categories.include?(category), :id => "categories_#{category}" %>
   <% end %>
-  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-info' %>
+  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-dark btn-large' %>
 <% end %>
 
     
-<h1>Stores</h2>
+<h1>Stores</h1>
     
 <div class="card-columns">
     <% @stores.each do |store| %>
@@ -58,8 +58,8 @@
         </div>
     <% end %>
 </div>
-    </body>
-</div>
+</body>
+
 
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
     <table class="table table-striped col-md-12" id="stores">
@@ -98,4 +98,4 @@
         <% end %>
       </tbody>
     </table>
-    
+</div>
