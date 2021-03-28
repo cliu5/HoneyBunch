@@ -8,8 +8,8 @@ Marcus Fong maf2300 <br>
 ## Instructions to Run: 
 Create initial database schema & transfer seed data.
 ```
-$ bundle exec rake cucumber
-$ bundle exec rake spec
+$ bundle exec rake db:migrate
+$ bundle exec rake db:test:prepare
 $ bundle exec rake db:seed 
 ```
 

@@ -1,0 +1,37 @@
+<h2>Food Delivery Made Easy!</h2>
+
+<p> 
+
+Bla bla bla something about how you should use our app if you hate fees and are lazy. Lorem ipsum text filler bla bla bla bla bla bla bla </p>
+
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Log In</h3>
+
+                        <%= form_tag '/login' do%>
+                            <%= label_tag :username%><br>
+                            <%= text_field_tag :username%><br>
+                            <%= label_tag :password%><br>
+                            <%= password_field_tag :password%><br>
+                            <br>
+                        <input type = "submit", class = "btnSubmit", value = "Log In">
+                        <%end%>
+
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3> Sign Up</h3>
+                    
+                    <%= form_for @user do |f|%>
+                        <%= f.label :username%><br>
+                        <%= f.text_field :username%><br>
+                        <%= f.label :password%><br>
+                        <%= f.password_field :password%><br><br>
+                        <input type = "submit", class = "btnSubmit", value = "Create User">
+                    <%end%>
+                    
+                </div>
+            </div>
+
+
+
+

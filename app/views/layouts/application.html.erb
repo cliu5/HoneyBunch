@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+      
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    
     <title>HoneyBunch</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', 'media' => 'all' %>
@@ -11,7 +17,7 @@
   <body>
     <%# These classes come from the Bootstrap CSS framework. %>
     <nav class="navbar navbar-expand-lg text-white mb-3">
-      <%= link_to 'HoneyBunch', stores_path, :class => 'title' %>
+      <%= link_to image_tag("logo3.png", :alt => "image not found"), stores_path %>
     </nav>
     <div class="container">
       <%# Render "flash" messages in our application. This loads _flash.erb %>

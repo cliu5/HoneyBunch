@@ -1,35 +1,29 @@
 <!--  This file is app/views/movies/index.html.erb -->
-<h2>Search local Columbia stores</h2>
 
+    
+    
+<br>
+<%= link_to 'Log Out', logout_path, :method => 'delete', :class => 'btn btn-dark btn-lg btn-logout btn-lg' %>
+<%= link_to 'My Orders', my_orders_path("id"),  :class => 'btn btn-dark btn-delivery btn-lg' %>
+<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-dark btn-delivery btn-lg' %>
+
+
+<h1>Search Local Columbia Stores</h2>
+
+  
 <%#  Part 2: Start here... %>
 
-<!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-<!-- 
-<div class="input-group rounded">
-  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-    aria-describedby="search-addon" />
-  <span class="input-group-text border-0" id="search-addon">
-    <i class="fas fa-search"></i>
-  </span>
-</div>
--->
-
 <!-- The form -->
-<%= form_tag stores_path, :method => "get" do %>
-  <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search...", id: 'search-bar' %>
-  <%= submit_tag("GO!", :name => "search_button", :class => "btn btn-warning btn-lg", id: 'search-btn')%>
+<%= form_tag stores_path, :class => 'search', :method => "get" do %>
+  <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search..." %>
+  <%= submit_tag("GO!", :name => nil, :class => "btn btn-dark btn-lg")%>
 <% end %>
 <!--  
 <form class="search_store" action="action_page.php">
   <input type="text" placeholder="Search.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+</form
 -->
-
-
-<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-primary' %>
 
 <body>
 
@@ -42,14 +36,14 @@
     <span class="checked"></span>
     <%= check_box_tag "categories[#{category}]", 1, @selected_categories.include?(category), :id => "categories_#{category}" %>
   <% end %>
-  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-primary' %>
+  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-dark btn-large' %>
 <% end %>
-
+<br>
+  
     
-<h2>Stores</h2>
 <div class="card-columns">
     <% @stores.each do |store| %>
-        <div class="card " style="width: 14rem; length; 10rem">
+        <div class="card" style="width: 18rem; length; 5rem">
           <%=image_tag(store.image, class: "card-img-top")%>
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
@@ -60,7 +54,6 @@
         </div>
     <% end %>
 </div>
-
     
 </body>
 
@@ -102,5 +95,4 @@
         <% end %>
       </tbody>
     </table>
-
-   
+</div>

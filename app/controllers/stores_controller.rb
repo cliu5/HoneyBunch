@@ -1,10 +1,10 @@
 class StoresController < ApplicationController
-
+    
   def show
     id = params[:id] 
     @store = Store.find(id) 
   end
-
+    
   def index
     if params[:search] != "" and !params[:search].nil? #if non-empty search entry
       @stores = Store.search_stores(params[:search])
@@ -62,31 +62,38 @@ class StoresController < ApplicationController
   end
 
   def create
-    @order = Order.create!(order_params)
+    new_params = {}
+    new_params[:name] = order_params[:name]
+    new_params[:deliver_to] = order_params[:deliver_to]
+    new_params[:item] = order_params[:item]
+    new_params[:user_id] = current_user.id
+    new_params[:status] = 'pending'
+    @order = Order.create!(new_params)
     puts order_params
     flash[:notice] = "#{@order.item} was successfully ordered."
     redirect_to '/stores'
   end
-   
+
     
-  def add_order(store, item)
-      new_order = Order.new
-      new_order.name = store
-      new_order.item = item
-      new_order.image = "tmp"
-      new_order.deliver_to = "Carman Hall"
-      Order.create!(new_order)
-      puts "klajsdklfjlds"
-      puts new_order
-      redirect_to store_path
-  end
-    
-  def orders
-      id = params[:id]
-      @orders = Order.all
-      if params[:id] != 'id'
-          @orders.delete(Order.find params[:id])
+  def my_orders
+      id = current_user.id
+      puts id
+      
+      @my_orders = Order.where(user_id: id)
+
+      if @my_orders.nil?
+          @my_orders = []
       end
+      if params[:id] != 'id'
+          @my_orders.delete(Order.find_by(user_id: id))
+      end
+  end   
+ 
+  def orders
+      if params[:id] != 'id'
+          Order.find(params[:id]).update_attributes(:status => "%s delivering" % current_user.username)
+      end
+      @orders = Order.all
   end
     
     
@@ -127,9 +134,9 @@ class StoresController < ApplicationController
   def store_params
     params.require(:store).permit(:name, :rating, :description, :menu)
   end
+
   def order_params
     params.require(:order).permit(:name, :image, :item, :deliver_to)
   end
   helper_method :order_accepted, :add_order
-
 end

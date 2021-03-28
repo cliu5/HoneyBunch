@@ -14,6 +14,8 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-body input').val(recipient)
 })
 </script>
+
+<br>
 <h3><%= @store.description %></h3>
 
 <br>
@@ -24,7 +26,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
           <div class="card-body">
             <h5 class="card-title"><%= item %></h5>
             <p class="card-text">$4</p>
-              
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
               Order Now
@@ -33,7 +34,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
         </div>
     <% end %>
 </div>
-
 
 
 
@@ -72,6 +72,3 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 
 <br>
-    <%= link_to 'Back to store list', stores_path, :class => 'btn btn-primary col-2' %>
- <%= link_to 'Find Stores With Same Category', stores_with_same_category_path(@store),  :class => 'btn btn-primary'%>
-

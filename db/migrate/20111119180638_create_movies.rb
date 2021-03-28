@@ -17,6 +17,8 @@ class CreateMovies < ActiveRecord::Migration
       t.string :image
       t.string :item
       t.string :deliver_to
+      t.string :user_id
+      t.string :status
      
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
