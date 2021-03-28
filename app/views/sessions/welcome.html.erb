@@ -23,10 +23,10 @@ Bla bla bla something about how you should use our app if you hate fees and are 
                     
                     <%= form_for @user do |f|%>
                         <%= f.label :username%><br>
-                        <%= f.text_field :username%><br>
+                        <%= f.text_field :username, id: 'new_username_field'%><br>
                         <%= f.label :password%><br>
-                        <%= f.password_field :password%><br><br>
-                        <input type = "submit", class = "btnSubmit", value = "Create User">
+                        <%= f.password_field :password, id: 'new_password_field'%><br><br>
+                        <input type = "submit", class = "btnSubmit", value = "Create User", id = "new_user_btn">
                     <%end%>
                     
                 </div>
