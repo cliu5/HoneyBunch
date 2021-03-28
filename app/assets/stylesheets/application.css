@@ -15,14 +15,14 @@
  */
 
 body {
-  background-color: rgba(247,234,218,255); 
+  background-color: #fef9f0; 
   color: black;
   min-width:100%;
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
     /* The image used */
   background-image: url("background.png");
   
@@ -52,6 +52,13 @@ h1{
                 9px 9px #F2E696,
                 10px 10px white,
                 11px 11px white;
+    
+}
+.card{
+    border-radius: 20px;
+    background-color: rgba(247,234,218,255);
+    box-shadow: 5px 5px #feb236;
+    padding-top: 10px;
     
 }
 

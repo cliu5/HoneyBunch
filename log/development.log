@@ -5858,3 +5858,1311 @@ Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/assets/background.png" for 2620:10d:c091:480::1:eff4 at 2021-03-27 03:45:02 +0000
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-28 00:30:05 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:30:05 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 317ms (Views: 316.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+
+
+Started GET "/assets/sessions.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+
+
+Started GET "/assets/application.self-c59f30eb8146603b70340be2da914c00eebf710646c05d4955ba2c049e0a65a2.css?body=1" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:30:06 +0000
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:30:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:30:22 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:30:27 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RLURJY+AFaXbK2R5YOIAqYthIrklcN7SAYN1ovolgd13iQ8Io0SZI02XHnvZ0nvY72VnRBJrsfGbkw40laxgPA==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:30:27 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:30:34 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"raN3bPporE29QVGaPJOsU6yyB5Yf9ZTOclLRA4AO/vaen2lB1qwgyyv9K5iFo9ciyLZCayju++3oQqqV74cfFw==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 259ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:30:34 +0000
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:30:39 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:30:44 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ywP5r7HqK8lMsdTuo5uEDDdIruq1wDvimOYL6MQQjl74P+eCnS6nT9oNruwaq/99U0zrF4LbVMEC9nB+q5lvvw==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan"], ["password_digest", "$2a$12$QXdSKnIsdGdZDjnaA2XaMujXw4Y4sR3dzNCJINvX96n00zMONeL8G"], ["created_at", "2021-03-28 00:30:44.481000"], ["updated_at", "2021-03-28 00:30:44.481000"]]
+  [1m[36m (117.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 360ms (ActiveRecord: 118.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:30:44 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:30:44 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:30:57 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jaYkDtdtr1ThKSgeGNpYJtjbrG2EcGTlllUBJrcX/ji+mjoj+6kj0neVUhyh6iNXvN/pkLNrC8YMRXqw2J4f2Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:30:57 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:31:17 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:31:20 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W3Ek4MoeLqLF4Fx+CbmHDFxrvRfrSio6vBgXT5O6Zp1oTTrN5tqiJFNcJnywifx9OG/46txRRRkmCGzZ/DOHfA==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 247ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:31:26 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RsGmo3UFTBKT66FvNSSz7Q1xDc4S7GahDDIgklG719J1/biOWcHAlAVX222MFMicaXVIMyX3CYKWIlsEPjI2Mw==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:31:31 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wezr8oFpK1xoV1gfIq9tmlsQtCedyGZCauT1nsmn3SHy0PXfra2n2v7rIh2bnxbrPxTx2qrTCWHw9I4Ipi48wA==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:31:38 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:31:42 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kx//gHr9fpOJWhiNl+qMRVLM+z1kJyuYC1lJK0dEgEagI+GtVjnyFR/mYo8u2vc0Nsi+wFM8RLuRSTK9KM1hpw==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "evan"], ["password_digest", "$2a$12$.EwXNhLbOkivd8oU8ShwRuZVGWUZOHqqUDXJiav1qypjscSCJYjKS"], ["created_at", "2021-03-28 00:31:42.307894"], ["updated_at", "2021-03-28 00:31:42.307894"]]
+  [1m[35m (113.3ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 353ms (ActiveRecord: 113.7ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:31:42 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:31:42 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:31:47 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XUNYvB3fHzfLsEOUT/7/Ho0OdYJ3ENA+aPDtOd1DHcJuf0aRMRuTsV0MOZb2zoRv6Qowf0ALvx3y4Javssr8Iw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:31:47 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered sessions/welcome.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:31:49 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:31:52 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2bmilZAedpSjW+IcZyUviQADAcnunLj9vIFNm1LdcMzqhby4vNr6EjXnmB7eFVT4ZAdENNmH194mkTYNPVSRLQ==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 249ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:31:54 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PVjp1Xrbr9ryOPIauK1KXg84I4hB5IBfbdw9YXouZLHyX2KeS/iOf10mcrT0s5YHDilcxYc/SLnpwtj6mFYcw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:31:55 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GF70V59hauwt1pjdpPZD5X8JbH+Mn1AWlMD4patUDcgrYup6s6Xmartq4t8dxjiUGw0pgruEPzUO0IMzxN3sKQ==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:32:58 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/w+/UsjxquMTtS4twvUCS/sKk3a2kcuB7qe2RpOKzR3MM6F/5DUmZYUJVC97xXk6nw7Wi4GKpKJ0t83Q/AMs/A==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 244ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:32:59 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7KrdNNsNtNgdP0MiR71WqWOx17iUDOzRQ6lAr98B+4vflsMZ98k4XouDOSD+jS3YB7WSRaMXg/LZuTs5sIgaag==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:33:00 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4UmTzK333bc0xJk4pnqIuoYJLTj8wDUEuAYmg7I825suThiHnNT8EpvaGZbqZFTjhxhSdTob/eI8GMMYUESjw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (91.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (92.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (103.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (89.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (100.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (99.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (96.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("name", "image", "item", "deliver_to") VALUES (?, ?, ?, ?)  [["name", "Gongcha"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"], ["item", "Milk Tea"], ["deliver_to", "Carman"]]
+  [1m[36m (105.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-28 00:34:40 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:34:40 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 27ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:34:40 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 183ms (Views: 182.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:34:41 +0000
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:34:42 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:34:42 +0000
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:34:45 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (37.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 87.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:34:51 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sx2Pjt1bWie6EoGImYzJb2iqzfxCnuT73FKepaHQJKV4IZGj8Z/WoSyu+4ogvLIeDK6IAXWFi9hGQuUzzlnFRA==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan"], ["password_digest", "$2a$12$TPy5/4z.MwcXbzOFE8DixeUvnECp846I/YYS6EqrhRya/heI9PX4G"], ["created_at", "2021-03-28 00:34:51.702440"], ["updated_at", "2021-03-28 00:34:51.702440"]]
+  [1m[36m (97.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 354ms (ActiveRecord: 98.0ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:34:51 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:34:52 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:35:18 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mVLcj2zsNSe/VoEjYBGvSP/uS1VAEv7hHqgqeQsG8fuqbsKiQCi5oSnq+yHZIdQ5m+oOqHcJkcKEuFHvZI8QGg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:35:18 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:35:20 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:35:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yzbLe9i0rEwU9pgj0L31YUWv8hR/EGGXQCiALl15jGz4CtVW9HAgyoJK4iFpjY4QIau36UgLDrTaOPu4MvBtjQ==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:35:29 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qYPf4w7VxTI68UbonjnyEVH0KrHpBK1maerw5XMqwcCav8HOIhFJtKxNPOonCYlgNfBvTN4fwkXz+otzHKMgIQ==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (91.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (99.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (96.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (95.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (89.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (93.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (106.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "orders" ("name", "image", "item", "deliver_to") VALUES (?, ?, ?, ?)  [["name", "Gongcha"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"], ["item", "Milk Tea"], ["deliver_to", "Carman"]]
+  [1m[36m (93.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-28 00:36:22 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:36:22 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:36:22 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 164ms (Views: 163.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:23 +0000
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:36:25 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:25 +0000
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:36:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5QrqTyvkwoNHE7ncM0tYH2hD0yZyrleOgDct8U0SHyjWNvRiByBOBdGvw96KeyNuDEeW20W1OK0aJ1ZnIpv+yQ==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan"], ["password_digest", "$2a$12$rqnkIhya2pebWEYiKyV/gurm8g7JWdLd0PjOwOK/WDmGB9Olg.WSK"], ["created_at", "2021-03-28 00:36:31.406942"], ["updated_at", "2021-03-28 00:36:31.406942"]]
+  [1m[36m (106.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 351ms (ActiveRecord: 108.4ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:36:31 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:36:31 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:31 +0000
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:36:35 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"agfPwWwDfjftnQF2rwi7Q7ZVEIEz4GuryGiewbi1egRZO9HsQMfysXshe3QWOMAy0lFVfAT7BIhSeOVX1zyb5Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:36:35 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:35 +0000
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:36:36 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:36 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:36:42 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eeOT4QkAnK8QISd4nf9vTIaglJ/qeSfIXoKquR6Co2RK343MJcQQKYadXXokzxQ94qTRYt1iSOvEktEvcQtChQ==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:42 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:36:46 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7C+u2eYCGXjji1MN472pv0UDXf2gjXdVXtbiXXKaysLfE7D0ysaV/nU3KQ9ajdLOIQcYAJeWGHbExpnLHRMrIw==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:47 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:36:48 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h2K1Wry+qbvFII7qZugJGC8EniDKjTODbWvUqlGw3qq0Xqt3kHolPVOc9Ojf2HJpSwDb3f2WXKD3e688Pjk/Sw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:48 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:36:50 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qkmV1E1UoRzOvqoApoLuWSsoPhjUCX8DoEYHsONrBzSZdYv5YZAtmlgC0AIfspUoTyx75eMSECA6VnwmjOLm1Q==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:36:50 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-28 00:36:55 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:36:55 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:36:57 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:37:03 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mf//tEqexd5APicPHOEEuWDC/WUeAM9o9boeAomblgWqw+GZZlpJWNaCXQ2l0X/IBMa4mCkboEtvqmWU5hJ35A==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan"], ["password_digest", "$2a$12$QzPVmAvQLcuEtBqF1ILc0eER12PgTjteAatVLIiCkYZN9/p8P3zgC"], ["created_at", "2021-03-28 00:37:03.325536"], ["updated_at", "2021-03-28 00:37:03.325536"]]
+  [1m[36m (94.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 341ms (ActiveRecord: 94.7ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:37:03 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:37:03 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:37:08 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n1GxEHE+SMdtUyeKu1iFK+OAiEt9wNFb8oCakju0w4qsba89XfrEQfvvXYgCaP5ah4TNtkrbvnhokOEEVD0iaw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:37:08 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:37:09 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:37:14 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pl1ZZhPj0fDgL6Cohr6AjeF7hXKz4berBmcKquVjOrMNYUdLPydddnaT2qo/jvv8hX/Aj4T62Iicd3E8iurbUg==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 245ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:37:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/WCZtPlfeESATyDp9UA2vJHHl7FwmqIOXJM5ucksKqLOXIeZ1Zv0whbzWutMcE3N9cPSTEeBzS3Gg0IvpqXLQw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", ""]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:37:47 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n1GxEHE+SMdtUyeKu1iFK+OAiEt9wNFb8oCakju0w4qsba89XfrEQfvvXYgCaP5ah4TNtkrbvnhokOEEVD0iaw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:37:47 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (103.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (104.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (103.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (100.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (101.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (105.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (93.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("name", "image", "item", "deliver_to") VALUES (?, ?, ?, ?)  [["name", "Gongcha"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"], ["item", "Milk Tea"], ["deliver_to", "Carman"]]
+  [1m[36m (95.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-28 00:39:56 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:39:56 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:39:56 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 153ms (Views: 152.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:39:57 +0000
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:39:58 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:39:58 +0000
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:40:02 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aexrdM1WzL9rCLWEF+kPZdCkxX4CpCwDvzB1gqX0TKNa0HVZ4ZJAOf20z4au2XQUtKCAgzW/QyAlIA4Uyn2tQg==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan"], ["password_digest", "$2a$12$wA2Orj.agPx6tCWsOMCLx.sPgbkuOfzq8Bcsa4HhGgMwST9J6KnmG"], ["created_at", "2021-03-28 00:40:02.811830"], ["updated_at", "2021-03-28 00:40:02.811830"]]
+  [1m[36m (102.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 345ms (ActiveRecord: 103.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:40:02 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:40:03 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:40:17 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EIXDnhLo8CO4VsqvyC6315cGPoDHL33OpWqVddBWlN4jud2zPix8pS7qsK1xHsym8wJ7ffA0Eu0/eu7jv991Pw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:40:17 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/welcome.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:40:18 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:40:27 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xo+EZgOHKtkxt3KCG+zZozvo1jdDVaTeADpsJd9NY5Jts5pLL0OmX6cLCICi3KLSX+yTynROy/2aKhezsMSCcw==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 239ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:40:27 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:40:27 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (97.5ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "item" varchar, "deliver_to" varchar) [0m
+  [1m[35m (103.7ms)[0m  CREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "category" varchar, "description" text, "menu" varchar, "image" varchar) 
+  [1m[36m (100.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (99.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (92.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210326053135')
+  [1m[36m (97.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[35m (92.5ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "item" varchar, "deliver_to" varchar) 
+  [1m[36m (94.3ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "category" varchar, "description" text, "menu" varchar, "image" varchar) [0m
+  [1m[35m (101.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (97.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (113.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (109.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210326053135')[0m
+  [1m[35m (110.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (101.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (115.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (99.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (110.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (105.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (116.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (110.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("name", "image", "item", "deliver_to") VALUES (?, ?, ?, ?)  [["name", "Gongcha"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"], ["item", "Milk Tea"], ["deliver_to", "Carman"]]
+  [1m[36m (99.1ms)[0m  [1mcommit transaction[0m
+  [1m[36m (89.7ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "item" varchar, "deliver_to" varchar) [0m
+  [1m[35m (102.6ms)[0m  CREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "category" varchar, "description" text, "menu" varchar, "image" varchar) 
+  [1m[36m (98.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (89.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (98.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (111.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210326053135')
+  [1m[36m (113.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[35m (105.4ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "item" varchar, "deliver_to" varchar) 
+  [1m[36m (122.2ms)[0m  [1mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" varchar, "category" varchar, "description" text, "menu" varchar, "image" varchar) [0m
+  [1m[35m (103.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (110.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (127.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (110.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210326053135')[0m
+  [1m[35m (105.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (101.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (104.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (115.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (105.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (104.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (107.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (116.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("name", "image", "item", "deliver_to") VALUES (?, ?, ?, ?)  [["name", "Gongcha"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"], ["item", "Milk Tea"], ["deliver_to", "Carman"]]
+  [1m[36m (107.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (108.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (109.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (118.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (103.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (112.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (109.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (110.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("name", "image", "item", "deliver_to") VALUES (?, ?, ?, ?)  [["name", "Gongcha"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"], ["item", "Milk Tea"], ["deliver_to", "Carman"]]
+  [1m[36m (119.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-28 00:42:32 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:42:32 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:42:33 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/welcome.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 211ms (Views: 210.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:42:33 +0000
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:42:35 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:42:35 +0000
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-28 00:42:39 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOyMz2+cQ8nmGj58pkrqNuZb41F2ZbvUj6L+y/dy0Ae/0JLiQ1jPT3CmRH4fepFHgl+mrEF+1PcVsoVdmPsx5g==", "user"=>{"username"=>"evan", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan"], ["password_digest", "$2a$12$hpgVbiVi7bizK.t7ra5tROBp20/Gu.//6qjDqjjTwWR1qwUW42b2a"], ["created_at", "2021-03-28 00:42:39.505158"], ["updated_at", "2021-03-28 00:42:39.505158"]]
+  [1m[36m (101.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 343ms (ActiveRecord: 102.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:42:39 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:42:39 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:44:19 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-8127192d3b1f4a39f0ac5d74ce5ed383635ceca5f25aaed0804a667c201ed0c0.css?body=1" for 209.6.116.71 at 2021-03-28 00:44:19 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:44:19 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:44:34 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-54290876e43356d7f279a1423e6e22f22330e39af5bc6889d999d66c084fe30a.css?body=1" for 209.6.116.71 at 2021-03-28 00:44:34 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:44:34 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:45:10 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-a17a973df63f6452df6c61d0adc8917748d40aae85be292b83d8ffb8686e9158.css?body=1" for 209.6.116.71 at 2021-03-28 00:45:10 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:45:10 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:45:46 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-c16dba42b497849c377931d79a23b9085461292aaab43924f8baf9d76152ac95.css?body=1" for 209.6.116.71 at 2021-03-28 00:45:46 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:45:47 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:45:55 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:45:55 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:46:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:46:18 +0000
+
+
+Started GET "/users/new" for 209.6.116.71 at 2021-03-28 00:46:53 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8f3294e2f58cde6c5427d76448e8cd3a94f4c1fdd14a9a27a74989793a65ffee.css?body=1" for 209.6.116.71 at 2021-03-28 00:46:53 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:46:53 +0000
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:47:03 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:47:03 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:47:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kV+/gCnavygATDwL0e3VHDUKrYiVl3RsbzWxIb9RRi2iY6GtBR4zrpbwRglo3a5tUQ7odaKMG0/1Jcq30NinzA==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 238ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:47:06 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:47:06 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:47:07 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:48:11 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-a1869fe91a381cc13c37f71e969ac8882ad20a7993a92a9518aec6f5844ad7fd.css?body=1" for 209.6.116.71 at 2021-03-28 00:48:11 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:48:11 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-28 00:49:30 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:49:30 +0000
+
+
+Started GET "/stores/1" for 209.6.116.71 at 2021-03-28 00:50:06 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered stores/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:50:06 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:50:18 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:50:18 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:50:18 +0000
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-28 00:54:05 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:54:05 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 29ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:54:05 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 174ms (Views: 172.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:54:05 +0000
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-28 00:54:11 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8Q5Fy+GKcifkpNih++O7tki8LYUNJDXYojmRVB8Q9mnCMlvmzU7+oXIYoqNC08DHLLhoeDo/Wvs4KerCcJkXiA=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-28 00:54:11 +0000
+Processing by SessionsController#welcome as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered sessions/welcome.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:54:11 +0000
+
+
+Started GET "/login" for 209.6.116.71 at 2021-03-28 00:54:13 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-28 00:54:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kz0r6D9Uatgg9mP+xZfLk+qYvcDIYzlMnhaQ9Fkg9sagATXFE5DmXrZKGfx8p7Dijpz4Pf94Vm8EButiNqkXJw==", "username"=>"evan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 239ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-28 00:54:17 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:54:17 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:55:00 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:56:25 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-a7fe37f50246667d8327fe4d46840691ecda60e428257ed1a5d368aab0832a2a.css?body=1" for 209.6.116.71 at 2021-03-28 00:56:25 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:56:25 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:56:32 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-28 00:56:49 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-b3c9095f0232d9ed01c08f0a5288a1ec96048f828700cf29faa1c150f55313ef.css?body=1" for 209.6.116.71 at 2021-03-28 00:56:49 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 00:56:49 +0000
