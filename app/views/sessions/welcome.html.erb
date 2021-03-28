@@ -4,11 +4,9 @@
 
 Bla bla bla something about how you should use our app if you hate fees and are lazy. Lorem ipsum text filler bla bla bla bla bla bla bla </p>
 
-<div class="container">
             <div class="row">
                 <div class="col-md-6 login-form-1">
                     <h3>Log In</h3>
-                      <div class="form-group">
 
                         <%= form_tag '/login' do%>
                             <%= label_tag :username%><br>
@@ -16,9 +14,8 @@ Bla bla bla something about how you should use our app if you hate fees and are 
                             <%= label_tag :password%><br>
                             <%= password_field_tag :password%><br>
                             <br>
-                            <%= submit_tag "Login", :class => 'btnSubmit' %>
+                        <input type = "submit", class = "btnSubmit", value = "Log In">
                         <%end%>
-                    </div>
 
                 </div>
                 <div class="col-md-6 login-form-2">
@@ -34,8 +31,6 @@ Bla bla bla something about how you should use our app if you hate fees and are 
                     
                 </div>
             </div>
-        <br>
-        </div>
 
 
 
