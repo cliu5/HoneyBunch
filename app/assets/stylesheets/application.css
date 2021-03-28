@@ -47,9 +47,9 @@ h1{
     text-shadow: 1px 1px #cc9900,
                 2px 2px #cc9900, 
                 3px 3px #cc9900,
-                6px 6px yellow,   
-                7px 7px yellow,
-                9px 9px yellow,
+                6px 6px #F2E696,   
+                7px 7px #F2E696,
+                9px 9px #F2E696,
                 10px 10px white,
                 11px 11px white;
     
@@ -74,10 +74,10 @@ h1{
     right: 475px;
     
 }
-.btn-login {
+.btn-logout {
     position: absolute;
     top: 200px;
-    right: 375px;
+    right: 350px;
 }
 /* Style the search field */
 form.search_store input[type=text] {
