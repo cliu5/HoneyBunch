@@ -20,7 +20,6 @@ class Store < ActiveRecord::Base
         @search_type = 0
         @stores = store_type
       else
-        puts("BYEBEYE\n\n")
         @search_type = 1
         @stores = Store.all
       end
