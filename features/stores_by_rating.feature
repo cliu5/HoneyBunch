@@ -80,3 +80,31 @@ Scenario: all categories selected:
   When I check the following categories: Cafe, Italian, Drinks, Chinese, Groceries
   And I press "Refresh"
   Then I should see all the stores
+  
+Scenario Outline: searching for a store/description/category/item that exists
+  When I fill in "search-bar" with "<Query>"
+  And I press "search-btn"
+  Then I should see "<Store>"
+  Examples: 
+    | Query        | Store           |
+    | McBonalds    | McBonalds       |
+    | Drinks       | Gong Cha        |
+    | yummy coffee | Btarsucks       |
+    | juice        | Cranberry Juice |
+  
+Scenario: searching for a store that doesn't exist
+  When I fill in "search-bar" with "WeeeeAaaaaaaa"
+  And I press "search-btn"
+  Then I should see "McBonalds"
+  And I should see "KingBurger"
+  And I should see "The Krusty Krab"
+  And I should see "Your search query found no results :("
+  
+Scenario: inputting nothing into the search bar
+  When I fill in "search-bar" with ""
+  And I press "search-btn"
+  Then I should see "McBonalds"
+  And I should see "KingBurger"
+  And I should see "The Krusty Krab"
+  And I should see "Please input a search query!"
+

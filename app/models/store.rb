@@ -8,6 +8,7 @@ class Store < ActiveRecord::Base
     end
   
   def self.search_stores(search)
+
     query = search.dup 
     query.strip!
     query.downcase! 
@@ -15,13 +16,16 @@ class Store < ActiveRecord::Base
       #query data base as all lower case
       #'game_name LIKE :search OR genre LIKE :search OR console LIKE :search', search: "%#{search}%"
       store_type = Store.all.where("lower(name) LIKE :search OR lower(category) LIKE :search OR lower(description) LIKE :search OR lower(menu) LIKE :search", search: "%#{query}%") 
-
       if store_type
-        return store_type
+        @search_type = 0
+        @stores = store_type
       else
+        puts("BYEBEYE\n\n")
+        @search_type = 1
         @stores = Store.all
       end
     else
+      @search_type = 2
       @stores = Store.all
     end
   end
