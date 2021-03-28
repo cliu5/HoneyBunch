@@ -15,8 +15,8 @@
 
 <!-- The form -->
 <%= form_tag stores_path, :class => 'search', :method => "get" do %>
-  <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search...", id: 'search-bar' %>
-  <%= submit_tag("GO!", :name => "search_button", :class => "btn btn-dark btn-lg", id: 'search-btn')%>
+  <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search...", id: 'search_bar' %>
+  <%= submit_tag("GO!", :name => "search_button", :class => "btn btn-dark btn-lg", id: 'search_btn')%>
 <% end %>
 
 <!--  

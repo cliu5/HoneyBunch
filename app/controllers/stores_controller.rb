@@ -13,6 +13,7 @@ class StoresController < ApplicationController
       if @stores.blank?
         flash[:notice] = "Your search query found no results :(" 
         @stores = Store.all
+        redirect_to :sort => session[:sort], :categories => @selected_categories and return
       end
       return
     elsif params[:search] == ""
