@@ -8,8 +8,6 @@ class Store < ActiveRecord::Base
     end
   
   def self.search_stores(search)
-    puts("\n\nI HAVE BEEN CALLED")
-    puts(search)
     query = search.dup 
     query.strip!
     query.downcase! 
@@ -24,7 +22,6 @@ class Store < ActiveRecord::Base
         @stores = Store.all
       end
     else
-      puts("this happened\n\n")
       @stores = Store.all
     end
   end
