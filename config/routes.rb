@@ -18,6 +18,8 @@ Rottenpotatoes::Application.routes.draw do
 
   get '/stores/orders/:id', to: 'stores#orders', as: 'orders'
     
+  get '/stores/my_orders/:id', to: 'stores#my_orders', as: 'my_orders'
+    
   get '/stores/:id/similar_stores/category', to:'stores#search_for_same_category', as: 'stores_with_same_category'
     
 end

@@ -4,8 +4,7 @@
     
 
 <%= link_to 'Log Out', logout_path, :method => 'delete', :class => 'btn btn-dark btn-lg btn-logout btn-lg' %>
-
-
+<%= link_to 'My Orders', my_orders_path("id"),  :class => 'btn btn-dark btn-delivery btn-lg' %>
 <%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-dark btn-delivery btn-lg' %>
 
 <h1>Search local Columbia stores</h2>
