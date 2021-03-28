@@ -8,7 +8,7 @@ Rottenpotatoes::Application.routes.draw do
     
   delete 'logout', to: 'sessions#destroy'
 
-  get 'welcome', to: 'sessions#welcome'
+  get 'welcome', to: 'sessions#welcome', as: 'welcome'
     
   get 'authorized', to: 'sessions#page_requires_login'
 

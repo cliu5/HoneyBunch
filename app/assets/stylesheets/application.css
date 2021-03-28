@@ -33,21 +33,45 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.container{
+    background: #ffffff;
+    opacity:.9;
+    font-family: 'Noto Sans JP';
+}
+
 h1{
     padding-top: 80px;
     padding-bottom: 80px; 
     font-weight: 700;
-    color: black; 
-    font: bold 52px Sans-Serif;
+    color: #353535; 
+    font: bold 52px;
+    font-family: 'Noto Sans JP';
+    /*
     text-shadow: 1px 1px #cc9900,
-                2px 2px #cc9900, 
                 3px 3px #cc9900,
                 6px 6px #F2E696,   
-                7px 7px #F2E696,
                 9px 9px #F2E696,
                 10px 10px white,
                 11px 11px white;
-    
+    */
+}
+
+h2{
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    font-size: 45px;
+    font-weight: 700;
+    color: #353535; 
+    font: bold 52px;
+    font-family: 'Noto Sans JP';
+    /*
+    text-shadow: 1px 1px #cc9900,
+                3px 3px #cc9900,
+                6px 6px #F2E696,   
+                9px 9px #F2E696,
+                10px 10px white,
+                11px 11px white;
+    */
 }
 .search{
     
@@ -74,6 +98,61 @@ h1{
 .checked {
   color: orange;
 }
+
+.btn{
+  font-family: 'Noto Sans JP';
+}
+
+.login-container{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form-2{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 40%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .btn-delivery{
     margin-left: 10px;
     float:right; 
