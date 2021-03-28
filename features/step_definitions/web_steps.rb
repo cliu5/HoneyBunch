@@ -45,6 +45,12 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+When /I create a temporary user and login/ do
+  fill_in("new_username_field", :with => "testuser123")
+  fill_in("new_password_field", :with => "password123")
+  click_button("new_user_btn")
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
