@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
     
 <!-- The form -->
-<%= form_tag stores_path, :method => "get" do %>
+<%= form_tag stores_path, :class => 'search', :method => "get" do %>
   <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search..." %>
   <%= submit_tag("GO!", :name => nil, :class => "btn btn-dark btn-lg")%>
 <% end %>
@@ -43,12 +43,11 @@
   <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-dark btn-large' %>
 <% end %>
 
-    
-<h1>Stores</h1>
+  
     
 <div class="card-columns">
     <% @stores.each do |store| %>
-        <div class="card" style="width: 14rem; length; 10rem">
+        <div class="card" style="width: 18rem; length; 5rem">
           <%=image_tag(store.image, class: "card-img-top")%>
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
@@ -59,6 +58,7 @@
         </div>
     <% end %>
 </div>
+    
 </body>
 
 

@@ -25,10 +25,8 @@ body {
   font-size: 1.5rem;
     /* The image used */
   background-image: url("background.png");
-  
   /* Set a specific height */
   min-height: 1000px;
-  min-width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -36,12 +34,9 @@ body {
   background-size: cover;
 }
 h1{
-    font-stretch: ultra-expanded;
     padding-top: 80px;
     padding-bottom: 80px; 
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 300%;
+    font-weight: 700;
     color: black; 
     font: bold 52px Sans-Serif;
     text-shadow: 1px 1px #cc9900,
@@ -54,12 +49,16 @@ h1{
                 11px 11px white;
     
 }
+.search{
+    
+    padding-bottom: 100px;
+    
+}
 .card{
     border-radius: 20px;
     background-color: rgba(247,234,218,255);
     box-shadow: 5px 5px #feb236;
-    padding-top: 10px;
-    
+    padding-top: 5px;
 }
 
 .title{
@@ -76,15 +75,13 @@ h1{
   color: orange;
 }
 .btn-delivery{
-    position: absolute;
-    top: 200px;
-    right: 475px;
-    
+    margin-left: 10px;
+    float:right; 
 }
 .btn-logout {
-    position: absolute;
-    top: 200px;
-    right: 350px;
+    margin-left: 10px;
+    float:right;
+
 }
 /* Style the search field */
 form.search_store input[type=text] {
