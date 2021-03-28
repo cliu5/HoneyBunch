@@ -15,7 +15,7 @@ class Store < ActiveRecord::Base
     if query 
       #query data base as all lower case
       #'game_name LIKE :search OR genre LIKE :search OR console LIKE :search', search: "%#{search}%"
-      store_type = Store.all.where("lower(name) LIKE :search OR lower(category) LIKE :search OR lower(description) LIKE :search OR lower(menu) LIKE :search", search: "%#{query}%") 
+      store_type = Store.all.where("lower(name) LIKE :search OR lower(category) LIKE :search OR lower(menu) LIKE :search", search: "%#{query}%") 
       if store_type
         @search_type = 0
         @stores = store_type
