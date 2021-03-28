@@ -12,4 +12,7 @@ class UsersController < ApplicationController
     session[:user_id] = @user.id
     redirect_to '/stores'
   end
+  
+  
+
 end

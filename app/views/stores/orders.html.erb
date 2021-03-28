@@ -15,20 +15,22 @@
         </thead>
       <tbody>
         <% @orders.each do |order| %>
-          <tr>
-            <td>
-              <%= order.name %>
-            </td>
-            <td>
-              <%= order.item %>
-            </td>
-            <td>
-              <%= order.deliver_to %>
-            </td>
-            <td>   
-                <%= link_to 'Accept Order', orders_path(order), :class => 'btn btn-primary' %>
-            </td>
-          </tr>
+          <% if order.status == 'pending' %>
+              <tr>
+                <td>
+                  <%= order.name %>
+                </td>
+                <td>
+                  <%= order.item %>
+                </td>
+                <td>
+                  <%= order.deliver_to %>
+                </td>
+                <td>   
+                    <%= link_to 'Accept Order', orders_path(order), :class => 'btn btn-primary' %>
+                </td>
+                </tr>
+           <% end %>
         <% end %>
       </tbody>
     </table>
