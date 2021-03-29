@@ -15609,3 +15609,154 @@ Processing by SessionsController#welcome as HTML
   Rendered sessions/welcome.html.erb within layouts/application (1.2ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-29 07:18:44 -0400
+
+
+Started GET "/stores" for 127.0.0.1 at 2021-03-29 07:18:44 -0400
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-29 07:18:44 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (25.1ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 318ms (Views: 315.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:18:45 -0400
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-29 07:18:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X7EjgChABmk3d5J7FDbOm6PYloryEBLJ0mKYSotzyi2530DABhA+mm+cmSeDI92Ju39zk4z23bQKQfWvhGYYaQ==", "user"=>{"username"=>"thomas", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "thomas"], ["password_digest", "$2a$12$LhJEEndYQfLWnyX0SXrlne5KBRl.I/0eq9o/yut2b3bkaCxk0dHGC"], ["created_at", "2021-03-29 11:18:49.045819"], ["updated_at", "2021-03-29 11:18:49.045819"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/stores
+Completed 302 Found in 208ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2021-03-29 07:18:49 -0400
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1" for 127.0.0.1 at 2021-03-29 07:18:49 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:18:49 -0400
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-03-29 07:18:51 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HsBqAp92HAaauEuXJBOdXhpZuj82cctTrzQz/lQn1kv4rglCsSYk9cJTQMuzBo5MAv5fJkiXBC53F14bWzIEDw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-29 07:18:51 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:18:51 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-29 07:18:55 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PnN7XCTl2lTsaZaJaxrk1aIcCjxgr1hcWyZiR5LTMUjYHRgcCrXip7SCndX8D/fHurvvJR5JlyGDBQ+incbjDA==", "username"=>"thomas", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "thomas"]]
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 212ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-29 07:18:55 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:18:55 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-29 07:19:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kROYy7T27ie4g2OPUv0vecRrmsnC/FkiBZA1R4sBWEN3ffuLmqbW1OBoaNPF6Dxr3Mx/0Lwall/ds1iihBSKBw==", "username"=>"thomas", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "thomas"]]
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 204ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-29 07:19:03 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:19:03 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-29 07:19:13 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y8x6TdQujJB7aqXH9GMXQIlFMC8n6SkC+RiN9waj0q0tohkN+n60YyOBrptjdgRSkeLVNlkP5n8hO+ASCbYA6Q==", "username"=>"thomas", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "thomas"]]
+Redirected to http://localhost:3000/stores
+Completed 302 Found in 208ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2021-03-29 07:19:13 -0400
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Redirected to http://localhost:3000/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1" for 127.0.0.1 at 2021-03-29 07:19:13 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:19:13 -0400
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-03-29 07:19:16 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NVqVA8c5UDfyO9vak428I5jTecwz+iXmHW+ZOH/RvpTTNPZD6WloxKrQ0IYEmK8xgHSc1U0c6pvFTPTdcMRs0A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-29 07:19:16 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-29 07:19:16 -0400

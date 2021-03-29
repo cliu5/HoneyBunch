@@ -11,12 +11,11 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe "GET #create" do
+    let!(:param) {{:username => 'test', :password => 'test'}}
+    let!(:user) {User.create!(param)}
     it "returns http success" do
-      @user = User.create(:username => 'test', :password => 'test') #changed but idt it matters
-      session[:user_id] = @user.id
-      log_in(@user)
-      get :create
-      expect(response).to have_http_status(:success) #can change this to 302 to pass
+      get :create, :user => param
+      expect(response).to have_http_status(302) #
     end
   end
 

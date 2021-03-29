@@ -11,13 +11,11 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "GET #create" do
+    let!(:param) {{:username => 'test', :password => 'test'}}
+    let!(:user) {User.create!(param)}
     it "returns http success" do
-      @user = User.create(:username => 'test', :password => 'test')
-      session[:user_id] = @user.id
-      log_in(@user)
-      controller.params[:user] = 'test'
-      get :create
-      expect(response).to have_http_status(:success)
+      get :create, :user => param
+      expect(response).to have_http_status(302) #
     end
   end
 
