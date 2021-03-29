@@ -27,7 +27,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
             <h5 class="card-title"><%= item %></h5>
             <p class="card-text">$4</p>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" id = "order_btn">
               Order Now
             </button>
           </div>
@@ -49,19 +49,18 @@ $('#exampleModal').on('show.bs.modal', function (event) {
       </div>
       <div class="modal-body">
         <%= form_tag(stores_path(:name => @store.name), {:class => 'form'}) do %>
-  <%= label :order, :deliver_to, 'Address', :class => 'col-form-label' %>
-  <%= text_field :order, :deliver_to, :class => 'form-control' %>
-  <%= hidden_field_tag :name, @store.name %>
-  <%= label :order, :item, 'Item', :class => 'col-form-label'  %>
-  <%= select("order", "item", @store.menu.split(",").collect {|item| [item]}, { include_blank: true }) %>
-
-  <br/>
+          <%= label :order, :deliver_to, 'Address', :class => 'col-form-label' %>
+          <%= text_field :order, :deliver_to, :class => 'form-control', id: 'address_field' %>
+          <%= hidden_field_tag :name, @store.name %>
+          <%= label :order, :item, 'Item', :class => 'col-form-label'  %>
+          <%= select("order", "item", @store.menu.split(",").collect {|item| [item]}, { include_blank: true }, id: @store.name+"_menu_dropdown") %>
+      <br/>
 
       </div>
       <div class="modal-footer">
-      <%= submit_tag 'Confirm', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', stores_path, :class => 'btn btn-secondary' %>
-<% end %>
+        <%= submit_tag 'Confirm', :class => 'btn btn-primary', id: @store.name+"_order_confirm_btn" %>
+        <%= link_to 'Cancel', stores_path, :class => 'btn btn-secondary', id: "cancel_order_btn" %>
+      <% end %>
       </div>
     </div>
   </div>

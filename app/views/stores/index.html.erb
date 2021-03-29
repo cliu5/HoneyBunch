@@ -4,7 +4,7 @@
     
 <br>
 <%= link_to 'Log Out', logout_path, :method => 'delete', :class => 'btn btn-dark btn-lg btn-logout btn-lg' %>
-<%= link_to 'My Orders', my_orders_path("id"),  :class => 'btn btn-dark btn-delivery btn-lg' %>
+<%= link_to 'My Orders', my_orders_path("id"),  :class => 'btn btn-dark btn-delivery btn-lg', :id => "my_orders_link" %>
 <%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-dark btn-delivery btn-lg' %>
 
 
@@ -50,7 +50,7 @@
             <h5 class="card-title"><%= store.name %></h5>
             <h5 class="card-title"><%= store.rating %><span class="fa fa-star checked"></span></h5> 
             <p class="card-text"><%= store.category %></p>
-            <%= link_to "Order", store_path(:id => store.id) %>
+            <%= link_to "Order", store_path(:id => store.id), id: store.name+"_order_link" %>
           </div>
         </div>
     <% end %>

@@ -72,6 +72,7 @@ class StoresController < ApplicationController
     @order = Order.create!(new_params)
     puts order_params
     flash[:notice] = "#{@order.item} was successfully ordered."
+    puts("\n\nHELLO\n\n")
     redirect_to '/stores'
   end
 

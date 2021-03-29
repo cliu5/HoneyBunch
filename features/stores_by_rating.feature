@@ -102,4 +102,23 @@ Scenario: inputting nothing into the search bar
   And I should see "KingBurger"
   And I should see "The Krusty Krab"
   And I should see "Please input a search query!"
+  
+Scenario: testing the order modal
+  When I follow "McBonalds_order_link"
+  And I press "McBonalds_fries_order_btn"
+  Then I should see "Address"
+  
+Scenario: placing an order and verifying it
+  When I follow "McBonalds_order_link"
+  And I press "order_btn"
+  And I fill in "address_field" with "70 Morningside Drive"
+  And I select "fries" from "McBonalds_menu_dropdown"
+  Then I should see "70 Morningside Drive"
+  #And I press "McBonalds_order_confirm_btn"
+  #And I go to the HoneyBunch home page
+  #And I follow "my_orders_link"
+  #Then I should see "McBonalds"
+  
+  
+
 
