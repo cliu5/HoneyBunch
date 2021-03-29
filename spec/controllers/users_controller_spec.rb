@@ -1,4 +1,5 @@
 require 'rails_helper'
+include SessionsHelper
 
 RSpec.describe UsersController, type: :controller do
 
@@ -10,9 +11,11 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "GET #create" do
+    let!(:param) {{:username => 'test', :password => 'test'}}
+    let!(:user) {User.create!(param)}
     it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+      get :create, :user => param
+      expect(response).to have_http_status(302) #
     end
   end
 
