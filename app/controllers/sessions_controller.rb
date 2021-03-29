@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
-        session[:user_id] = user.id 
+        log_in user
         redirect_to '/stores'
     else
       redirect_to '/welcome'
@@ -24,8 +24,7 @@ class SessionsController < ApplicationController
   end
     
   def destroy
-    session.delete(:user_id)
-    @current_user = nil
+    log_out
     redirect_to '/welcome'
   end
 
