@@ -64,7 +64,7 @@ class StoresController < ApplicationController
 
   def create
     new_params = {}
-    new_params[:name] = order_params[:name]
+    new_params[:name] = params[:name]
     new_params[:deliver_to] = order_params[:deliver_to]
     new_params[:item] = order_params[:item]
     new_params[:user_id] = current_user.id

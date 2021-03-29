@@ -48,13 +48,12 @@ $('#exampleModal').on('show.bs.modal', function (event) {
         </button>
       </div>
       <div class="modal-body">
-        <%= form_tag stores_path, :class => 'form' do %>
+        <%= form_tag(stores_path(:name => @store.name), {:class => 'form'}) do %>
   <%= label :order, :deliver_to, 'Address', :class => 'col-form-label' %>
   <%= text_field :order, :deliver_to, :class => 'form-control' %>
+  <%= hidden_field_tag :name, @store.name %>
   <%= label :order, :item, 'Item', :class => 'col-form-label'  %>
   <%= select("order", "item", @store.menu.split(",").collect {|item| [item]}, { include_blank: true }) %>
-  <%= label :order, :name, 'Store', :class => 'col-form-label'  %>
-  <%= select("order", "name", [@store.name].collect{|name| [name]}, { include_blank: true }) %>
 
   <br/>
 

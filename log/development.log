@@ -11990,3 +11990,2547 @@ Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-28 05:25:52 +0000
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-29 00:30:14 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:30:14 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 35ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:30:15 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 247ms (Views: 245.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-1d0e0c1c5a9dd830dd670ef6c0de7a4e752dcf025c7b4b7d56a7aeac1903724d.css?body=1" for 209.6.116.71 at 2021-03-29 00:30:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 209.6.116.71 at 2021-03-29 00:30:15 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 209.6.116.71 at 2021-03-29 00:30:15 +0000
+
+
+Started GET "/assets/logo3-6d14c6cabe76c72aed6b24072a0f10ca21c2c90c0df460590acea4a171c1aa58.png" for 209.6.116.71 at 2021-03-29 00:30:15 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:30:16 +0000
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:30:23 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GREE4K4fGV9/4aY9/yr7FNIv443cu6Wnc1RbIWYg80UqLRrNgtuV2eld3D9GGoBltiumcOugyoTpRCC3CakSpA=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:30:23 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (34.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:30:23 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:30:32 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTEeUGBKP8dSVa8KEBEHLTchqjpKlsKyYgjl+qkZTsiKDQB9TI6zQcTp1QipIXxcUyXvx32NrZH4GJ5sxpCvKQ==", "username"=>"evan", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 243ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:30:32 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:30:32 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:30:32 +0000
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:30:37 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:30:37 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:30:40 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:30:40 +0000
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-29 00:31:06 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:31:06 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:31:06 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:31:06 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:31:07 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:31:07 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:31:08 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 00:31:18 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 00:31:18 +0000
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 00:31:24 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aq6rb20rNdcxVhGB3CpGLhU//xkhezAGpVfWQx5jJn0xkrVCQe+5Uafqa4NlGj1fcTu65BZgXyU/R63VcerHnA==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza", "name"=>"Koronet"}, "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "1"], ["status", "pending"]]
+  [1m[35m (299.9ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 304ms (ActiveRecord: 300.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:31:24 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:31:25 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:31:35 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:31:40 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:31:48 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/orders/15" for 209.6.116.71 at 2021-03-29 00:31:49 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "orders" SET "status" = ? WHERE "orders"."id" = ?[0m  [["status", "evan delivering"], ["id", 15]]
+  [1m[35m (94.6ms)[0m  commit transaction
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 8.2ms | ActiveRecord: 95.2ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:32:02 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:32:04 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:32:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:32:13 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores/5" for 209.6.116.71 at 2021-03-29 00:32:18 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 00:32:26 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3lIG0ZafIn/998eQlG7msK61sQxo8h6hPB3lClh75ebtbhj8uluu+WtLvZItXp3ByrH08V/pcYKmDZ6cN/IEBw==", "order"=>{"deliver_to"=>"Carman", "item"=>"Kung Pao Chicken", "name"=>"Panda Express"}, "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Panda Express"], ["deliver_to", "Carman"], ["item", "Kung Pao Chicken"], ["user_id", "1"], ["status", "pending"]]
+  [1m[35m (94.2ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 97ms (ActiveRecord: 94.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:32:26 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:32:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:32:28 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hoofZwB93l3CYUncYHT7oTEVsbmZOQX6b8EFdN+sqva1tgFKLLlS21TdM97ZRIDQVRH0RK4iatn10X7isCVLFw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:32:28 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-29 00:32:36 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VIVu9d1aroMxEBWrG2J/yZHM65MJ/nVtDsbGLJAVqZ5nuXDY8Z4iBaesb6miUgS49ciubj7lGk6U1r26/5xIfw==", "user"=>{"username"=>"evan1", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "evan1"], ["password_digest", "$2a$12$56CBWQ6tYJMfkqW4Q/UuGu1YtUxZC81z4B45TUZxCpIFe25/HvTq."], ["created_at", "2021-03-29 00:32:36.479050"], ["updated_at", "2021-03-29 00:32:36.479050"]]
+  [1m[36m (106.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 355ms (ActiveRecord: 107.4ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:32:36 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:32:36 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:32:44 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "2"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:32:46 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/orders/16" for 209.6.116.71 at 2021-03-29 00:32:48 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "orders" SET "status" = ? WHERE "orders"."id" = ?  [["status", "evan1 delivering"], ["id", 16]]
+  [1m[36m (104.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 7.2ms | ActiveRecord: 104.8ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:32:50 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:32:50 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:32:51 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h5o7g8au7GUB/HEIvfzI1V4JQ25D1wbfKZKEaaXyMZC0piWu6mpg45dACwoEzLOkOg0Gk3TMafyzgv//ynvQcQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:32:51 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:32:57 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"55eHah9F/9A+XdbZe05Su83i+MLA3LLPV9F7AJ9CgqHUq5lHM4FzVqjhrNvCfinKqea9P/fH3ezNwQCW8MtjQA==", "username"=>"evan", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 241ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:32:57 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:32:57 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:33:02 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/my_orders/15" for 209.6.116.71 at 2021-03-29 00:33:08 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? LIMIT 1  [["user_id", "1"]]
+  [1m[36mSQL (90.7ms)[0m  [1mDELETE FROM "orders" WHERE "orders"."user_id" = ? AND "orders"."id" = 15[0m  [["user_id", "1"]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 101ms (Views: 7.7ms | ActiveRecord: 91.0ms)
+
+
+Started GET "/stores/my_orders/15" for 209.6.116.71 at 2021-03-29 00:33:08 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? LIMIT 1[0m  [["user_id", "1"]]
+  [1m[35mSQL (97.9ms)[0m  DELETE FROM "orders" WHERE "orders"."user_id" = ? AND "orders"."id" = 16  [["user_id", "1"]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 107ms (Views: 7.2ms | ActiveRecord: 98.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:33:10 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:33:10 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:33:16 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aQGbtUocmlm/rP4lg9BkMs9+yE+CC/OW1BwaNo81zzlaPYWYZtgW3ykQhCc64B9Dq3qNsrUQnLVODGGg4Lwu2A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:33:16 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:33:29 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M/0aoBUB5nBKX+qy3WKEmfvIxRmtQFEmh3nfRm+E7ZoAwQSNOcVq9tzjkLBkUv/on8yA5JpbPgUdaaTQAA0Mew==", "username"=>"evan1", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan1"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 239ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:33:30 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:33:30 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 00:33:34 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 00:33:44 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGyLva/KX1pCWeI1reQ7dPJQjYszJ53bfi9kX52cRUE3UJWQgw7T3NTlmDcU1EAFllTIdgQ88vjkPx/J8hWkoA==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza", "name"=>"Koronet"}, "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "2"], ["status", "pending"]]
+  [1m[35m (92.9ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 96ms (ActiveRecord: 93.4ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:33:44 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:33:45 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:33:46 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:33:46 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:33:47 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "2"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:33:48 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:33:48 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:33:49 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZpqIxeHavL+aa6XqCzrEeEwsPd5FGdaXzR9x/eT8kxVVppbozR4wOQzX3+iyCr8JKCh4I3ICubRXDwpri3Vy9A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:33:49 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:33:55 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NUibJCvJL0TkMbME1MNaRO3/qoGVTa8h4uYXg1AOEx0GdIUJBw2jwnKNyQZt8yE1ifvvfKJWwAJ49mwVP4fy/A==", "username"=>"evan", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 239ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:33:55 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:33:55 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:33:59 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/orders/17" for 209.6.116.71 at 2021-03-29 00:34:04 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "orders" SET "status" = ? WHERE "orders"."id" = ?  [["status", "evan delivering"], ["id", 17]]
+  [1m[36m (97.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 8.1ms | ActiveRecord: 97.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:34:06 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:34:06 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:34:08 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+wIpOJ3i2thtwrar66B06SVdFxJfVGwhyhMCrurnGkLIPjcVsSZWXvt+zKlSkA+YQVlS72hPAwJQA3k4hW77ow=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:34:09 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:34:22 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c9mGOpH9E+6nZqA0At/+GwCoEfM7jb8tQqktYfTEGs9A5ZgXvTmfaDHa2ja774VqZKxUDgyW0A7YuVb3m037Lg==", "username"=>"evan1", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan1"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 238ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:34:22 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:34:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:34:24 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "2"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:36:22 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:36:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:36:25 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7ZQSTBk0eiWkJFw5ZAXGd/mtjT+pbuQa4AnqEt4Yx/reqAxhNfD2ozKYJjvdNb0GnanIwp51izl6GZGEsZEmGw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:36:25 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 209.6.116.71 at 2021-03-29 00:36:30 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h7LXExPo6vcaaTaaVVQdWN+Fcbs9oPlSIv0sPbhW0S20jsk+PyxmcYzVTJjsZGYpu4E0Rgq7lnG47Ver198wzA==", "user"=>{"username"=>"evan2", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "evan2"], ["password_digest", "$2a$12$Rbx69VVzcLWXzDSbil/zOODv4sans58saex3JHv0gqpPCip.BFxeW"], ["created_at", "2021-03-29 00:36:30.954277"], ["updated_at", "2021-03-29 00:36:30.954277"]]
+  [1m[35m (97.3ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 336ms (ActiveRecord: 97.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:36:31 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:36:31 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:36:34 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:36:37 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:36:37 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 00:36:39 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.0ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 00:36:47 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ChB+byfVTQb2s0SJytuF5FSdRPkDVv3z81uwsVZx+Ls5LGBCCxHBgGAPPotz6/6VMJkBBDRNktBpS8snOfgZWg==", "order"=>{"deliver_to"=>"asd", "item"=>"Pizza", "name"=>"Koronet"}, "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["deliver_to", "asd"], ["item", "Pizza"], ["user_id", "3"], ["status", "pending"]]
+  [1m[35m (116.7ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 120ms (ActiveRecord: 117.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:36:47 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:36:48 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:36:51 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:36:51 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:37:05 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:37:06 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:37:06 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:37:07 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yAXZDUFvAoQxdCvQOp+i9KgRhGb7vA3klSoOBPQNhxj7OccgbauOAqfIUdKDr9mFzBXBm8ynYscPOnWSm4Rm+Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:37:07 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:37:14 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xnWtJPlgdfVA82Ihsrmo555gCfIq1aEnrHKhwvT/B+H1SbMJ1aT5c9ZPGCMLidOW+mRMDx3OzgQ2YtpUm3bmAA==", "username"=>"evan", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 241ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:37:15 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:37:15 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 00:37:17 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/orders/18" for 209.6.116.71 at 2021-03-29 00:37:18 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "orders" SET "status" = ? WHERE "orders"."id" = ?  [["status", "evan delivering"], ["id", 18]]
+  [1m[36m (100.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 7.6ms | ActiveRecord: 100.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:37:20 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:37:20 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:37:21 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"60xltcr72ipbOL6wrdHHtKArpXhZ2p15U8uKqdb/aEvYcHuY5j9WrM2ExLIU4bzFxC/ghW7B8lrJ2/E/uXaJqg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:37:21 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 00:37:27 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJGXIlbqhtGqH9vYtnjmmaavYNsc5RcFKj0rt0qFr2kLrYkPei4KVzyjodoPSJ3owqslJiv+eCawLVAhJQxOiA==", "username"=>"evan2", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "evan2"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 240ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:37:27 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:37:27 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.4ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 00:37:32 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:38:15 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:38:15 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 209.6.116.71 at 2021-03-29 00:38:22 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.0ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 00:38:24 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 00:38:24 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 209.6.116.71 at 2021-03-29 00:38:47 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9J2yjp5WQXCX6eLRA1MbN1KJBfAZ3zzYF196O48UxdjHoayjspLN9gFVmNO6Y2BGNo1ADS7EU/uNTwGt4J0kOQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 00:38:47 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-29 04:31:16 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:31:16 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to https://agenda-except-3000.codio.io/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome" for 209.6.116.71 at 2021-03-29 04:31:16 +0000
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 259ms (Views: 256.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 209.6.116.71 at 2021-03-29 04:31:16 +0000
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:31:17 +0000
+
+
+Started POST "/login" for 209.6.116.71 at 2021-03-29 04:31:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjaPZFa0lwMoBBRAQjwgcqMQfeYdh/3vTgykjdN/bA+VCpFJenAbhb64bkL7DFsDxxQ4GyqckszUHN8bvPaN7g==", "username"=>"evan2", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "evan2"]]
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 243ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:31:21 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:31:21 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:31:22 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:31:24 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:33:12 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:35:04 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 04:35:45 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bD3xXEF5rK7s6MGT4NKipP4Qpyv5vi2kN3XxW0HGs6RfAe9xbb0gKHpUu5FZ4tnVmhTi1s6lQoetZYrNLk9SRQ==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza", "name"=>"Koronet"}, "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Koronet"], ["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "3"], ["status", "pending"]]
+  [1m[35m (101.1ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 113ms (ActiveRecord: 101.8ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:35:45 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:35:45 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:39:03 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("name", "user_id", "status") VALUES (?, ?, ?)  [["name", "Koronet"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (96.7ms)[0m  [1mcommit transaction[0m
+Completed 400 Bad Request in 109ms (ActiveRecord: 97.8ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  app/controllers/stores_controller.rb:151:in `order_params'
+  app/controllers/stores_controller.rb:14:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.7ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:39:33 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("name", "user_id", "status") VALUES (?, ?, ?)  [["name", "Koronet"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (227.0ms)[0m  [1mcommit transaction[0m
+Completed 400 Bad Request in 238ms (ActiveRecord: 228.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  app/controllers/stores_controller.rb:151:in `order_params'
+  app/controllers/stores_controller.rb:14:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:39:56 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("name", "user_id", "status") VALUES (?, ?, ?)  [["name", "Koronet"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (89.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 90.4ms)
+
+NameError (undefined local variable or method `order_params' for #<StoresController:0x00007f26a6a74300>):
+  app/controllers/stores_controller.rb:14:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:40:10 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("name", "user_id", "status") VALUES (?, ?, ?)  [["name", "Koronet"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (105.3ms)[0m  [1mcommit transaction[0m
+  Rendered stores/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 17.1ms | ActiveRecord: 106.9ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:40:10 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:40:56 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:40:56 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:43:03 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:04 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:43:31 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.0ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:31 +0000
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 04:43:37 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FZnmOgjLwGibSQgpEdTPafRIJ+3JCrroNkXpne6TtXwmpfgXJA9M7g31ciuo5LQYkExiEP4R1cusVZILgRpUnQ==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza"}, "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "orders" ("deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?)[0m  [["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "3"], ["status", "pending"]]
+  [1m[35m (97.9ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 103ms (ActiveRecord: 98.5ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:43:37 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:37 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:37 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:43:39 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:39 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:39 +0000
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 04:43:41 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:41 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:43:46 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:46 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:46 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:47 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:43:47 +0000
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:48 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/5" for 209.6.116.71 at 2021-03-29 04:43:53 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered stores/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/stores" for 209.6.116.71 at 2021-03-29 04:43:58 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SkvP9Am0unUcLhpSXSBqm4cg+g98kY1A9WppdS131ER5d9HZJXA284qSYFDkEBHq4yS/8kuK4mNvehLjQv41pQ==", "order"=>{"deliver_to"=>"Carman", "item"=>"Kung Pao Chicken"}, "commit"=>"Confirm"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?)  [["deliver_to", "Carman"], ["item", "Kung Pao Chicken"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (94.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 98ms (ActiveRecord: 95.4ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:43:58 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:58 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:43:59 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:43:59 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 04:44:00 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:44:14 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:44:14 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:44:17 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 04:44:22 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IJactfpkP7chLbqb1qOVMWLCByjBsvSqfjLE+JznwncTqoKY1qCzMbeRwJlvk+5ABsZC1fapm4nkIr9u824jlg==", "order"=>{"deliver_to"=>"Carman", "item"=>"Calzone"}, "commit"=>"Confirm", "name"=>"Koronet"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?)  [["deliver_to", "Carman"], ["item", "Calzone"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (102.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 105ms (ActiveRecord: 102.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:44:22 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:44:22 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:44:23 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:44:23 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 04:44:25 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 04:46:48 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:46:48 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:46:50 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:46:50 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:46:50 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:46:53 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting end
+...ame => @store.name) stores_path, :class => 'form' do @output...
+...                    ^~~~~~~~~~~
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:51: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+...re.name) stores_path, :class => 'form' do @output_buffer.saf...
+...                             ^~
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:51: syntax error, unexpected do, expecting end
+...tores_path, :class => 'form' do @output_buffer.safe_append='
+...                             ^~
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:73: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/stores/show.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting end
+  app/views/stores/show.html.erb:51: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+  app/views/stores/show.html.erb:51: syntax error, unexpected do, expecting end
+  app/views/stores/show.html.erb:73: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.1ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:49:01 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:49:01 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:49:40 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:64: syntax error, unexpected tIVAR, expecting ')'
+@output_buffer.safe_append='      </div>
+^~~~~~~~~~~~~~):
+  app/views/stores/show.html.erb:64: syntax error, unexpected tIVAR, expecting ')'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:49:52 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:66: syntax error, unexpected tIVAR, expecting ')'
+@output_buffer.safe_append='      </div>
+^~~~~~~~~~~~~~):
+  app/views/stores/show.html.erb:66: syntax error, unexpected tIVAR, expecting ')'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:50:21 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:50:22 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:50:36 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.0ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:66: syntax error, unexpected tIVAR, expecting ')'
+@output_buffer.safe_append='      </div>
+^~~~~~~~~~~~~~):
+  app/views/stores/show.html.erb:66: syntax error, unexpected tIVAR, expecting ')'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.7ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:51:34 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:51: syntax error, unexpected ')', expecting =>
+...store.name, {:class => 'form'}) do @output_buffer.safe_appen...
+...                              ^
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/stores/show.html.erb:51: syntax error, unexpected ')', expecting =>
+  app/views/stores/show.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:51:51 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:51:51 +0000
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 04:51:57 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8DLxJDZm3tMTGnr9hDzTp1HVd1PKziqdZEATDKY4w2HDDu8JGqJSVYWmAP89DKjWNdEyrv3VRb7+UGiaybEigA==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza", "name"=>"Koronet"}, "commit"=>"Confirm", "name"=>"Koronet"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)  [["name", "Koronet"], ["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (115.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 120ms (ActiveRecord: 116.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:51:57 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:51:57 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 04:51:57 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8DLxJDZm3tMTGnr9hDzTp1HVd1PKziqdZEATDKY4w2HDDu8JGqJSVYWmAP89DKjWNdEyrv3VRb7+UGiaybEigA==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza", "name"=>"Koronet"}, "commit"=>"Confirm", "name"=>"Koronet"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)  [["name", "Koronet"], ["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (95.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 100ms (ActiveRecord: 96.5ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:51:57 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:51:58 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:51:58 +0000
+
+
+Started GET "/stores/4" for 209.6.116.71 at 2021-03-29 04:52:04 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered stores/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:52:04 +0000
+
+
+Started POST "/stores?name=Morton+Williams" for 209.6.116.71 at 2021-03-29 04:52:08 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K5tUs2z/9O3p5o73Y3LRlsyR9HIlhc03AQIPJJb9TKUYp0qeQDt4a39a9PXaQqrnqJWxjxKeohSbEnSy+XStRA==", "order"=>{"deliver_to"=>"Carman", "item"=>"Kale"}, "commit"=>"Confirm", "name"=>"Morton Williams"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "orders" ("deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?)  [["deliver_to", "Carman"], ["item", "Kale"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (95.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 100ms (ActiveRecord: 96.1ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:52:08 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:52:08 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:52:09 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 04:52:11 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:52:11 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 04:53:08 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:53:09 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:53:10 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:53:10 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:53:10 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 04:53:12 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:53:12 +0000
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 04:53:15 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"REPXgOy0JfeVhfDMcKdSlm9ZjkMGOrhO0vtKKoi8a013f8mtwHCpcQM5is7JlynnC13LvjEh121I6zG85zWKrA==", "commit"=>"Confirm", "name"=>"Koronet"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  app/controllers/stores_controller.rb:140:in `order_params'
+  app/controllers/stores_controller.rb:67:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.7ms)
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 04:53:38 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"REPXgOy0JfeVhfDMcKdSlm9ZjkMGOrhO0vtKKoi8a013f8mtwHCpcQM5is7JlynnC13LvjEh121I6zG85zWKrA==", "commit"=>"Confirm", "name"=>"Koronet"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+NameError (undefined local variable or method `order_params' for #<StoresController:0x00007f26a4cda8d0>):
+  app/controllers/stores_controller.rb:67:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 04:55:58 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"REPXgOy0JfeVhfDMcKdSlm9ZjkMGOrhO0vtKKoi8a013f8mtwHCpcQM5is7JlynnC13LvjEh121I6zG85zWKrA==", "commit"=>"Confirm", "name"=>"Koronet"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.6ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  app/controllers/stores_controller.rb:140:in `order_params'
+  app/controllers/stores_controller.rb:67:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 209.6.116.71 at 2021-03-29 04:56:05 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:56:05 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:56:05 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:56:05 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 04:56:07 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:56:07 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:56:09 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:56:09 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:56:09 +0000
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 04:56:10 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:56:10 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:56:12 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:56:12 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:56:12 +0000
+
+
+Started GET "/stores/1" for 209.6.116.71 at 2021-03-29 04:56:15 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered stores/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:56: syntax error, unexpected tIVAR, expecting ')'
+...nd=( label(:order, :name=@store.name), 'Store', :class => 'c...
+...                         ^~~~~~
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:56: syntax error, unexpected =>, expecting end
+...store.name), 'Store', :class => 'col-form-label'  );@output_...
+...                             ^~
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:56: syntax error, unexpected ')', expecting end
+..., :class => 'col-form-label'  );@output_buffer.safe_append='
+...                              ^
+/home/codio/workspace/HoneyBunch/app/views/stores/show.html.erb:74: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/stores/show.html.erb:56: syntax error, unexpected tIVAR, expecting ')'
+  app/views/stores/show.html.erb:56: syntax error, unexpected =>, expecting end
+  app/views/stores/show.html.erb:56: syntax error, unexpected ')', expecting end
+  app/views/stores/show.html.erb:74: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+
+
+Started GET "/stores/1" for 209.6.116.71 at 2021-03-29 04:58:56 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered stores/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:58:57 +0000
+
+
+Started POST "/stores?name=Gongcha" for 209.6.116.71 at 2021-03-29 04:59:02 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iubAXw0g8KjO88Hnj2RP5Vw+EHyOMrweaLvmXCyR3oi52t5yIeR8LlhPu+U2VDSUODpVgbkp0z3yq53KQxg/aQ==", "order"=>{"deliver_to"=>"Carman", "item"=>"Green Tea"}, "name"=>"Gongcha", "commit"=>"Confirm"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "orders" ("deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?)  [["deliver_to", "Carman"], ["item", "Green Tea"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (101.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 108ms (ActiveRecord: 102.8ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:59:02 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:59:02 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:03 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:59:04 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:59:04 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:04 +0000
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 04:59:05 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:05 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:59:08 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:59:08 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:09 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 04:59:09 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:09 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:59:23 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:59:24 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:24 +0000
+
+
+Started GET "/stores/2" for 209.6.116.71 at 2021-03-29 04:59:27 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered stores/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:27 +0000
+
+
+Started POST "/stores?name=HMart" for 209.6.116.71 at 2021-03-29 04:59:32 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1KKiBKhI/h3PHuwZyAdlKs63EKOArG8Y3myRzojjHkLnnrwphIxym1milhtxNx5bqrNVXre3ADtEfOpY52r/ow==", "order"=>{"deliver_to"=>"Carman", "item"=>"Ramen"}, "name"=>"HMart", "commit"=>"Confirm"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "orders" ("deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?)  [["deliver_to", "Carman"], ["item", "Ramen"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (134.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 139ms (ActiveRecord: 135.6ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 04:59:32 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 04:59:32 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:33 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 04:59:34 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 04:59:34 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 05:00:24 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:00:25 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 05:00:25 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 05:00:25 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:00:25 +0000
+
+
+Started GET "/stores/7" for 209.6.116.71 at 2021-03-29 05:00:29 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered stores/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:00:29 +0000
+
+
+Started POST "/stores?name=Cafe+East" for 209.6.116.71 at 2021-03-29 05:00:33 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2dJPs6qmRiYuiJquk2KyoMXcCchT5YaYiZzqvCj8zuTq7lGehmLKoLg04KwqUsnRodhMNWT+6bsTjJEqR3UvBQ==", "order"=>{"deliver_to"=>"Carman", "item"=>"Boba pastries"}, "name"=>"Cafe East", "commit"=>"Confirm"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("name", "user_id", "status") VALUES (?, ?, ?)[0m  [["name", "Cafe East"], ["user_id", "3"], ["status", "pending"]]
+  [1m[35m (113.5ms)[0m  commit transaction
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 117ms (ActiveRecord: 114.0ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 05:00:34 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 05:00:34 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (1.2ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:00:34 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 05:00:36 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 05:00:36 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:00:36 +0000
+
+
+Started GET "/stores/my_orders/id" for 209.6.116.71 at 2021-03-29 05:00:38 +0000
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", "3"]]
+  Rendered stores/my_orders.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:00:38 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 05:01:20 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 05:01:20 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:01:20 +0000
+
+
+Started GET "/stores/3" for 209.6.116.71 at 2021-03-29 05:01:22 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered stores/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:01:22 +0000
+
+
+Started POST "/stores?name=Koronet" for 209.6.116.71 at 2021-03-29 05:01:26 +0000
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UU7b2kJiumpmI785bkdXYyor9lbdkl3n0EaNb9e4SYxicsX3bqY27PCfxTvXdywSTi+zq+qJMsRKVvb5uDGobQ==", "order"=>{"deliver_to"=>"Carman", "item"=>"Pizza"}, "name"=>"Koronet", "commit"=>"Confirm"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES (?, ?, ?, ?, ?)  [["name", "Koronet"], ["deliver_to", "Carman"], ["item", "Pizza"], ["user_id", "3"], ["status", "pending"]]
+  [1m[36m (101.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://agenda-except-3000.codio.io/stores
+Completed 302 Found in 109ms (ActiveRecord: 102.3ms)
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 05:01:26 +0000
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 05:01:26 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:01:26 +0000
+
+
+Started GET "/stores/orders/id" for 209.6.116.71 at 2021-03-29 05:01:27 +0000
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:01:28 +0000
+
+
+Started GET "/stores" for 209.6.116.71 at 2021-03-29 05:01:30 +0000
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://agenda-except-3000.codio.io/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BDrinks%5D=1&categories%5BGroceries%5D=1&categories%5BItalian%5D=1" for 209.6.116.71 at 2021-03-29 05:01:30 +0000
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Drinks"=>"1", "Groceries"=>"1", "Italian"=>"1"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Drinks', 'Groceries', 'Italian')[0m
+  Rendered stores/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 209.6.116.71 at 2021-03-29 05:01:30 +0000

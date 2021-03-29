@@ -50,7 +50,7 @@
             <h5 class="card-title"><%= store.name %></h5>
             <h5 class="card-title"><%= store.rating %><span class="fa fa-star checked"></span></h5> 
             <p class="card-text"><%= store.category %></p>
-            <%= link_to "Order", store_path(store) %>
+            <%= link_to "Order", store_path(:id => store.id) %>
           </div>
         </div>
     <% end %>
