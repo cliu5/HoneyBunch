@@ -51,6 +51,41 @@ When /I create a temporary user and login/ do
   click_button("new_user_btn")
 end
 
+#When /^I press the "order_btn"$/ do
+#    find("#order_btn").click
+#end 
+
+Given /^An order of "([^"]*)" has already been placed from "([^"]*)"$/ do |item, store|
+  click_link(store+"_order_link")
+  find("#address_field2", visible: false).set("70 Morningside Drive")
+  select(item, :from => store+"_menu_dropdown2", visible: false)
+  find("#order_confirm_btn2", visible: false).click
+  page.should have_content(item+" was successfully ordered.")
+end
+
+When /^I enter a hidden test address$/ do
+    find("#address_field2", visible: false).set("70 Morningside Drive")
+end
+
+When /^(?:|I )choose "([^"]*)" from hidden "([^"]*)"$/ do |value, field|
+  #find_field("#"+field+"_menu_dropdown2", visible: false).find(value, visible: false).click
+  select(value, :from => field, visible: false)
+end
+
+When /^I press the hidden "order_confirm_btn2$/ do
+    find("#order_confirm_btn2", visible: false).click
+end
+
+Then /My order should say "delivering" in My Orders/ do
+  visit path_to("the HoneyBunch home page")
+  click_link("my_orders_link")
+  page.should have_content("delivering")
+end
+  
+When /^(?:|I )follow hidden "([^"]*)"$/ do |link|
+  click_link(link, visible: false)
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
