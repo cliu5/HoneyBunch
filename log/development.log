@@ -15953,3 +15953,311 @@ Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6
 
 
 Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 00:40:14 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-30 01:05:26 -0400
+
+
+Started GET "/stores" for 127.0.0.1 at 2021-03-30 01:05:27 -0400
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 44ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-30 01:05:27 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (33.4ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 258ms (Views: 252.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:05:29 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-30 01:05:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l4FBWv+IFZzDLxbNg8qS/xPzZ+zxhq+vuwdIJvRWgnZx7yIa0dgtb5vEHZEU34HtC1SC9Y9gYNJjJCXD+0NQMg==", "username"=>"thomas", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "thomas"]]
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2021-03-30 01:05:32 -0400
+Processing by SessionsController#welcome as HTML
+  Rendered sessions/welcome.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:05:32 -0400
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-30 01:05:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0MpqLzSHT+tqeIte7DdflZsZuHtn/fZNzTUoMdbDseM2pAlvGtd3GDKTgAJ7IkyHg75dYhkbOTAVFkXU2dZjpw==", "user"=>{"username"=>"thomas", "password"=>"[FILTERED]"}}
+  [1m[36m (15.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "thomas"], ["password_digest", "$2a$12$kCK47WM/gxbohU4iv2wD4e1bcNi4nbdIYavyYqB3imwJKZBSDKXPy"], ["created_at", "2021-03-30 05:05:37.021093"], ["updated_at", "2021-03-30 05:05:37.021093"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stores
+Completed 302 Found in 236ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2021-03-30 01:05:37 -0400
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1" for 127.0.0.1 at 2021-03-30 01:05:37 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (2.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:05:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'stores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1" for 127.0.0.1 at 2021-03-30 01:05:59 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.5ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 246ms (Views: 199.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:06:00 -0400
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1" for 127.0.0.1 at 2021-03-30 01:06:01 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:06:01 -0400
+
+
+Started GET "/stores?utf8=%E2%9C%93&categories%5BItalian%5D=1&categories%5BChinese%5D=1&categories%5BCafe%5D=1&commit=Refresh" for 127.0.0.1 at 2021-03-30 01:06:04 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "categories"=>{"Italian"=>"1", "Chinese"=>"1", "Cafe"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Italian', 'Chinese', 'Cafe')
+  Rendered stores/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:06:04 -0400
+
+
+Started GET "/stores?utf8=%E2%9C%93&categories%5BItalian%5D=1&categories%5BChinese%5D=1&categories%5BCafe%5D=1&commit=Refresh" for 127.0.0.1 at 2021-03-30 01:06:05 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "categories"=>{"Italian"=>"1", "Chinese"=>"1", "Cafe"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.3ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Italian', 'Chinese', 'Cafe')
+  Rendered stores/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2021-03-30 01:06:05 -0400
+
+
+Started GET "/stores?utf8=%E2%9C%93&categories%5BItalian%5D=1&categories%5BChinese%5D=1&categories%5BCafe%5D=1&commit=Refresh" for 127.0.0.1 at 2021-03-30 01:06:05 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "categories"=>{"Italian"=>"1", "Chinese"=>"1", "Cafe"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.2ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Italian', 'Chinese', 'Cafe')
+  Rendered stores/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (48.8ms)[0m  [1mDROP DATABASE IF EXISTS "my_database_test"[0m
+  [1m[35m (247.4ms)[0m  CREATE DATABASE "my_database_test" ENCODING = 'utf8'
+  [1m[36mSQL (1.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.3ms)[0m  CREATE TABLE "orders" ("id" serial primary key, "name" character varying, "image" character varying, "item" character varying, "deliver_to" character varying, "user_id" character varying, "status" character varying) 
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "stores" ("id" serial primary key, "name" character varying, "rating" character varying, "category" character varying, "description" text, "menu" character varying, "image" character varying) [0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210326053135')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gongcha"], ["rating", "4"], ["category", "Drinks"], ["description", "Gong Cha today is one of the most recognized bubble tea brands around the world. Known for quality tea and service, Gong Cha has withheld its reputation against many existing competitors."], ["menu", "Milk Tea,Green Tea"], ["image", "https://www.gongchausa.com/wp-content/uploads/2016/02/TeaAndPearlsBanner320.png"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "HMart"], ["rating", "3"], ["category", "Groceries"], ["description", "HMart is the largest Asian supermarket chain in America and is the pioneer of Asian food in America."], ["menu", "Ramen,Korean Fried Chicken"], ["image", "https://cdn.vox-cdn.com/thumbor/HtPE36-UDBbBqkmo10tqKk29_Ek=/0x0:2048x1360/1200x800/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/52683551/10648237_791550397560030_5178451302245274192_o.0.jpg"]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Koronet"], ["rating", "4"], ["category", "Italian"], ["description", "Koronet Pizza is currently located at 2848 Broadway. Order your favorite pizza, pasta, salad, and more, all with the click of a button."], ["menu", "Pizza,Calzone"], ["image", "https://media-cdn.tripadvisor.com/media/photo-p/08/ff/c5/17/koronet-pizzeria.jpg"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Morton Williams"], ["rating", "5"], ["category", "Groceries"], ["description", "Morton Williams is a family-owned and operated food retailer of fifteen stores in New York Metropolitan area - in business since 1946."], ["menu", "Broccoli,Kale"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Morton_Williams_logo.svg/1200px-Morton_Williams_logo.svg.png"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Panda Express"], ["rating", "4"], ["category", "Chinese"], ["description", "Panda Express is an American fast food restaurant chain that serves American Chinese cuisine. With over 2,200 locations, it is the largest Asian segment restaurant chain in the United States."], ["menu", "Kung Pao Chicken,Fried Rice"], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Panda_Express_logo.svg/1200px-Panda_Express_logo.svg.png"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Famiglias"], ["rating", "3"], ["category", "Italian"], ["description", " Famous Famiglia, in the heart of New York City, serves up fresh, authentic New York style pizza in a fast, casual environment."], ["menu", "Pepperoni Pizza,Cheese Pizza"], ["image", "https://orderfamigliapizza.com/slideimages/famous-famiglia-pizza-slider-logo.png"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stores" ("name", "rating", "category", "description", "menu", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cafe East"], ["rating", "5"], ["category", "Cafe"], ["description", "Counter serve spot in the Columbia University Student Center for bubble tea, smoothies & Asian eats."], ["menu", "Boba pastries"], ["image", "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/MI26VTDGIJCGXDWW6NU4MOIJ24"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+
+
+Started GET "/stores?utf8=%E2%9C%93&categories%5BItalian%5D=1&categories%5BChinese%5D=1&categories%5BCafe%5D=1&commit=Refresh" for 127.0.0.1 at 2021-03-30 01:07:08 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"utf8"=>"✓", "categories"=>{"Italian"=>"1", "Chinese"=>"1", "Cafe"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.5ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Italian', 'Chinese', 'Cafe')
+  Rendered stores/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 254ms (Views: 202.2ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/stores/6" for 127.0.0.1 at 2021-03-30 01:07:10 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.1ms)[0m  SELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered stores/show.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stores?name=Famiglias" for 127.0.0.1 at 2021-03-30 01:07:16 -0400
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yIl1HwR1LI1tPI+aI6xJgGVdWyb8mPVeB8jHnBK11O4u5xZfKiUUfjXXhMa0uVqSffq+P4J+OiPf66p5HaAGqg==", "order"=>{"deliver_to"=>"asdfasdf", "item"=>"Cheese Pizza"}, "name"=>"Famiglias", "commit"=>"Confirm"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "orders" ("name", "deliver_to", "item", "user_id", "status") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Famiglias"], ["deliver_to", "asdfasdf"], ["item", "Cheese Pizza"], ["user_id", "1"], ["status", "pending"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stores
+Completed 302 Found in 16ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2021-03-30 01:07:16 -0400
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/stores?categories%5BCafe%5D=1&categories%5BChinese%5D=1&categories%5BItalian%5D=1" for 127.0.0.1 at 2021-03-30 01:07:16 -0400
+Processing by StoresController#index as HTML
+  Parameters: {"categories"=>{"Cafe"=>"1", "Chinese"=>"1", "Italian"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mStore Load (0.4ms)[0m  SELECT "stores".* FROM "stores" WHERE "stores"."category" IN ('Cafe', 'Chinese', 'Italian')
+  Rendered stores/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/my_orders/id" for 127.0.0.1 at 2021-03-30 01:07:21 -0400
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/orders/id" for 127.0.0.1 at 2021-03-30 01:07:23 -0400
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/orders/id" for 127.0.0.1 at 2021-03-30 01:07:25 -0400
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered stores/orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/orders/1" for 127.0.0.1 at 2021-03-30 01:07:26 -0400
+Processing by StoresController#orders as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "orders" SET "status" = $1 WHERE "orders"."id" = $2  [["status", "thomas delivering"], ["id", 1]]
+  [1m[36m (4.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered stores/orders.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/stores/my_orders/id" for 127.0.0.1 at 2021-03-30 01:07:29 -0400
+Processing by StoresController#my_orders as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", "1"]]
+  Rendered stores/my_orders.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms)
