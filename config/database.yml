@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  host: localhost
+  host: /usr/local/var/postgres
 
 development:
   <<: *default
@@ -14,7 +14,6 @@ development:
 test:
   <<: *default
   database: my_database_test
-  host: localhost
 
 production:
   <<: *default
