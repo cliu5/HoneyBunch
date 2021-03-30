@@ -13,18 +13,78 @@
  *= require_tree .
  *= require_self
  */
+
 body {
-  background-color: #FFFACD;
-  margin: auto;
-  width: 75%;
-  min-width: 300px;
+  background-color: #fef9f0; 
+  color: black;
+  min-width:100%;
   padding-top: 80px;
   padding-bottom: 80px;
-  text-align: left;
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
   font-size: 1.5rem;
+    /* The image used */
+  background-image: url("background.png");
+  /* Set a specific height */
+  min-height: 1000px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.container{
+    background: #FDFDF6;
+    font-family: 'Noto Sans JP';
+   /* opacity: 0.9;*/
+}
+
+h1{
+    padding-top: 80px;
+    padding-bottom: 80px; 
+    font-weight: 700;
+    color: #353535; 
+    font: bold 52px;
+    font-family: 'Noto Sans JP';
+    /*
+    text-shadow: 1px 1px #cc9900,
+                3px 3px #cc9900,
+                6px 6px #F2E696,   
+                9px 9px #F2E696,
+                10px 10px white,
+                11px 11px white;
+    */
+}
+
+h2{
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    font-size: 45px;
+    font-weight: 700;
+    color: #353535; 
+    font: bold 52px;
+    font-family: 'Noto Sans JP';
+    /*
+    text-shadow: 1px 1px #cc9900,
+                3px 3px #cc9900,
+                6px 6px #F2E696,   
+                9px 9px #F2E696,
+                10px 10px white,
+                11px 11px white;
+    */
+}
+.search{
+    
+    padding-bottom: 100px;
+    
+}
+.card{
+    border-radius: 20px;
+    background-color: rgba(247,234,218,255);
+    box-shadow: 5px 5px #feb236;
+    padding-top: 5px;
+}
+
 .title{
     color: black;
     font-size: 3.0em;
@@ -39,6 +99,69 @@ body {
   color: orange;
 }
 
+.btn{
+  font-family: 'Noto Sans JP';
+}
+
+.login-container{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form-2{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 40%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-delivery{
+    margin-left: 10px;
+    float:right; 
+}
+.btn-logout {
+    margin-left: 10px;
+    float:right;
+
+}
 /* Style the search field */
 form.search_store input[type=text] {
   border-radius: 20px;
@@ -74,4 +197,9 @@ form.search_store::after {
   content: "";
   clear: both;
   display: table;
+}
+
+table{
+    background: white;
+    
 }

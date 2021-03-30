@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+<h2>Items you ordered</h2>
+
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-striped col-md-12" id="stores">
+        <thead>
+        <tr>
+          <th>From</th>
+          <th>Item</th>
+          <th>Deliver to</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+      <tbody>
+        <% @my_orders.each do |order| %>
+          <tr>
+            <td>
+              <%= order.name %>
+            </td>
+            <td>
+              <%= order.item %>
+            </td>
+            <td>
+              <%= order.deliver_to %>
+            </td>
+            <td>
+              <%= order.status %>
+            </td>
+            <td>   
+               <%= link_to 'Received', my_orders_path(order), :class => 'btn btn-primary', id: order.item+"_receive_btn"%>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+</div>

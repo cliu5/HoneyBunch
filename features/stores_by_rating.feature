@@ -20,22 +20,16 @@ Background: stores in database
   | Chicken Wings       | 3      | Italian     |krispy                       | fried chicken  | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
   | Energy Drinks       | 4      | Cafe        |caffeine drinks              | monster energy | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
   | Hotdog Stand        | 2      |             |ketchup and mustard          | hotdog         | https://patch.com/img/cdn/users/22873889/2016/03/raw/20160356e2fa5dbf5fc.jpg |
-
-    And I am on the HoneyBunch home page
-    Then 11 seed stores should exist
+  And I am on the HoneyBunch home page
+  When I create a temporary user and login
+  Then 11 seed stores should exist
+  And I should see "Search Local Columbia Stores"
 
 Scenario: add rating to existing store
   When I go to the edit page for "Hotdog Stand"
   And  I fill in "Rating" with "2"
   And  I press "Update Store Info"
   Then the rating of "Hotdog Stand" should be "2"
-
-Scenario: can't find similar stores if we don't know category
-  Given I am on the details page for "Hotdog Stand"
-  Then  I should not see "cafe"
-  When  I follow "Find Stores With Same Category"
-  Then  I should be on the home page
-  And   I should see "This feature has not been implemented yet!"
 
 Scenario: sort stores alphabetically
   When I follow "Store Name"
@@ -80,3 +74,92 @@ Scenario: all categories selected:
   When I check the following categories: Cafe, Italian, Drinks, Chinese, Groceries
   And I press "Refresh"
   Then I should see all the stores
+  
+Scenario Outline: searching for a store/category/item that exists
+  When I fill in "search_bar" with "<Query>"
+  And I press "search_btn"
+  Then I should see "<Store>"
+  And I should not see "<NoSeeStore>"
+  And I should not see "Your search query found no results :("
+  Examples: 
+    | Query        | Store           | NoSeeStore |
+    | McBonalds    | McBonalds       | Gong Cha   |
+    | Drinks       | Gong Cha        | McBonalds  |
+    | juice        | Cranberry Juice | McBonalds  |
+  
+Scenario: searching for a store that doesn't exist
+  When I fill in "search_bar" with "WeeeeAaaaaaaa"
+  And I press "search_btn"
+  Then I should see "McBonalds"
+  And I should see "KingBurger"
+  And I should see "The Krusty Krab"
+  And I should see "Your search query found no results."
+  
+Scenario: inputting nothing into the search bar
+  When I fill in "search_bar" with ""
+  And I press "search_btn"
+  Then I should see "McBonalds"
+  And I should see "KingBurger"
+  And I should see "The Krusty Krab"
+  And I should see "Please input a search query!"
+  
+Scenario: testing the order modal
+  When I follow "McBonalds_order_link"
+  And I press "order_btn"
+  Then I should see "Address"
+  
+Scenario: cancelling an order
+  When I follow "McBonalds_order_link"
+  And I follow hidden "cancel_order_btn2"
+  Then I should see "Search Local Columbia Stores"
+
+Scenario Outline: placing an order and verifying it
+  When I follow "<Store>_order_link"
+  And I enter a hidden test address
+  And I choose "<Item>" from hidden "<Store>_menu_dropdown2"
+  And I press the hidden "order_confirm_btn2
+  And I go to the HoneyBunch home page
+  And I follow "my_orders_link"
+  And I should see "Items you ordered"
+  Then I should see "<Store>"
+  Examples: 
+    | Store        | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+
+Scenario Outline: receiving a delivery
+  Given An order of "<Item>" has already been placed from "<Store>"
+  When I follow "my_orders_link"
+  And I follow "<Item>_receive_btn"
+  Then I should not see "<Item>"
+  Examples: 
+    | Store     | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+
+Scenario Outline: receiving a delivery
+  Given An order of "<Item>" has already been placed from "<Store>"
+  When I follow "my_orders_link"
+  And I follow "<Item>_receive_btn"
+  Then I should not see "<Item>"
+  Examples: 
+    | Store     | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+    
+Scenario Outline: accepting a delivery
+  Given An order of "<Item>" has already been placed from "<Store>"
+  When I follow "my_deliveries_link"
+  And I follow "<Item>_accept_order_btn"
+  Then I should not see "<Item>"
+  And My order should say "delivering" in My Orders
+  Examples: 
+    | Store     | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+
+

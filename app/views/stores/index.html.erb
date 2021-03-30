@@ -1,20 +1,30 @@
 <!--  This file is app/views/movies/index.html.erb -->
-<h2>Search local Columbia stores</h2>
 
+    
+    
+<br>
+<%= link_to 'Log Out', logout_path, :method => 'delete', :class => 'btn btn-dark btn-lg btn-logout btn-lg' %>
+<%= link_to 'My Orders', my_orders_path("id"),  :class => 'btn btn-dark btn-delivery btn-lg', id: "my_orders_link" %>
+<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-dark btn-delivery btn-lg', id: "my_deliveries_link" %>
+
+
+<h1>Search Local Columbia Stores</h2>
+
+  
 <%#  Part 2: Start here... %>
 
-<!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-
 <!-- The form -->
+<%= form_tag stores_path, :class => 'search', :method => "get" do %>
+  <%= text_field_tag :search, params[:search], :size=>"75", placeholder:"Search...", id: 'search_bar' %>
+  <%= submit_tag("GO!", :name => "search_button", :class => "btn btn-dark btn-lg", id: 'search_btn')%>
+<% end %>
+
+<!--  
 <form class="search_store" action="action_page.php">
   <input type="text" placeholder="Search.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-
-
-<%= link_to 'Delivery', orders_path("id"), :class => 'btn btn-primary' %>
+</form
+-->
 
 <body>
 
@@ -27,25 +37,24 @@
     <span class="checked"></span>
     <%= check_box_tag "categories[#{category}]", 1, @selected_categories.include?(category), :id => "categories_#{category}" %>
   <% end %>
-  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-primary' %>
+  <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-dark btn-large' %>
 <% end %>
-
+<br>
+  
     
-<h2>Stores</h2>
 <div class="card-columns">
     <% @stores.each do |store| %>
-        <div class="card " style="width: 14rem; length; 10rem">
+        <div class="card" style="width: 18rem; length; 5rem">
           <%=image_tag(store.image, class: "card-img-top")%>
           <div class="card-body">
             <h5 class="card-title"><%= store.name %></h5>
             <h5 class="card-title"><%= store.rating %><span class="fa fa-star checked"></span></h5> 
             <p class="card-text"><%= store.category %></p>
-            <%= link_to "Order", store_path(store) %>
+            <%= link_to "Order", store_path(:id => store.id), id: store.name+"_order_link" %>
           </div>
         </div>
     <% end %>
 </div>
-
     
 </body>
 
@@ -57,7 +66,11 @@
           <th class="<%= @name_header %>">
         <%= link_to 'Store Name', stores_path(:sort => 'name', :categories => @selected_categories), :id => 'name_header' %>
           </th>
-          <th>Rating</th>
+          
+          <th class="<%= @rating_header %>">
+        <%= link_to 'Rating', stores_path(:sort => 'rating', :categories => @selected_categories), :id => 'rating_header' %>
+          </th>
+          
           <th class="<%= @description_header %>">
         <%= link_to 'Description', stores_path(:sort => 'description', :categories => @selected_categories), :id => 'description_header' %>
           </th>
@@ -83,5 +96,4 @@
         <% end %>
       </tbody>
     </table>
-
-   
+</div>

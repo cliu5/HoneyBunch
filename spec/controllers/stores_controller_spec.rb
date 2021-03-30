@@ -1,4 +1,5 @@
 require 'rails_helper'
+include SessionsHelper
 
 #https://github.com/rails/rails/issues/34790
 if RUBY_VERSION>='2.6.0'
@@ -20,7 +21,12 @@ describe StoresController do
     before :each do
 	@store_class = class_double('Store').as_stubbed_const
 	@store_attributes = {:name => 'test', :rating => 'G', :description => '2020-01-01'}
+	@user = User.create(:username => 'test', :password => 'test') #changed but idt it matters
+    session[:user_id] = @user.id
+	log_in(@user)
     end
+	
+
     describe 'Find Stores With Same Category' do
 
 	before :each do
@@ -53,6 +59,8 @@ describe StoresController do
 	    end
 	end
     end
+
+
 
     describe 'update store' do
 	let(:current_store) { instance_double(Store, :id => 1, :name => 'test') }

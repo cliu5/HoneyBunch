@@ -1,0 +1,33 @@
+<h2>Food Delivery Made Easy!</h2>
+
+<p> 
+
+    Start ordering food in your local area! If you already have an account, sign in to use HoneyBunch on the web.
+
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Log In</h3>
+
+                        <%= form_tag '/login' do%>
+                            <%= label_tag :username%><br>
+                            <%= text_field_tag :username%><br>
+                            <%= label_tag :password%><br>
+                            <%= password_field_tag :password%><br>
+                            <br>
+                        <input type = "submit", class = "btnSubmit", value = "Log In">
+                        <%end%>
+
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3> Sign Up</h3>
+                    
+                    <%= form_for @user do |f|%>
+                        <%= f.label :username%><br>
+                        <%= f.text_field :username, id: 'new_username_field'%><br>
+                        <%= f.label :password%><br>
+                        <%= f.password_field :password, id: 'new_password_field'%><br><br>
+                        <input type = "submit", class = "btnSubmit", value = "Create User", id = "new_user_btn">
+                    <%end%>
+                    
+                </div>
+            </div>
