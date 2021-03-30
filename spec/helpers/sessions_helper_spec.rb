@@ -11,5 +11,39 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe SessionsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @user = User.create(:username => 'test', :password => 'test') #changed but idt it matters
+    session[:user_id] = @user.id
+    log_in(@user)
+    end
+  
+    describe 'login' do
+      it 'logs in' do
+        expect(session[:user_id]).to eq(@user.id)
+      end
+    end
+
+    describe 'logout' do
+      it 'logs out' do
+        log_out 
+        expect(@current_user).to eq(nil)
+      end
+    end
+
+    describe 'logged in?' do
+      it 'is logged in' do
+        expect(logged_in?).to eq(true)
+      end
+      it 'is not logged in' do
+        log_out
+        expect(logged_in?).to eq(false)
+      end
+    end
+
+    describe 'current_user' do
+      it 'is equal to current user' do
+        expect(current_user).to eq(User.find_by(id: session[:user_id]))
+      end
+    end
+
 end
