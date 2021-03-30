@@ -27,6 +27,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
             <h5 class="card-title"><%= item %></h5>
             <p class="card-text">$4</p>
             <!-- Button trigger modal -->
+            <a class="btn btn-dark" href="#myModal" data-toggle="modal" data-target="#exampleModal" id = "<%=item%>_order_btn2">
+              Order Now!
+            </a>
             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" id = "order_btn">
               Order Now
             </button>

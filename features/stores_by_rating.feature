@@ -93,7 +93,7 @@ Scenario: searching for a store that doesn't exist
   Then I should see "McBonalds"
   And I should see "KingBurger"
   And I should see "The Krusty Krab"
-  And I should see "Your search query found no results."
+  And I should see "Your search query found no results :("
   
 Scenario: inputting nothing into the search bar
   When I fill in "search_bar" with ""
