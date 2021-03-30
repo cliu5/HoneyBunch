@@ -27,7 +27,7 @@
                   <%= order.deliver_to %>
                 </td>
                 <td>   
-                    <%= link_to 'Accept Order', orders_path(order), :class => 'btn btn-primary' %>
+                    <%= link_to 'Accept Order', orders_path(order), :class => 'btn btn-primary', id: order.item+"_accept_order_btn" %>
                 </td>
                 </tr>
            <% end %>

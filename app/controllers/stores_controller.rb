@@ -70,16 +70,14 @@ class StoresController < ApplicationController
     new_params[:user_id] = current_user.id
     new_params[:status] = 'pending'
     @order = Order.create!(new_params)
-    puts order_params
+    #puts order_params
     flash[:notice] = "#{@order.item} was successfully ordered."
-    puts("\n\nHELLO\n\n")
     redirect_to '/stores'
   end
 
     
   def my_orders
       id = current_user.id
-      puts id
       
       @my_orders = Order.where(user_id: id)
 

@@ -105,20 +105,61 @@ Scenario: inputting nothing into the search bar
   
 Scenario: testing the order modal
   When I follow "McBonalds_order_link"
-  And I press "McBonalds_fries_order_btn"
+  And I press "order_btn"
   Then I should see "Address"
   
-Scenario: placing an order and verifying it
+Scenario: cancelling an order
   When I follow "McBonalds_order_link"
-  And I press "order_btn"
-  And I fill in "address_field" with "70 Morningside Drive"
-  And I select "fries" from "McBonalds_menu_dropdown"
-  Then I should see "70 Morningside Drive"
-  #And I press "McBonalds_order_confirm_btn"
-  #And I go to the HoneyBunch home page
-  #And I follow "my_orders_link"
-  #Then I should see "McBonalds"
-  
-  
+  And I follow hidden "cancel_order_btn2"
+  Then I should see "Search Local Columbia Stores"
+
+Scenario Outline: placing an order and verifying it
+  When I follow "<Store>_order_link"
+  And I enter a hidden test address
+  And I choose "<Item>" from hidden "<Store>_menu_dropdown2"
+  And I press the hidden "order_confirm_btn2
+  And I go to the HoneyBunch home page
+  And I follow "my_orders_link"
+  And I should see "Items you ordered"
+  Then I should see "<Store>"
+  Examples: 
+    | Store        | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+
+Scenario Outline: receiving a delivery
+  Given An order of "<Item>" has already been placed from "<Store>"
+  When I follow "my_orders_link"
+  And I follow "<Item>_receive_btn"
+  Then I should not see "<Item>"
+  Examples: 
+    | Store     | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+
+Scenario Outline: receiving a delivery
+  Given An order of "<Item>" has already been placed from "<Store>"
+  When I follow "my_orders_link"
+  And I follow "<Item>_receive_btn"
+  Then I should not see "<Item>"
+  Examples: 
+    | Store     | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
+    
+Scenario Outline: accepting a delivery
+  Given An order of "<Item>" has already been placed from "<Store>"
+  When I follow "my_deliveries_link"
+  And I follow "<Item>_accept_order_btn"
+  Then I should not see "<Item>"
+  And My order should say "delivering" in My Orders
+  Examples: 
+    | Store     | Item   | 
+    | McBonalds    | fries  |
+    | KingBurger   | burger | 
+    | Gong Cha     | boba   | 
 
 
