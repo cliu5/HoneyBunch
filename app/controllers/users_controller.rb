@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params) #changed but idt it matters
+    @user = User.create(user_params) #changed
     session[:user_id] = @user.id
     #puts user_params
     redirect_to '/stores'
