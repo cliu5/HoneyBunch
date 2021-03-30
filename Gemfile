@@ -24,6 +24,7 @@ end
 group :production do
   gem 'pg', '~> 0.20'
   gem 'rails_12factor'
+  gem 'bcrypt', '~> 3.1.7'
 end
 
 # Gems used only for assets and not required
