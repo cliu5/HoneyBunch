@@ -27,7 +27,8 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 <div class="card-columns">
     <% @store.menu.split(",").each do |item| %>
         <div class="card " style="width: 14rem; length; 10rem">
-          <%=image_tag(@store.image, class: "card-img-top")%>
+          <%=image_tag(@store.image, class: "card-img-top", style: "width:100%;")%>
+        
           <div class="card-body">
             <h5 class="card-title"><%= item %></h5>
             <p class="card-text">$4</p>

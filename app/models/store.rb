@@ -1,6 +1,6 @@
 class Store < ActiveRecord::Base
     def self.all_categories
-	%w(Drinks Italian Groceries Chinese Cafe)
+	%w(Drinks Italian Groceries Chinese Cafe Deli Indian Mexican American Dessert Japanese Thai)
     end
     def self.find_stores_with_same_category(store)
       raise ArgumentError if store.category.blank?

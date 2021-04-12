@@ -82,6 +82,17 @@ h2{
     background-color: rgba(247,234,218,255);
     box-shadow: 5px 5px #feb236;
     padding-top: 5px;
+    display: flex;
+}
+
+.card-deck{
+    padding-top: 5px;
+}
+
+.card-img-top{
+    width:  280px;
+    height: 280px;
+    object-fit: contain;
 }
 
 .title{
