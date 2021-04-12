@@ -16,25 +16,62 @@
         </thead>
       <tbody>
         <% @my_orders.each do |order| %>
-          <tr>
-            <td>
-              <%= order.name %>
-            </td>
-            <td>
-              <%= order.item %>
-            </td>
-            <td>
-              <%= order.deliver_to %>
-            </td>
-            <td>
-              <%= order.status %>
-            </td>
-            <td>   
-               <%= link_to 'Received', my_orders_path(order), :class => 'btn btn-primary', id: order.item+"_receive_btn"%>
-            </td>
-          </tr>
+          <% if order.status != 'done' %>
+            <tr>
+              <td>
+                <%= order.name %>
+              </td>
+              <td>
+                <%= order.item %>
+              </td>
+              <td>
+                <%= order.deliver_to %>
+              </td>
+              <td>
+                <%= order.status %>
+              </td>
+              <td>   
+                <%= link_to 'Received', my_orders_path(order), :class => 'btn btn-primary', id: order.item+"_receive_btn"%>
+              </td>
+            </tr>
+          <% end %>
         <% end %>
       </tbody>
     </table>
-    
+</div>
+
+
+<h2>Past Orders</h2>
+
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-striped col-md-12" id="stores">
+        <thead>
+        <tr>
+          <th>From</th>
+          <th>Item</th>
+          <th>Delivered to</th>
+        </tr>
+        </thead>
+      <tbody>
+        <% @my_orders.each do |order| %>
+          <% if order.status == 'done' %>
+            <tr>
+              <td>
+                <%= order.name %>
+              </td>
+              <td>
+                <%= order.item %>
+              </td>
+              <td>
+                <%= order.deliver_to %>
+              </td>
+              <td>
+                <%= link_to "Order Again", store_path(:id => order.store_id), :class => 'btn btn-primary',id: order.name+"_order_link" %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
 </div>

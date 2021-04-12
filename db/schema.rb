@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20210326053135) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "orders", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -20,6 +23,7 @@ ActiveRecord::Schema.define(version: 20210326053135) do
     t.string "deliver_to"
     t.string "user_id"
     t.string "status"
+    t.string "store_id"
   end
 
   create_table "stores", force: :cascade do |t|
