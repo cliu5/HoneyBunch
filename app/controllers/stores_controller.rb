@@ -2,6 +2,7 @@ class StoresController < ApplicationController
     
   def show
     id = params[:id] 
+    @cur_item = ""
     @store = Store.find(id) 
   end
     
@@ -64,10 +65,17 @@ class StoresController < ApplicationController
 
   def create
     new_params = {}
+
     new_params[:name] = params[:name]
+
+    new_params[:store_id] = Store.find_by(name: new_params[:name]).id
+
     new_params[:deliver_to] = order_params[:deliver_to]
+
     new_params[:item] = order_params[:item]
+    
     new_params[:user_id] = current_user.id
+
     new_params[:status] = 'pending'
     @order = Order.create!(new_params)
     #puts order_params
@@ -78,20 +86,19 @@ class StoresController < ApplicationController
     
   def my_orders
       id = current_user.id
-      
+      if params[:id] != 'id'
+        Order.find(params[:id]).update_attributes(:status => "done" % current_user.username)
+      end
       @my_orders = Order.where(user_id: id)
 
       if @my_orders.nil?
           @my_orders = []
       end
-      if params[:id] != 'id'
-          @my_orders.delete(Order.find_by(user_id: id))
-      end
   end   
  
   def orders
       if params[:id] != 'id'
-          Order.find(params[:id]).update_attributes(:status => "%s delivering" % current_user.username)
+          Order.find(params[:id]).update_attributes(:status => "delivering" % current_user.username)
       end
       @orders = Order.all
   end

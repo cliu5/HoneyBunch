@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20210326053135) do
     t.string "deliver_to"
     t.string "user_id"
     t.string "status"
+    t.string "store_id"
   end
 
   create_table "stores", force: :cascade do |t|

@@ -17,7 +17,12 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 <br>
 <h3><%= @store.description %></h3>
-
+<br>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModal" id = "order_btn">
+  Order an Item
+</button>
+<br>
 <br>
 <div class="card-columns">
     <% @store.menu.split(",").each do |item| %>
@@ -26,10 +31,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
           <div class="card-body">
             <h5 class="card-title"><%= item %></h5>
             <p class="card-text">$4</p>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" id = "order_btn">
-              Order Now
-            </button>
           </div>
         </div>
     <% end %>
