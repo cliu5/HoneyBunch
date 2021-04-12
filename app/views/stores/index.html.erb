@@ -40,25 +40,46 @@
   <%= submit_tag 'Refresh', :id => 'categories_submit', :class => 'btn btn-dark btn-large' %>
 <% end %>
 <br>
+
+<table class="table">
+  <th>
+    <p>Sort by:</p>
+  </th>
+  <th class="<%= @name_header %>">
+    <%= link_to 'Store Name', stores_path(:sort => 'name', :categories => @selected_categories), :id => 'name_header' %>
+  </th>
   
+  <th class="<%= @rating_header %>">
+    <%= link_to 'Rating', stores_path(:sort => 'rating', :categories => @selected_categories), :id => 'rating_header' %>
+  </th>
+</table>
     
-<div class="card-columns">
+
+  <% i = 0 %>
     <% @stores.each do |store| %>
-        <div class="card" style="width: 18rem; length; 5rem">
-          <%=image_tag(store.image, class: "card-img-top")%>
-          <div class="card-body">
-            <h5 class="card-title"><%= store.name %></h5>
-            <h5 class="card-title"><%= store.rating %><span class="fa fa-star checked"></span></h5> 
-            <p class="card-text"><%= store.category %></p>
-            <%= link_to "Order", store_path(:id => store.id), id: store.name+"_order_link" %>
-          </div>
+      <% if i.modulo(4) == 0 %>
+        <div class="card-columns">
+      <% end %>
+      <div class="card" style="width: 18rem; length; 5rem">
+        <%=image_tag(store.image, class: "card-img-top")%>
+        <div class="card-body">
+          <h5 class="card-title"><%= store.name %></h5>
+          <h5 class="card-title"><%= store.rating %><span class="fa fa-star checked"></span></h5> 
+          <p class="card-text"><%= store.category %></p>
+          <%= link_to "Order", store_path(:id => store.id), id: store.name+"_order_link" %>
         </div>
+      </div>
+      <% i = i + 1 %>
+      <% if i.modulo(4) == 3 %>
+        <% i = i + 1 %>
+        </div>
+      <% end %>
     <% end %>
-</div>
+
     
 </body>
 
-
+<!--
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
     <table class="table table-striped col-md-12" id="stores">
         <thead>
@@ -96,4 +117,6 @@
         <% end %>
       </tbody>
     </table>
+-->
+
 </div>
