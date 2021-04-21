@@ -19,6 +19,9 @@ class SessionsController < ApplicationController
         log_in user
         redirect_to '/stores'
     else
+      flash[:notice] = "Invalid username or password."
+      puts username: params[:username]
+      puts "\n\n"
       redirect_to '/welcome'
     end
   end
@@ -26,6 +29,7 @@ class SessionsController < ApplicationController
   def destroy
     log_out
     redirect_to '/welcome'
+    flash[:notice] = "You have been sucessfully logged out."
   end
 
   def welcome

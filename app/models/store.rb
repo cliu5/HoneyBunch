@@ -19,13 +19,7 @@ class Store < ActiveRecord::Base
       if store_type
         @search_type = 0
         @stores = store_type
-      else
-        @search_type = 1
-        @stores = Store.all
       end
-    else
-      @search_type = 2
-      @stores = Store.all
     end
   end
   

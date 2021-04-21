@@ -43,17 +43,17 @@ Scenario: sort stores alphabetically
   And I should see "Popsicles" before "KingBurger"
   And I should see "KingBurger" before "The Krusty Krab"
 
-Scenario: sort stores by their description
-  When I follow "Description"
-  Then I should see "Btarsucks" before "Chicken Wings"
-  And I should see "Chicken Wings" before "KingBurger"
-  And I should see "KingBurger" before "The Krusty Krab"
-  And I should see "The Krusty Krab" before "McBonalds"
-  And I should see "McBonalds" before "Energy Drinks"
-  And I should see "Energy Drinks" before "Gong Cha"
-  And I should see "Gong Cha" before "Some Pastry Shop"
-  And I should see "Some Pastry Shop" before "Popsicles"
-  And I should see "Popsicles" before "Cranberry Juice"
+#Scenario: sort stores by their description
+#  When I follow "Description"
+#  Then I should see "Btarsucks" before "Chicken Wings"
+#  And I should see "Chicken Wings" before "KingBurger"
+#  And I should see "KingBurger" before "The Krusty Krab"
+#  And I should see "The Krusty Krab" before "McBonalds"
+ # And I should see "McBonalds" before "Energy Drinks"
+ # And I should see "Energy Drinks" before "Gong Cha"
+ # And I should see "Gong Cha" before "Some Pastry Shop"
+ # And I should see "Some Pastry Shop" before "Popsicles"
+ # And I should see "Popsicles" before "Cranberry Juice"
 
 Scenario: restrict to stores with 'cafe' or 'drinks' categories
   When I check the following categories: Cafe, Drinks
@@ -132,18 +132,8 @@ Scenario Outline: receiving a delivery
   Given An order of "<Item>" has already been placed from "<Store>"
   When I follow "my_orders_link"
   And I follow "<Item>_receive_btn"
-  Then I should not see "<Item>"
-  Examples: 
-    | Store     | Item   | 
-    | McBonalds    | fries  |
-    | KingBurger   | burger | 
-    | Gong Cha     | boba   | 
-
-Scenario Outline: receiving a delivery
-  Given An order of "<Item>" has already been placed from "<Store>"
-  When I follow "my_orders_link"
-  And I follow "<Item>_receive_btn"
-  Then I should not see "<Item>"
+  Then I should not see "Received"
+  And I should see "Order Again"
   Examples: 
     | Store     | Item   | 
     | McBonalds    | fries  |
@@ -162,4 +152,13 @@ Scenario Outline: accepting a delivery
     | KingBurger   | burger | 
     | Gong Cha     | boba   | 
 
+Scenario: logging out and logging back in
+  When I follow "logout_link"
+  And I try logging back into the temp user
+  Then I should see "Search Local Columbia Stores"
 
+Scenario: logging out and logging back in with invalid user
+  When I follow "logout_link"
+  And I try logging in with an invalid user
+  Then I should see "Food Delivery Made Easy!"
+  And I should see "Invalid username or password"

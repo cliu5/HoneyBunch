@@ -63,6 +63,19 @@ Given /^An order of "([^"]*)" has already been placed from "([^"]*)"$/ do |item,
   page.should have_content(item+" was successfully ordered.")
 end
 
+When /^I try logging back into the temp user$/ do
+  fill_in("username", :with => "testuser123")
+  fill_in("password", :with => "password123")
+  click_button("login_user_btn")
+end
+
+When /^I try logging in with an invalid user$/ do
+  fill_in("username", :with => "weepeepaa")
+  fill_in("password", :with => "weepeepaa123")
+  click_button("login_user_btn")
+end
+
+
 When /^I enter a hidden test address$/ do
     find("#address_field2", visible: false).set("70 Morningside Drive")
 end
