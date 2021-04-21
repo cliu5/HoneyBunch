@@ -6,13 +6,13 @@
                 <div class="col-md-6 login-form-1">
                     <h3>Log In</h3>
 
-                        <%= form_tag '/login' do%>
+                        <%= form_tag '/login', :id => 'login_tag', :class => 'login_class' do%>
                             <%= label_tag :username%><br>
                             <%= text_field_tag :username%><br>
                             <%= label_tag :password%><br>
                             <%= password_field_tag :password%><br>
                             <br>
-                        <input type = "submit", class = "btnSubmit", value = "Log In">
+                            <input type = "submit", class = "btnSubmit", value = "Log In", id = "login_user_btn">
                         <%end%>
 
                 </div>
